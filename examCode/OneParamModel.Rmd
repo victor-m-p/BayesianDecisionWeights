@@ -1,0 +1,69 @@
+---
+title: "Untitled"
+output: html_document
+---
+```{r}
+library(pacman)
+p_load(tidyverse, parallel, brms)
+ncores = detectCores()
+```
+
+Own faked data
+
+```{r}
+
+
+df <- data.frame(
+  w = c(0.05, 0.1, 0.2, 0.4, 0.6, 0.8, 0.95),
+  p = c(0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99)
+)
+
+
+```
+
+For 1 parameter (without cross-over)
+
+```{r}
+
+prior1 <- prior(normal(0.5, 2), nlpar = "a")
+
+fit1 <- brm(bf(w ~ p**(1-a) / (p**(1-a)+(1-p)**(1-a)), a ~ 1, nl = TRUE),
+            data = df, prior = prior1)
+
+```
+
+```{r}
+summary(fit1)
+```
+
+```{r}
+plot(fit1)
+```
+
+```{r}
+plot(conditional_effects(fit1), points = TRUE)
+```
+
+For 2 parameters (with cross-over)
+
+```{r}
+prior1 <- prior(normal(0.5, 2), nlpar = "y") +
+  prior(normal(0.5, 2), nlpar = "delta")
+
+fit1 <- brm(bf(w ~ (delta * (p ** y)) / (delta * (p **y) + (1-p)**y), 
+               y + delta ~ 1, nl = TRUE),
+            data = df, prior = prior1)
+
+```
+
+```{r}
+summary(fit1)
+```
+
+```{r}
+plot(fit1)
+```
+
+```{r}
+plot(conditional_effects(fit1), points = TRUE)
+```

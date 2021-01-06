@@ -1,0 +1,194 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r}
+library(pacman)
+p_load(tidyverse, parallel, brms)
+ncores = detectCores()
+```
+
+2 parameters more data and effects: 
+
+more data:
+of course this should be done in some smart 
+generative way (later). 
+
+```{r}
+df <- data.frame(
+  w = c(0.05, 0.1, 0.2, 0.4, 0.6, 0.8, 0.95,
+        0.08, 0.12, 0.23, 0.4, 0.5, 0.8, 0.93,
+        0.2, 0.25, 0.30, 0.43, 0.48, 0.72, 0.92,
+        0.25, 0.30, 0.35, 0.45, 0.51, 0.63, 0.90),
+  p = c(0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99,
+        0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99,
+        0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99,
+        0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99),
+  ID = c(rep(1, 7), 
+         rep(2, 7),
+         rep(1, 7),
+         rep(2, 7)),
+  item = c(rep(1, 7), 
+           rep(1, 7),
+           rep(2, 7),
+           rep(2, 7)),
+  valence = c(rep(0.2, 7),
+               rep(0.2, 7),
+               rep(0.8, 7),
+               rep(0.8, 7))
+)
+
+```
+
+```{r}
+
+prior1 <- prior(normal(0.5, 2), nlpar = "y") +
+  prior(normal(0.5, 2), nlpar = "delta")
+            
+## should item be the main effect?
+fit2 <- brm(bf(w ~ (delta * (p ** y)) / (delta * (p **y) + (1-p)**y), 
+               y ~ 1 + item + (1|ID),
+               delta ~ 1 + item + (1|ID),
+               nl = TRUE),
+            data = df, prior = prior1,
+            cores = ncores,
+            iter = 5000,
+            file = "mainEFF") #set working directory.
+
+# random slope over item for IDs?
+fit3 <- brm(bf(w ~ (delta * (p ** y)) / (delta * (p **y) + (1-p)**y), 
+               y ~ 1 + item + (item|ID),
+               delta ~ 1 + item + (item|ID),
+               nl = TRUE),
+            data = df, prior = prior1,
+            cores = ncores,
+            iter = 5000,
+            file = "mainEff2") 
+
+```
+
+Load rds files: 
+
+```{r}
+
+fit2 <- readRDS("mainEFF.rds")
+fit3 <- readRDS("mainEFF2.rds")
+
+```
+
+```{r}
+
+fixef(fit2)
+fixef(fit3) #makes most sense of the two models here. 
+
+```
+
+```{r}
+
+plot(fit2)
+plot(fit3)
+
+```
+
+```{r}
+plot(conditional_effects(fit2), points = TRUE)
+plot(conditional_effects(fit3), points = TRUE)
+```
+
+## PLOTTING 
+The question is whether the next part works with participant IDs?
+looks terrible of course...
+
+```{r}
+
+## empty dataframe with groups: 
+conditions <- data.frame(item = unique(df$item))
+rownames(conditions) <- unique(df$item)
+
+## predict values 
+predW <- conditional_effects(
+  fit2, conditions = conditions, 
+  re_formula = NULL, method = "predict"
+)
+
+plot(predW, ncol = 2, points = TRUE)
+
+fit1
+
+```
+
+
+## PLOTTING TAKE 2
+https://www.tjmahr.com/another-mixed-effects-model-visualization/
+
+```{r}
+
+## load model 
+
+p_first_pass <- ggplot(df) +
+  aes(x = p, y = w, color = as.factor(item)) +
+  geom_line(aes(group = item)) +
+  geom_point() +
+  facet_wrap("ID", nrow = 1) +
+  coord_cartesian(ylim = c(0, 1)) +
+  ggtitle("Each participant contributes data") + 
+  theme_grey(base_size = 14)
+
+p_first_pass
+
+```
+
+fitted draws?
+
+```{r}
+
+library(tidybayes)
+
+df_fitted <- df %>%
+  # Create a dataframe with all possible combination of Subject and Days
+  tidyr::expand(
+    ID,
+    item,
+    p = seq(min(p), max(p), by = 0.01)
+  ) %>%
+  # Get the posterior predictions
+  add_fitted_draws(model = fit3)
+```
+
+crazy plot
+
+```{r}
+
+plot_fitted <- ggplot(df_fitted) +
+  aes(x = p, y = .value) +
+  # .width is the interval width
+  stat_lineribbon(alpha = .4, .width = .30) + ## width should be .95
+  geom_point(
+    aes(y = w), 
+    data = df) +
+  facet_wrap("ID", nrow = 1) +
+  # Use the viridis scale on the ribbon fill
+  scale_color_viridis_d(aesthetics = "fill") +
+  # No legend
+  guides(fill = FALSE) +
+  scale_x_continuous(breaks = seq(0, 9, by = 2)) +
+  coord_cartesian(ylim = c(0, 1)) +
+  ggtitle(
+    "Individual trajectories \"borrow information\" from others"
+  ) +
+  theme_grey(base_size = 14) +
+  theme(
+    strip.background = element_blank(),
+    strip.text = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid.minor = element_blank(),
+    plot.tag.position = "right",
+    plot.tag = element_text(size = rel(.9)),
+    plot.title.position = "plot"
+  )
+
+plot_fitted
+```
+

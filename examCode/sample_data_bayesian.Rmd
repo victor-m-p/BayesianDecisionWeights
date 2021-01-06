@@ -1,0 +1,65 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+
+```{r}
+library(pacman)
+p_load(tidyverse, brms, parallel, bayesplot)
+ncores = detectCores()
+setwd("C:/Users/95/Dropbox/MastersSem1/DecisionMaking/examCode")
+
+```
+
+https://discourse.mc-stan.org/t/simulating-data-using/5881
+
+
+```{r}
+
+#sample_prior = "only"
+#posteror_predict
+
+df = data.frame(w = rep(1, 900),
+                p = rep(c(0.01, 0.05, 0.15, 0.25, 0.5, 0.75, 0.85, 0.95, 0.99),
+                        100),
+                ID = rep(1:10, each=9*10))
+                
+# values from gonzalez/wu: 
+# should be gamma: est: .44, SE: 0.01 (should be SD). 
+# 
+prior1 <- prior(normal(0.44, 0.01), nlpar = "gamma") +
+  prior(normal(0.44, 0.0001), nlpar = "delta")
+
+## fit model based on priors: 
+fittedMod <- brm(bf(w ~ (delta * (p ** gamma))/(delta * (p**gamma)+(1-p)**gamma),
+               gamma ~ 1 + (1|ID),
+               delta ~ 1 + (1|ID),
+               nl = TRUE),
+            data = df, prior = prior1,
+            sample_prior = "only",
+            cores = ncores,
+            iter = 5000,
+            file = "sampleprior")
+
+```
+
+load the model.. 
+
+```{r}
+
+## load model: 
+fittedMod <- readRDS("sampleprior.rds")
+
+```
+
+```{r}
+
+## generate data: 
+test <- posterior_predict(fittedMod)
+newY = predict(fittedMod, newdata = df, summary=FALSE, nsamples=1)[1,]
+newY
+## another try: 
+ppc_dens_overlay(y = df$w, yrep = posterior_predict(fittedMod, draws=25))
+
+```
