@@ -1,0 +1,109 @@
+\documentclass[12pt]{article} %scrartcl
+%\usepackage{apacite}
+\usepackage{wrapfig}
+\setlength{\parindent}{0pt}
+\usepackage{tgtermes}
+\usepackage{setspace}
+\usepackage{gensymb}
+\usepackage{import}
+\doublespacing
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage[subpreambles=true]{standalone}
+\usepackage{float} %for the H (hammer) method
+\usepackage[utf8]{inputenc}
+\usepackage[backend=biber,style=apa,autocite=inline]{biblatex}
+\DeclareLanguageMapping{english}{english-apa}
+\addbibresource{../References.bib}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Overall introduction}
+\rhead{Victor M. Poulsen, Studie Nr.: 201707639}
+
+\begin{document}
+
+\title{Exam: Advanced Cognitive Neuroscience}
+\author{Victor Møller Poulsen, Studie Nr.: 201707639}
+
+\maketitle
+\leavevmode
+\section{Overall Introduction}
+
+This collection of three neuroscience papers
+focuses mainly on methodology and on
+overarching theoretical frameworks. It is
+generally less concerned with the specific
+experimental findings than
+it is with the methodology used to arrive
+at those findings, and whether the methodology
+warrants the inferences made. As such, specific
+findings are brought in to the extent that they
+ground the themes discussed, and ensure that the
+discussion remains faithful to the best
+experimental findings. Another common thread is
+a focus on representation of information.
+This is arguably a core question for neuroscience
+\autocite{norman2006beyond}.
+%However, it is a slippery concept, which is rarely
+%defined clearly in the literature.
+%By representation (e.g. of edge orientation), I
+%will mean that the underlying neuronal signal
+%discriminates between this class of information
+%and other classes of information.
+
+\vspace{3mm}
+
+The first paper
+focus on electrophysiology and brain oscillations.
+Oscillations are generally thought to be
+involved in routing and controlling flow
+of information in the brain. A specific focus
+is on the role of attention, since attention
+necessarily is involved in selective routing
+of information. The relation between the
+concept of attention and neuronal realization
+is as such a key relationship to specify for
+any theory which attempts to explain the
+role of neural oscillations.
+
+\vspace{3mm}
+
+Both the second and the third paper focus
+on functional magnetic resonance imaging (fMRI).
+The second paper discuss multivariate
+pattern analysis (MVPA) as opposed to
+classical univariate statistics in neuroscience.
+A specific focus is on the advantages of linear and
+non-linear classifiers in different contexts.
+I will argue that for investigating representation
+linear classifiers have certain advantages related
+to interpretation. They are restrictive enough
+to allow researchers to draw the inferences they
+are often interested in from observed performance
+of these statistical models.
+
+\vspace{3mm}
+
+The third paper focus mainly on convolutional
+neural networks (CNNs) as models of the brain,
+and specifically of the ventral visual system
+of humans and non-human primates.
+A model of a system must necessarily simplify
+certain aspects of the system to be useful.
+However, we do observe anomalous behaviour in
+CNNs applied to visual object classification.
+We will discuss which simplifications might
+not be warranted in models of the brain,
+but will also see that these models are useful
+tools for understanding cognition while remaining
+very different from the actual brain.
+
+\includepdf[pages = -, scale = 1]{../paper1/paper1-final.pdf}
+\includepdf[pages = -, scale = 1]{../paper2MVPA/paper2-v2.pdf}
+\includepdf[pages = -, scale = 1]{../paper3/paper3-edit.pdf}
+\includepdf[pages = -, scale = 1]{overall-discussion.pdf}
+
+\printbibliography
+\end{document}
+
+

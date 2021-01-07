@@ -12,6 +12,10 @@ is modulated by the affect of risky choices
 This pipeline is a suggestion for how their initial
 (and convincing) findings can be tested more rigorously.
 
+See the folder "Code" for code used in the project.
+See the folder "Report" for the report submitted.
+See the folder "Literature" for the literature that I build on.
+
 ### Study 1
 
 First, it is proposed that a range of questions (10)
