@@ -9,7 +9,7 @@ packages
 library(pacman)
 p_load(tidyverse, parallel, brms)
 ncores = detectCores()
-setwd("C:/Users/95/Dropbox/MastersSem1/DecisionMaking/examCode")
+setwd("C:/Users/95/BayesianDecisionWeights/Code")
 ```
 
 read simulated data 
