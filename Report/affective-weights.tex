@@ -26,15 +26,153 @@
 \maketitle
 \leavevmode
 
-\section{Abstract}
+\section{Description}
+Prospect Theory \autocite{kahneman2013prospect,
+tversky1992advances} (PT) is arguably the main model
+of human decision making. It postulates a value
+function $v$ for transforming objective value to
+subjective utility, a probability weighting function $w$ to
+transform probability into a subjective weight, and
+an operation to combine these \autocite{
+gonzalez1999shape}. There is evidence to support
+the notion that the affect of outcomes modulates
+the parameters of $w$ \autocite{
+rottenstreich2001money,
+hsee2004music} but a thorough investigation
+of this effect is lacking. This study consits
+of two sub-studies. In the first study subjects
+will evaluate 10 items on a scale of affect.
+In the second study subjects will indicate their
+certainty equivalence (CE) as to gambles
+involving these questions. Based on this, the
+parameters of the weighting function
 
-\section{Introduction}
+\[
+	w(p) = \frac{\delta \cdot p^{\gamma}}
+	{\delta \cdot p^{\gamma} + (1-p)^{\gamma}}
+\]
+
+are estimated for each of the 10 items, and it
+is calculated whether level of affect (obtained in
+study 1) modulates the parameters of the weighting
+function. Note that the above is the two-parameter
+weighting function
+suggested in \autocite{gonzalez1999shape}.
+
+\section{Hypotheses}
+
+$H_1$: It is expected that the 10 questions in
+study 1 will - on average - obtain significantly
+different ratings as to affective quality.
+This is necessary for the follow-up study to
+make sense.
+
+$H_2$ It is hypothesized that the $\gamma$
+parameter will be higher for items that are
+rated as being higher in affect.
+(estimate of size of effect).
+
+$H_3$: It is expected that the $\delta$
+parameter will not be systematically
+modulated by the level of affect of items.
+
+\section{Design Plan}
+
+\textbf{Study type:} Observational Study. \\
+
+\textbf{Blinding:} No blinding is involved in this study. \\
+
+\subsection{Study Design}
+
+\emph{Study 1}: All subjects will rate all items
+(see Appendix 1) as to the level of affect they
+feel with regards to them.
+
+\emph{Study 2}: All participants
+indicate their certainty equivalence (CE) for all
+combinations of items (10) and certainty levels
+(1\%, 5\%, 15\%, 30\%, 50\%, 70\%, 85\%, 95\%, 99\%).
+This results in $90$ observations per participant.
+
+\section{Sampling Plan}
+
+\textbf{Existing Data}: Registration prior
+to creation of data.
+
+\textbf{Data collection procedures}:
+Participants will be recruited through online
+channels (e.g. facebook, student groups, etc.).
+Participants must be at least 18 years old to
+participate. In the first experiments subjects
+will be payed 30 DKK for agreeing to participate
+in an approx. 10 minute online survey. In the
+second experiment subjects will be payed 150 DKK
+for agreeing to participate in an approx. 60 minute
+online survey.
+
+\textbf{Sample size}:
+
+\emph{Study 1}: 30 participants. \\
+\emph{Study 2}: 50 participants.
+
+\textbf{Sample size rationale}:
+
+Power analysis?
+Credibility/Density interval 95\%
+assuming data generating process?
+
+\section{Variables}
+
+\subsection{Manipulated variables}
+\emph{Study 1}: No manipulated variables. \\
+
+\emph{Study 2}: Levels of uncertainty are
+manipulated, and are given as
+$0.01, 0.05, 0.15, 0.3, 0.5, 0.7, 0.85, 0.95, 0.99$.
+Levels of affect differ for each item
+(obtained in Study 1).
+
+\subsection{Measured variables}
+\emph{Study 1}: The single outcome variable
+will be the rating of affect level. This will
+be measured on a scale of $0-100$ using a
+slider.
+
+\emph{Study 2}: The single outcome variable
+is the price that subjects indicate that they
+are willing to pay for a ticket in a lottery
+(combination of probability of outcome).
+This will indicate their certainty equivalence (CE).
+This will be measured on a scale of $0-500$ dollars
+using a slider. The max is 500 dollars since the
+lottery tickets by definition cannot be worth
+more than this (see Appendix 2).
+
+\subsection{Indices}
+
+??
+
+\section{Analysis Plan}
+
+All analysis is performed in the programming
+language $R$ \autocite{rcore} using $Rstudio$
+\autocite{rstudio}. \\
+
+\emph{Study 1}: The affect ratings will be
+ordered based on group-level means? \\
+
+\emph{Study 2}: A bayesian generalized nonlinear
+mixed effects model is fit to the data using the
+$R$ package $brms$ \autocite{brms}.
+This is done to estimate the unobserved parameters
+$\delta$ and $\gamma$ from the independent variable
+probability/uncertainty and the dependent variable
+$w(p)$ which is the observed certainty equivalence (CE).
+Weakly informative priors are specified for both
+$\gamma$ and $\delta$ (see Github).
+
 
 \section{Discussion}
-
-\section{Future Work}
-
-\section{Conclusion}
 
 \printbibliography
 \end{document}
