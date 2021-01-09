@@ -1,0 +1,286 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+
+load packages
+
+```{r}
+
+library(pacman)
+p_load(tidyverse, brms, parallel, bayesplot, 
+       RColorBrewer, cowplot)
+ncores = detectCores()
+setwd("C:/Users/95/BayesianDecisionWeights/Code")
+
+
+```
+
+#### ONE PARAMETER 
+function for computing Rottenstreich & Wu/Gonzales
+
+```{r}
+
+## rottenstreich
+rottenstreich <- function(a, p){
+  w = p**(1-a) / (p**(1-a) + (1-p)**(1-a))
+  #return(w)
+}
+
+## wu 1996?
+wu <- function(a, p){
+  w = (p**a / (p**a + (1-p)**a)**(1-a))
+}
+
+```
+
+function for estimating params with these functions
+
+```{r}
+
+## use the functions:
+
+est_param <- function(fun, num_a, num_p) {
+  
+  a = seq(0, 1, by = num_a)
+  p = seq(0, 1, by = num_p)
+  
+  df <- tibble(affect = numeric(),
+               probability = numeric(),
+               utility = numeric()) 
+  
+  for(aff in a){
+    value = sapply(p, fun, a = aff)
+    df = rbind(df, 
+               tibble(affect = rep(aff, length(p)), 
+                      probability = p, 
+                      utility = value))
+  }
+  
+  return(df)
+}
+  
+```
+
+Get the data 
+
+```{r}
+
+rot <- est_param(rottenstreich, 0.1, 0.01)
+wuGon <- est_param(rottenstreich, 0.1, 0.01)
+
+```
+
+Function for plotting
+
+```{r}
+
+plotW <- function(df, x, y, group){
+  ggplot(df, aes({{x}}, {{y}}, 
+                 group = {{group}})) +
+    geom_line() +
+    labs(x = "p", y = "w(p)") +
+    coord_fixed(ratio = 1) +
+    theme_minimal()
+}
+
+```
+
+Use the plotting function
+
+```{r}
+
+## they are the same.. (it seems): prove it.
+p1 <- plotW(rot, probability, utility, affect)
+p1 <- plotW(wuGon, probability, utility, affect)
+ggsave("../Figures/oneParam.png")
+
+```
+
+
+### TWO PARAMETERS
+
+Gonzalez Wu 
+
+```{r}
+
+## Gonzalez / Wu 
+gonzWu <- function(delta, gamma, p){
+  w = (delta * (p ** gamma)) / (delta * (p ** gamma) + (1-p)**gamma)
+  #return(w)
+}
+```
+
+
+Computing utility over (probability, delta, gamma). 
+
+```{r}
+
+est_param2 <- function(fun, num_delta, num_gamma, num_p) {
+  
+  delta = seq(0.2, 1.8, by = num_delta)
+  gamma = seq(0.2, 1.8, by = num_gamma)
+  p = seq(0, 1, by = num_p)
+  
+  df <- tibble(delta = numeric(),
+               gamma = numeric(),
+               probability = numeric(),
+               utility = numeric()) 
+  
+  for(g in gamma){
+    for(d in delta){
+      value = sapply(p, gonzWu, delta = d, gamma = g)
+      
+      df = rbind(df, 
+                 tibble(delta = rep(d, length(p)), 
+                        gamma = rep(g, length(p)),
+                        probability = p, 
+                        utility = value))
+  }
+  }
+  return(df)
+}
+
+```
+
+Generate data 
+
+```{r}
+
+two_param <- est_param2(gonzWu, 
+                        num_delta = 0.2, 
+                        num_gamma = 0.2, 
+                        num_p = 0.001)
+
+```
+
+Make them factors: 
+
+```{r}
+factor_param <- two_param %>%
+  mutate(delta = as_factor(delta),
+         gamma = as_factor(gamma))
+```
+
+Plotting function
+
+```{r}
+
+plotW <- function(df, vis_param, group_param, value){
+df %>%
+    filter({{vis_param}} == value) %>%
+    ggplot(aes(probability, utility, group = {{group_param}}), 
+           color = {{group_param}}) +
+    geom_abline(intercept = 0, slope = 1) +
+    geom_line() +
+    labs(x = "p", y = "w(p)") +
+    coord_fixed(ratio = 1) +
+    #xlim(0, 1) +
+    #ylim(0, 1) +
+    theme_minimal()
+}
+
+```
+
+Plot them: 
+reproducing the plot in 1999.
+
+```{r}
+
+p2 <- plotW(df = two_param, 
+      vis_param = gamma, 
+      group_param = delta, 
+      value = "0.6")
+
+p3 <- plotW(df = two_param, 
+      vis_param = delta, 
+      group_param = gamma, 
+      value = "0.6")
+
+#p2: high gamma = a lot of curvature. 
+#p3: high delta = high attractiveness?
+
+```
+
+New function to generate plot of 
+what they find. 
+
+```{r}
+
+est_param3 <- function(fun, delta, gamma, num_p) {
+  
+  p = seq(0, 1, by = num_p)
+  
+  df <- tibble(delta = numeric(),
+               gamma = numeric(),
+               probability = numeric(),
+               utility = numeric()) 
+  
+  for(g in gamma){
+    for(d in delta){
+      value = sapply(p, gonzWu, delta = d, gamma = g)
+      
+      df = rbind(df, 
+                 tibble(delta = rep(d, length(p)), 
+                        gamma = rep(g, length(p)),
+                        probability = p, 
+                        utility = value))
+  }
+  }
+  return(df)
+}
+
+```
+
+Generate data
+
+```{r}
+delta = c(0.77, 0.77, 0.77)
+gamma = c(0.22, 0.44, 0.64)
+
+Gonzalez_param <- est_param3(gonzWu, 
+                             delta = delta, 
+                             gamma = gamma, 
+                             num_p = 0.001)
+
+```
+
+Plotting function
+
+```{r}
+plotG <- function(df, group_param){
+df %>%
+    ggplot(aes(probability, utility, group = {{group_param}}), 
+           color = {{group_param}}) +
+    geom_abline(intercept = 0, slope = 1) +
+    geom_line() +
+    labs(x = "p", y = "w(p)") +
+    #xlim(0, 1) +
+    #ylim(0, 1) +
+    coord_fixed(ratio = 1) +
+    theme_minimal()
+}
+
+p4 <- plotG(Gonzalez_param, gamma)
+ggsave("../Figures/ourHyp.png")
+```
+
+plot grid w. cowplot.
+
+```{r}
+
+## first grid
+grid1 <- plot_grid(p2, p3, 
+                   labels = c('A', 'B'))
+
+ggsave("../Figures/grid1.png")
+
+## second grid 
+grid2 <- plot_grid(p1, p4,
+                   labels = c('A', 'B'))
+
+ggsave("../Figures/grid2.png")
+```
+
+

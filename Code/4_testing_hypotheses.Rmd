@@ -1,0 +1,90 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r}
+library(pacman)
+p_load(tidyverse, brms)
+setwd("C:/Users/95/BayesianDecisionWeights/Code")
+```
+
+load the models: 
+
+```{r}
+#can also load non-big.
+mod <- readRDS("../Data/m_items_logID_big.rds")
+```
+
+Checking the model
+
+```{r}
+
+pp_check(mod) #show good fit. 
+(res1 <- summary(mod)) #shows sensible values. 
+plot(mod)
+conditional_effects(mod)
+
+```
+
+Getting posterior draws for the 
+various items (population level).
+We want both gamma and delta. 
+
+```{r}
+
+#http://mjskay.github.io/tidybayes/articles/tidy-brms.html
+devtools::install_github("mjskay/tidybayes")
+library(tidybayes)
+
+## sample posterior 
+posts <- posterior_samples(mod)
+
+## data wrangling: 
+posts_clean <- posts %>%
+  mutate(b_deltaO_item1 = exp(b_logdeltaO_item1),
+         b_deltaO_item2 = exp(b_logdeltaO_item2),
+         b_deltaO_item3 = exp(b_logdeltaO_item3)) %>%
+  select(c(
+    b_gammaO_item1,
+    b_gammaO_item2,
+    b_gammaO_item3,
+   b_deltaO_item1,
+   b_deltaO_item2,
+   b_deltaO_item3
+  ))
+
+## melt the dataframe for visualization: 
+posts_melt <- posts_clean %>%
+  pivot_longer(cols = starts_with("b_"),
+               names_to = c("variable", "level"),
+               names_pattern = ("b_(.*)O_(.*)"),
+               values_to = "observed")
+
+## use the melted data to get 95% CI. 
+posts_melt %>%
+  group_by(variable, level) %>%
+  median_qi(cond_mean = observed)
+
+
+## visualize this for gamma and delta
+## .95, .66 posterior mass. 
+interval_plot <- function(df, variable){
+  
+  df %>%
+    filter(variable == {{variable}}) %>%
+    group_by(level) %>%
+    mutate(condition_mean = observed) %>%
+    ggplot(aes(y = level, 
+               x = condition_mean)) +
+    stat_halfeye()
+  
+}
+
+## plot both gamma and delta posteriors by item:
+interval_plot(posts_melt, "gamma")
+interval_plot(posts_melt, "delta")
+
+## he has one more nice plot with coloring:
+
+```
