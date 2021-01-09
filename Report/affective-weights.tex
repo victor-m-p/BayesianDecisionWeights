@@ -27,18 +27,179 @@
 \leavevmode
 
 \section{Description}
-Prospect Theory \autocite{kahneman2013prospect,
+Both Expected-utility theory and prospect theory
+posit that humans maximize some version of
+utility.
+They do so by combination of the values
+of two functions \autocite{rottenstreich2001money}.
+A value function $v$ transforms objective value to
+subjective utility, and a weighting function $w$
+distorts probabilities \autocite{rottenstreich2001money,
+gonzalez1999shape}. Expected-utility and
+prospect theory combine these two paramters in
+the simplest way possible
+\autocite{rottenstreich2001money}
+
+\[
+	\sum w(p_i)v(i),
+\]
+
+where $p$ stands for probability and $i$ stands for the
+$i^{th}$ gamble.
+
+Prospect Theory \autocite{PT,
 tversky1992advances} (PT) is arguably the main model
-of human decision making. It postulates a value
-function $v$ for transforming objective value to
-subjective utility, a probability weighting function $w$ to
-transform probability into a subjective weight, and
-an operation to combine these \autocite{
-gonzalez1999shape}. There is evidence to support
+of human decision making \autocite{
+newell2015straight}. It advances theorizing
+from expected-utility by postulating that losses and
+gains are evaluated as changes in wealth rather
+than in regard to end states \autocite{newell2015straight}.
+
+\vspace{3mm}
+
+In \textcite{PT} we find the familiar
+(non-linear) S-shaped
+value function $v$ which is concave for the gains
+domain and convex for losses (where it is steeper as well).
+The weight function $w$ is the identity,
+$w(p) = p$ in expected-utility theory
+\autocite{rottenstreich2001money} whereas
+a non-linear probability distortion is proposed in
+prospect theory \autocite{PT}. Here $w$
+is stylized as being reverse S-shaped,
+meaning that it is concave for low probabilities
+and convex for high probabilities \textcite{
+gonzalez1999shape}. This means that
+people underweight changes in probability in
+the middle of the spectrum (e.g. $[0.2-0.8]$)
+while overweighting changes in probability close
+to the end-points (e.g. $[0.0 - 0.2], [0.8 - 1.0]$).
+These general characteristics of the weighting
+function are empirically well documented
+\autocite{tversky1992advances,
+wu1996curvature}.
+
+\subsection{Prior work}
+
+There is evidence to support
 the notion that the affect of outcomes modulates
-the parameters of $w$ \autocite{
-rottenstreich2001money,
-hsee2004music} but a thorough investigation
+the parameters of both $v$
+\autocite{hsee2004music} and $w$ \autocite{
+rottenstreich2001money}. A main finding is
+that the S-shape of the weighting function
+$w$ appears to be more pronounced
+for high-affect than low-affect outcomes under
+uncertainty \autocite{rottenstreich2001money}.
+This was shown as a preference reversal in
+which a high-affect outcome was preferred for
+low probability (1\%) whereas a low-affect
+outcome was preferred for high probability (100\%)
+\autocite{rottenstreich2001money}.
+The finding that affect appears to modulate
+both $v$ and $w$ has subsequently been
+modelled as an interaction between an
+affective system and a deliberative system \textcite{
+	mukherjee2010dual,
+mukherjee2011thinking}.
+
+\subsection{Focus and parameterization}
+
+In this article we focus exclusively on the
+weighting function $w$ while ignoring both
+the value function $v$ and the combination
+of the two functions. We also restrict ourselves
+to the gains domain.
+In \textcite{rottenstreich2001money} they
+propose that the affective modulation can
+be estimated as an affect paramter $a$
+in the form:
+
+\[
+	w(p) = \frac{p^{1-a}}
+	{p^{1-a}+(1-p)^{1-a}}
+.\]
+
+where $a \in [0, 1]$ and larger values indicate
+greater affect \autocite{rottenstreich2001money}.
+The issue with this one-parameter
+formulation is that it
+does not account for the fact that people
+generally show low \emph{eleveation}.
+What I mean by that is that the empirically
+observed weighting function $w$ typically
+crosses the diagonal line
+at around $0.3$ rather than $0.5$
+\autocite{gonzalez1999shape}. The one-parameter
+formulation fixes this point at $0.5$
+which can be seen from figure $1$.
+
+
+
+
+
+
+
+
+
+The article will
+follow much of the methodological strategy
+for estimating the parameters of $w$
+presented in \textcite{gonzalez1999shape}
+in order to validate the affective distortion
+hinted at in \textcite{rottenstreich2001money}.
+The weighting function $w$
+can be parameterized in different ways,
+notably with either one or two parameters.
+This article follows
+\textcite{gonzalez1999shape} by parameterizing
+$w$ with two parameters; $\delta$ and $\gamma$.
+
+\vspace{3mm}
+
+The $\delta$ parameter will vary based on
+\emph{elevation} (intercept)
+\autocite{gonzalez1999shape},
+which here simply refers to the overall
+perceived attractiveness of outcomes
+under uncertainty.
+
+\vspace{3mm}
+
+The $\gamma$ parameter will vary based on
+\emph{curvature} (slope)
+\autocite{gonzalez1999shape} and is what we
+are primarily interested in for our purposes.
+It follows as a direct prediction from
+\textcite{rottenstreich2001money} that the
+curvature ($\gamma$) should be modulated by changes in
+the affective level of outcomes.
+
+\vspace{3mm}
+
+The model is:
+
+\[
+	\log\frac{w(p)}{1-w(p)} =
+	\gamma \log\frac{p}{1-p} + \tau
+.\]
+
+where solving for $w(p)$ and setting $\delta = \exp(\tau)$
+gives us
+
+\[
+	w(p) = \frac{\delta \cdot p^{\gamma}}
+	{\delta \cdot p^{\gamma} +
+	(1-p)^{\gamma}}
+.\]
+
+The above equations are taken from \textcite{
+rottenstreich2001money}.
+
+\subsection{Methodology}
+
+
+
+but a thorough investigation
 of this effect is lacking. This study consits
 of two sub-studies. In the first study subjects
 will evaluate 10 items on a scale of affect.
