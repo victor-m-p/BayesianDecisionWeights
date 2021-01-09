@@ -130,7 +130,7 @@
       \field{pages}{23}
       \range{pages}{1}
     \endentry
-    \entry{kahneman2013prospect}{inbook}{}
+    \entry{PT}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=d0dcea81f8587e7d56bb5dbe34a39d6c}{%
            family={Kahneman},
@@ -145,9 +145,6 @@
            giveni={A\bibinitperiod},
            givenun=0}}%
       }
-      \list{publisher}{1}{%
-        {World Scientific}%
-      }
       \strng{namehash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
       \strng{fullhash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
       \strng{bibnamehash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
@@ -161,11 +158,121 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Handbook of the fundamentals of financial decision making: Part I}
-      \field{title}{Prospect theory: An analysis of decision under risk}
-      \field{year}{2013}
-      \field{pages}{99\bibrangedash 127}
+      \field{abstract}{No abstract is available for this item.}
+      \field{journaltitle}{Econometrica}
+      \field{month}{3}
+      \field{number}{2}
+      \field{title}{{Prospect Theory: An Analysis of Decision under Risk}}
+      \field{volume}{47}
+      \field{year}{1979}
+      \field{pages}{263\bibrangedash 291}
       \range{pages}{29}
+    \endentry
+    \entry{mukherjee2010dual}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fac22b40a232cc40bb5e2283aa846a96}{%
+           family={Mukherjee},
+           familyi={M\bibinitperiod},
+           given={Kanchan},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Psychological Association}%
+      }
+      \strng{namehash}{fac22b40a232cc40bb5e2283aa846a96}
+      \strng{fullhash}{fac22b40a232cc40bb5e2283aa846a96}
+      \strng{bibnamehash}{fac22b40a232cc40bb5e2283aa846a96}
+      \strng{authorbibnamehash}{fac22b40a232cc40bb5e2283aa846a96}
+      \strng{authornamehash}{fac22b40a232cc40bb5e2283aa846a96}
+      \strng{authorfullhash}{fac22b40a232cc40bb5e2283aa846a96}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychological review}
+      \field{number}{1}
+      \field{title}{A dual system model of preferences under risk.}
+      \field{volume}{117}
+      \field{year}{2010}
+      \field{pages}{243}
+      \range{pages}{1}
+    \endentry
+    \entry{mukherjee2011thinking}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fac22b40a232cc40bb5e2283aa846a96}{%
+           family={Mukherjee},
+           familyi={M\bibinitperiod},
+           given={Kanchan},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{fac22b40a232cc40bb5e2283aa846a96}
+      \strng{fullhash}{fac22b40a232cc40bb5e2283aa846a96}
+      \strng{bibnamehash}{fac22b40a232cc40bb5e2283aa846a96}
+      \strng{authorbibnamehash}{fac22b40a232cc40bb5e2283aa846a96}
+      \strng{authornamehash}{fac22b40a232cc40bb5e2283aa846a96}
+      \strng{authorfullhash}{fac22b40a232cc40bb5e2283aa846a96}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Behavioral Decision Making}
+      \field{number}{5}
+      \field{title}{Thinking styles and risky decision-making: Further exploration of the affect--probability weighting link}
+      \field{volume}{24}
+      \field{year}{2011}
+      \field{pages}{443\bibrangedash 455}
+      \range{pages}{13}
+    \endentry
+    \entry{newell2015straight}{book}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=b99db8107cae1482ca10f13bd306f361}{%
+           family={Newell},
+           familyi={N\bibinitperiod},
+           given={Ben\bibnamedelima R},
+           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e7217f2e21106cf2fb139fd36946da97}{%
+           family={Lagnado},
+           familyi={L\bibinitperiod},
+           given={David\bibnamedelima A},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=90af7950b1e39366bd9e471daf89e98b}{%
+           family={Shanks},
+           familyi={S\bibinitperiod},
+           given={David\bibnamedelima R},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Psychology Press}%
+      }
+      \strng{namehash}{d12591b53a3ab68f63a6179682048535}
+      \strng{fullhash}{9652b1339dda0f6e509e0d9660173cbc}
+      \strng{bibnamehash}{9652b1339dda0f6e509e0d9660173cbc}
+      \strng{authorbibnamehash}{9652b1339dda0f6e509e0d9660173cbc}
+      \strng{authornamehash}{d12591b53a3ab68f63a6179682048535}
+      \strng{authorfullhash}{9652b1339dda0f6e509e0d9660173cbc}
+      \field{sortinit}{N}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Straight choices: The psychology of decision making}
+      \field{year}{2015}
     \endentry
     \entry{rcore}{manual}{}
       \name{author}{1}{}{%
@@ -312,6 +419,45 @@
       \field{year}{1992}
       \field{pages}{297\bibrangedash 323}
       \range{pages}{27}
+    \endentry
+    \entry{wu1996curvature}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=bc34f63dffe91768896753e83b3a2c0a}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=16a790b9f1635d02ebe5fc48cdf9ae8d}{%
+           family={Gonzalez},
+           familyi={G\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {INFORMS}%
+      }
+      \strng{namehash}{6a4d7dc7ac24bae58342394d75733723}
+      \strng{fullhash}{6a4d7dc7ac24bae58342394d75733723}
+      \strng{bibnamehash}{6a4d7dc7ac24bae58342394d75733723}
+      \strng{authorbibnamehash}{6a4d7dc7ac24bae58342394d75733723}
+      \strng{authornamehash}{6a4d7dc7ac24bae58342394d75733723}
+      \strng{authorfullhash}{6a4d7dc7ac24bae58342394d75733723}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Management science}
+      \field{number}{12}
+      \field{title}{Curvature of the probability weighting function}
+      \field{volume}{42}
+      \field{year}{1996}
+      \field{pages}{1676\bibrangedash 1690}
+      \range{pages}{15}
     \endentry
   \enddatalist
 \endrefsection
