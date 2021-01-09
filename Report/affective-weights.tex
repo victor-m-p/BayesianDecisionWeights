@@ -29,9 +29,9 @@
 \section{Description}
 Both Expected-utility theory and prospect theory
 posit that humans maximize some version of
-utility.
-They do so by combination of the values
-of two functions \autocite{rottenstreich2001money}.
+utility. The theories get there by a
+combination of two functions
+\autocite{rottenstreich2001money}.
 A value function $v$ transforms objective value to
 subjective utility, and a weighting function $w$
 distorts probabilities \autocite{rottenstreich2001money,
@@ -120,11 +120,12 @@ in the form:
 .\]
 
 where $a \in [0, 1]$ and larger values indicate
-greater affect \autocite{rottenstreich2001money}.
+greater affect
+and more curvature \autocite{rottenstreich2001money}.
 The issue with this one-parameter
 formulation is that it
 does not account for the fact that people
-generally show low \emph{eleveation}.
+generally show low \emph{elevation}.
 What I mean by that is that the empirically
 observed weighting function $w$ typically
 crosses the diagonal line
@@ -141,7 +142,7 @@ which can be seen from figure $1$.
 		$a \in [0, 1]$. Diagonal line has
 		$a = 0$, and the horizontal line
 		has $a = 1$. Intermediate curves
-		are generated for increments of $0.2$
+		are generated for $0.2$ increments
 		of $a$. All values beside
 		$a = 0$ show a probability distortion
 		as compared to the objective probability.
@@ -181,7 +182,7 @@ and $\gamma$ parameters independently modulate
 different aspects of the weighting function $w$.
 
 \begin{figure}[h!]
-	\includegraphics[width = \linewidth]{../Figures/grid1.png}
+	\includegraphics[width = \linewidth]{../Figures/Fig2.png}
 	\caption{Data simulated from the model
 		$w(p) = \frac{\delta \cdot p^{\gamma}}
 	{\delta \cdot p^{\gamma} +
@@ -193,7 +194,8 @@ different aspects of the weighting function $w$.
 	and $\gamma$ varied between $0.2$ and $1.8$.
 	Shows that $\gamma$  controls
 	curvature and $\delta$ controls
-	elevation.
+	elevation. The identity function $w(p) = p$
+	is achieved for $\delta = 1, \gamma = 1$.
 	Note.. gamma low has the opposite interpretation
 	as compared to rottenstreich?}
 \end{figure}
@@ -222,6 +224,154 @@ The above equations are taken from \textcite{
 rottenstreich2001money}.
 
 \subsection{Methodology}
+
+Two studies are proposed to
+properly test the robustness
+of affect-level on the
+curvature ($\gamma$) of the
+weight function $w$.
+
+\vspace{3mm}
+
+In the first study, subjects will be asked to
+rate the affect-richness of 10 different
+items.
+All outcomes
+consist of coupons redeemable
+for various items, all worth $\$500$.
+The 10 items are designed to cover the
+full spectrum from affect-rich to
+affect-poor.
+
+\vspace{3mm}
+
+Example of expected high-affect item:\\
+"If you won a $\$500$ coupon redeemable
+for a vacation abroad how emotionally
+affected would you be?"
+
+\vspace{3mm}
+
+Example of expected low-affect item: \\
+"If you won a $\$500$ coupon redeemable
+for insurance covering how emotionally
+affected would you be?"
+
+\vspace{3mm}
+
+For the full list of items see Appendix $A$.
+Participants
+will indicate how affect-rich
+each outcome is with a slider. Participants will
+see "not affected at all" (left),
+"somewhat affected" (middle)
+and "very affected" (right).
+We will receive continuous ratings from $0$
+(affect poor) to $1$ (affect rich). A mean
+affect rating across participants for each
+item will rank them from least affective to
+most affective. Three items (gambles) are
+then selected: The least affective item,
+the most affective item and the item in
+between these two extremes which separate them
+best (follow up).
+
+\vspace{3mm}
+
+In the second study, subjects will be presented
+with the three items which have been validated
+for affect-richness in the prior study.
+In this study however, the formulation
+around the items is that of a gamble.
+The formulation is the same
+for all items: \\
+
+"You can buy a lottery ticket with an $[x]$
+percent chance of winning a $\$500$ coupon
+redeemable for $[y]$ with a $[1-x]$ percent
+chance of winning nothing. How much are you
+willing to pay for the lottery ticket?" \\
+
+The three selected items are inserted as $[y]$
+and $100$ different probability levels:
+$x = 0.01, 0.02, \ldots, 0.99$ will be
+inserted as $[x]$ and the negation $[1-x]$.
+With all
+possible combinations, this means that
+all participants will rate $3$ items
+at $100$ different levels of certainty each.
+As in experiment 1 participants will rate
+with a slider. This time ranging from
+$\$0$ to $\$500$ as it is neither logical
+to assign a value below $\$0$ or above
+$\$500$ to any of the gambles.
+The approach is somewhat
+different from \textcite{gonzalez1999shape}
+but ultimately we estimate the same thing that
+they do; participants' certainty equivalence (CE).
+This simply is the amount of money they think
+that the gamble is worth. \\
+
+Note that we are not directly measuring either
+$\delta$ or $\gamma$. What we do measure is the
+dependent variable $w(p)$ and the independent
+variable $p$ for items ranked based on their
+affect-richness. \\
+
+In order to infer the
+unmeasured paramters a bayesian (non)linear
+mixed effects model is proposed. The model
+is fitted in $R$ with the  $brms$ package.
+Here we can specify the previously
+mentioned formula:
+
+ \[
+	 w(p) \sim \frac{\exp({\tau})\cdot p^{\gamma}}
+	 {\exp({\tau})\cdot p^{\gamma}+(1-p)^{\gamma}}
+.\]
+
+We have to specify that the model should
+be nonlinear. We can further specify that we would like to
+estimate specifically the value for $\tau$
+and $\gamma$ with random intercepts (partial pooling)
+for participants (ID) and with item as a main
+effect. \\
+
+ \[
+	 \tau \sim 0 + item + (1|ID),
+\]
+\[
+	\gamma \sim 0 + item + (1|ID)
+.\]
+
+We can then convert $\tau$ to $\delta$
+by exponentiating the estimated value
+for $\tau$ for each item. For the analysis
+pipeline on simulated data, see Github. \\
+
+After fitting the model, posterior samples
+for the three items are generated. Based on
+these, $.66$ and $.95$ credibility intervals
+are calculated and the distributions for each
+paramter (for each item) as a group-level effect
+is visualized. \\
+
+\emph{Hypothesis:} A directional effect is
+expected for the population effect of the
+$\gamma$ parameter. It is expected that
+item 1 (lowest affect) will have the highest
+$\gamma$ value, and that item 3 (highest affect)
+will have the lowest $\gamma$ value, with
+item 2 falling in the middle. The paper
+does not propose to calculate significance
+or bayes factor, but simply hypothesizes that
+the $.95$ and $.66$ credibility intervals
+will only overlap in the expected direction
+(see plot).
+
+
+
+
 
 
 
