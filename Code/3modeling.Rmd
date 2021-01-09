@@ -17,16 +17,34 @@ read simulated data
 ```{r}
 
 df <- read_csv("sample_data.csv") %>%
-  select(-c(delta, gamma))
+  select(-c(delta, gamma)) %>%
+  filter(items == 1 | items == 2)
 
 ```
 
-set priors 
+get priors 
 
 ```{r}
 
-prior1 <- prior(normal(0.5, 0.5), nlpar = "gamma") +
-  prior(normal(0.5, 0.5), nlpar = "delta")
+(prior <- brms::get_prior(
+  brms::bf(w ~ (delta * (p ** gamma)) / 
+                      (delta * (p ** gamma) + (1-p)**gamma), 
+               gamma ~ 1 + items + (1|ID),
+               delta ~ 1,
+               nl = TRUE),
+  data = df, 
+  family = gaussian()))
+
+
+```
+
+
+set priors: 
+
+```{r}
+
+prior1 <- prior(normal(0.44, 0.2), nlpar = "gamma") +
+  prior(normal(0.77, 0.2), nlpar = "delta")
 
 ```
 
@@ -40,13 +58,13 @@ define model:
 
 randomMod <- brm(bf(w ~ (delta * (p ** gamma)) / 
                       (delta * (p **gamma) + (1-p)**gamma), 
-               gamma ~ 1 + items + (items|ID),
-               delta ~ 1 + items + (items|ID),
+               gamma ~ 1 + items + (1|ID),
+               delta ~ 1 + items + (1|ID),
                nl = TRUE),
             data = df, prior = prior1,
-            iter = 500,
+            iter = 2000,
             cores = ncores,
-            file = "itemSlope") 
+            file = "IDintercept") 
 
 ```
 

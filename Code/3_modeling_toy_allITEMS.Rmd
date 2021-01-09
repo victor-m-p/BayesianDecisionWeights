@@ -1,0 +1,121 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+
+packages 
+
+```{r}
+library(pacman)
+p_load(tidyverse, parallel, brms)
+ncores = detectCores()
+setwd("C:/Users/95/BayesianDecisionWeights/Code")
+```
+
+read simulated data 
+
+```{r}
+
+readeR <- function(name){
+  
+  df <- read_csv(name) %>%
+    rename(p = probability,
+         gammaT = gamma_true,
+         deltaT = delta_true,
+         gammaO = gamma_obs, 
+         deltaO = delta_obs, 
+         w = w_prob) %>%
+  mutate(ID = as_factor(ID),
+         item = as_factor(item))
+  
+}
+
+df <- readeR("../Data/exp2_sim_toy.csv")
+df2 <- readeR("../Data/exp2_sim_toyBIG.csv")
+
+```
+
+
+### for several ITEMS
+
+Still small dummy subset.
+Did not work..?
+
+```{r}
+
+df_allItem <- df %>%
+  select(c(ID, item, p, w)) 
+
+```
+
+
+```{r}
+(prior <- brms::get_prior(
+  brms::bf(w ~ (deltaO * (p ** gammaO)) / 
+                      (deltaO * (p ** gammaO) +
+                         (1-p)**gammaO), 
+               gammaO ~ 0 + Intercept + item,
+               deltaO ~ 0 + Intercept + item,
+               nl = TRUE),
+  data = df_allItem, 
+  family = gaussian()))
+
+```
+
+set priors: 
+https://sahirbhatnagar.com/bayesian-stan
+
+```{r}
+
+priors <- c(prior(normal(0.77, 0.3), 
+                class = "b",
+                coef = "Intercept",
+                nlpar = "deltaO"),
+            prior(normal(0.77, 0.3),
+                  class = "b",
+                  coef = "item2",
+                  nlpar = "deltaO"),
+            prior(normal(0.77, 0.3),
+                  class = "b",
+                  coef = "item3",
+                  nlpar = "deltaO"),
+            prior(normal(0.28, 0.3),
+                  class = "b",
+                  coef = "Intercept",
+                  nlpar = "gammaO"),
+            prior(normal(0.48, 0.3),
+                  class = "b",
+                  coef = "item2",
+                  nlpar = "gammaO"),
+            prior(normal(0.68, 0.3),
+                  class = "b",
+                  coef = "item3",
+                  nlpar = "gammaO"))
+
+```
+
+```{r}
+## with (1|ID) as it probably should..
+mod2 <- brms::brm(
+  bf(w ~ (deltaO * (p ** gammaO)) / 
+       (deltaO * (p **gammaO) +
+          (1-p)**gammaO),
+     gammaO ~ 0 + Intercept + item,
+     deltaO ~ 0 + Intercept + item,
+     nl = TRUE),
+  data = df_allItem, 
+  prior = priors,
+  chains = 6,
+  iter = 4000,
+  cores = 6,
+  control = list(adapt_delta = 1)) 
+
+```
+
+```{r}
+pp_check(mod2) 
+(res <- summary(mod2))
+plot(mod2)
+```
+

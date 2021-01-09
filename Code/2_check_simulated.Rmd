@@ -1,0 +1,36 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+Checking the sampled data
+
+```{r}
+df <- read_csv("../Data/exp2_sim_data.csv") %>%
+  rename(p = probability,
+         gammaT = gamma_true,
+         deltaT = delta_true,
+         gammaO = gamma_obs, 
+         deltaO = delta_obs, 
+         w = w_prob) %>%
+  mutate(ID = as_factor(ID),
+         item = as_factor(item))
+```
+
+
+
+```{r}
+ggplot(df, aes(x = item, y = gammaO)) +
+  geom_boxplot(aes(fill = item), 
+               alpha = 2/3, show.legend = F) +
+  scale_fill_manual(values = c("grey25", "blue2", "green")) +
+  xlab(NULL) +
+  ylim(0,1) +
+  facet_wrap(~as_factor(ID))
+```
+
+
+```{r}
+
+```
+

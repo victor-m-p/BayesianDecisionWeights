@@ -1,0 +1,102 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+packages 
+
+```{r}
+library(pacman)
+p_load(tidyverse, parallel, brms)
+ncores = detectCores()
+setwd("C:/Users/95/BayesianDecisionWeights/Code")
+```
+
+read simulated data 
+
+```{r}
+
+readeR <- function(name){
+  
+  df <- read_csv(name) %>%
+    rename(p = probability,
+         gammaT = gamma_true,
+         deltaT = delta_true,
+         gammaO = gamma_obs, 
+         deltaO = delta_obs, 
+         w = w_prob) %>%
+  mutate(ID = as_factor(ID),
+         item = as_factor(item))
+  
+}
+
+df <- readeR("../Data/exp2_sim_toy.csv")
+df2 <- readeR("../Data/exp2_sim_toyBIG.csv")
+
+```
+
+Still for 1 item (big dataset)
+and with random ID intercept. 
+
+```{r}
+df2 %>%
+  glimpse()
+
+df_p2 <- df2 %>% 
+  filter(item == 1,
+         w >= 0 & w <= 1) %>%
+  select(ID, item, p, w)
+
+```
+
+```{r}
+
+(prior <- brms::get_prior(
+  brms::bf(w ~ (deltaO * (p ** gammaO)) / 
+                      (deltaO * (p ** gammaO) +
+                         (1-p)**gammaO), 
+               gammaO ~ 1 + (1|ID),
+               deltaO ~ 1 + (1|ID),
+               nl = TRUE),
+  data = df_p2, 
+  family = gaussian()))
+
+```
+
+not really sure that this is correct..
+
+```{r}
+
+priors = c(prior(normal(0.7, 1), nlpar = "deltaO"),
+           prior(normal(0.4, 1), nlpar = "gammaO"))
+
+```
+
+trying to run this bad boy. 
+
+```{r}
+
+mod2 <- brms::brm(
+  bf(w ~ (deltaO * (p ** gammaO)) / 
+       (deltaO * (p **gammaO) +
+          (1-p)**gammaO),
+     gammaO ~ 1 + (1|ID),
+     deltaO ~ 1 + (1|ID),
+     nl = TRUE),
+  data = df_p2, 
+  prior = priors,
+  chains = 2,
+  iter = 4000,
+  cores = 6,
+  control = list(adapt_delta = 0.9)) 
+
+```
+
+```{r}
+
+```
+
+
+```{r}
+se
+```

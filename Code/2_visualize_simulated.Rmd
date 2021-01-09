@@ -1,0 +1,47 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+
+```{r}
+library(pacman)
+p_load(tidyverse, brms, parallel, bayesplot)
+setwd("C:/Users/95/BayesianDecisionWeights/Code")
+
+```
+
+```{r}
+dfW <- read_csv("../Data/exp2_sim_data.csv")
+```
+
+visualize the main data.
+
+```{r}
+
+ggplot(dfW, aes(x = probability, y = w_prob,
+                color = as_factor(gamma_true))) +
+  geom_point() +
+  geom_smooth() +
+  geom_abline(intercept = 0, slope = 1) +
+  labs(color = "gamma value", x = "p", y = "w(p)") +
+  xlim(0, 1) +
+  ylim(0, 1) 
+
+```
+
+visualize the toy model
+
+```{r}
+dfW <- read_csv("../Data/exp2_sim_toy.csv")
+ggplot(dfW, aes(x = probability, y = w_prob,
+                color = as_factor(gamma_true))) +
+  geom_point() +
+  geom_smooth() +
+  geom_abline(intercept = 0, slope = 1) +
+  labs(color = "gamma value", x = "p", y = "w(p)") +
+  xlim(0, 1) +
+  ylim(0, 1) 
+
+```
+

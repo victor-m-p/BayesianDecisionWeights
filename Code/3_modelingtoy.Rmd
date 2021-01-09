@@ -1,0 +1,161 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+Inspiration:
+https://sahirbhatnagar.com/bayesian-stan
+https://tysonbarrett.com/jekyll/update/2019/07/21/BayesianSims/
+
+packages 
+
+```{r}
+library(pacman)
+p_load(tidyverse, parallel, brms)
+ncores = detectCores()
+setwd("C:/Users/95/BayesianDecisionWeights/Code")
+```
+
+read simulated data 
+
+```{r}
+
+readeR <- function(name){
+  
+  df <- read_csv(name) %>%
+    rename(p = probability,
+         gammaT = gamma_true,
+         deltaT = delta_true,
+         gammaO = gamma_obs, 
+         deltaO = delta_obs, 
+         w = w_prob) %>%
+  mutate(ID = as_factor(ID),
+         item = as_factor(item))
+  
+}
+
+df <- readeR("../Data/exp2_sim_toy.csv")
+df2 <- readeR("../Data/exp2_sim_toyBIG.csv")
+
+```
+
+Try to fit it to just ONE item 
+without random ID for the small model.
+
+```{r}
+
+df_item1 <- df %>%
+  filter(item == 1,
+         w >= 0 & w <= 1) %>%
+  select(c(ID, p, w)) 
+  
+```
+
+```{r}
+
+(prior <- brms::get_prior(
+  brms::bf(w ~ (deltaO * (p ** gammaO)) / 
+                      (deltaO * (p ** gammaO) +
+                         (1-p)**gammaO), 
+               gammaO ~ 1 + (1|ID),
+               deltaO ~ 1 + (1|ID),
+               nl = TRUE),
+  data = df_item1, 
+  family = gaussian()))
+
+```
+
+function for running models 
+
+```{r}
+
+brmsFun <- function(brm_prior, brm_df, item_nr,
+                    filename, iter){
+  
+  brm_df <- brm_df %>%
+  filter(item == {{item_nr}},
+         w >= 0 & w <= 1) %>%
+  select(c(ID, p, w)) 
+  
+  ## needs to be exp. & then we transfer back to log. 
+  mod <- brms::brm(
+  bf(w ~ (exp(logdeltaO) * (p ** gammaO)) / 
+       (exp(logdeltaO) * (p **gammaO) +
+          (1-p)**gammaO),
+     gammaO ~ 1 + (1|ID),
+     logdeltaO ~ 1 + (1|ID),
+     nl = TRUE),
+  data = brm_df, 
+  prior = brm_prior,
+  chains = 6,
+  iter = iter,
+  cores = 4,
+  control = list(adapt_delta = 0.9),
+  file = filename) 
+  
+}
+
+```
+
+specifying priors.
+
+```{r}
+
+prior1 <- c(prior(normal(0, 2), 
+                  nlpar = "logdeltaO"),
+            prior(normal(0.3, 1), 
+                  nlpar = "gammaO"))
+
+prior2 <- c(prior(normal(0, 2), 
+                  nlpar = "logdeltaO"),
+            prior(normal(0.3, 1), 
+                  nlpar = "gammaO"))
+
+prior3 <- c(prior(normal(0, 2), 
+                  nlpar = "logdeltaO"),
+            prior(normal(0.3, 1), 
+                  nlpar = "gammaO"))
+
+```
+
+```{r}
+## for priors, see below: 
+## (more than half an hour). 
+mod1 <- brmsFun(brm_prior = prior1, 
+                brm_df = df,
+                item_nr = 1,
+                filename = "../Data/m_item1_logID",
+                iter = 4000)
+
+mod2 <- brmsFun(brm_prior = prior2, 
+                brm_df = df,
+                item_nr = 2,
+                filename = "../Data/m_item2_logID",
+                iter = 4000)
+
+mod3 <- brmsFun(brm_prior = prior3, 
+                brm_df = df,
+                item_nr = 3,
+                filename = "../Data/m_item3_logID",
+                iter = 4000)
+
+```
+
+Checking the models 
+
+```{r}
+
+pp_check(mod1) #pretty good fit. 
+(res1 <- summary(mod1))
+
+
+pp_check(mod2)
+pp_check(mod3)
+
+## all very bad.. 
+(res1 <- summary(mod1))
+(res2 <- summary(mod2))
+(res3 <- summary(mod3)) #gamma close. 
+
+plot(mod1)
+```
