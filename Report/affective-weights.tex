@@ -133,26 +133,29 @@ at around $0.3$ rather than $0.5$
 formulation fixes this point at $0.5$
 which can be seen from figure $1$.
 
+\begin{figure}[h!]
+	\includegraphics[width = \linewidth]{../Figures/oneParam.png}
+	\caption{Data simulated from the model
+		$w(p) = \frac{p^{1-a}}
+		{p^{1-a}+(1-p)^{1-a}}$ with
+		$a \in [0, 1]$. Diagonal line has
+		$a = 0$, and the horizontal line
+		has $a = 1$. Intermediate curves
+		are generated for increments of $0.2$
+		of $a$. All values beside
+		$a = 0$ show a probability distortion
+		as compared to the objective probability.
+		Note that all curves meet at
+		$w(p) = 0.5, p = 0.5$. This is
+	not empirically supported.}
+\end{figure}
 
-
-
-
-
-
-
-
-The article will
-follow much of the methodological strategy
-for estimating the parameters of $w$
-presented in \textcite{gonzalez1999shape}
-in order to validate the affective distortion
-hinted at in \textcite{rottenstreich2001money}.
-The weighting function $w$
-can be parameterized in different ways,
-notably with either one or two parameters.
-This article follows
-\textcite{gonzalez1999shape} by parameterizing
-$w$ with two parameters; $\delta$ and $\gamma$.
+Instead of using the parameterization
+proposed in \textcite{rottenstreich2001money}
+this paper will use the parameterization
+of $w$ proposed in \textcite{gonzalez1999shape}.
+They parameterize $w$ with two parametrs;
+$\delta$ and $\gamma$.
 
 \vspace{3mm}
 
@@ -172,7 +175,30 @@ are primarily interested in for our purposes.
 It follows as a direct prediction from
 \textcite{rottenstreich2001money} that the
 curvature ($\gamma$) should be modulated by changes in
-the affective level of outcomes.
+the affective level of outcomes. See
+figure 2 for an illustration of how the $\delta$
+and $\gamma$ parameters independently modulate
+different aspects of the weighting function $w$.
+
+\begin{figure}[h!]
+	\includegraphics[width = \linewidth]{../Figures/grid1.png}
+	\caption{Data simulated from the model
+		$w(p) = \frac{\delta \cdot p^{\gamma}}
+	{\delta \cdot p^{\gamma} +
+	(1-p)^{\gamma}}$ similarly to figure 4
+	of \textcite{gonzalez1999shape}.
+	On the left: $\gamma$ fixed at $0.6$
+	and $\delta$ varied between $0.2$ and $1.8$.
+	On the right: $\delta$ fixed at $0.6$
+	and $\gamma$ varied between $0.2$ and $1.8$.
+	Shows that $\gamma$  controls
+	curvature and $\delta$ controls
+	elevation.
+	Note.. gamma low has the opposite interpretation
+	as compared to rottenstreich?}
+\end{figure}
+
+
 
 \vspace{3mm}
 
