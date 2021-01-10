@@ -246,6 +246,57 @@
       \field{pages}{263\bibrangedash 291}
       \range{pages}{29}
     \endentry
+    \entry{loewenstein2001risk}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=eee824474e847c4fa3e1ffd200268181}{%
+           family={Loewenstein},
+           familyi={L\bibinitperiod},
+           given={George\bibnamedelima F},
+           giveni={G\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=86c96845d5fadba6351f48d53834d9b4}{%
+           family={Weber},
+           familyi={W\bibinitperiod},
+           given={Elke\bibnamedelima U},
+           giveni={E\bibinitperiod\bibinitdelim U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e8c2833e35b0418f6acab1c9a9bd672}{%
+           family={Hsee},
+           familyi={H\bibinitperiod},
+           given={Christopher\bibnamedelima K},
+           giveni={C\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5a08b7a302d6a3d1a35d625ab7ad39b3}{%
+           family={Welch},
+           familyi={W\bibinitperiod},
+           given={Ned},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Psychological Association}%
+      }
+      \strng{namehash}{0689b8186974f40e0fd43ac1d38956fc}
+      \strng{fullhash}{342d2ce6eef9be11280076ac844eaafe}
+      \strng{bibnamehash}{342d2ce6eef9be11280076ac844eaafe}
+      \strng{authorbibnamehash}{342d2ce6eef9be11280076ac844eaafe}
+      \strng{authornamehash}{0689b8186974f40e0fd43ac1d38956fc}
+      \strng{authorfullhash}{342d2ce6eef9be11280076ac844eaafe}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychological bulletin}
+      \field{number}{2}
+      \field{title}{Risk as feelings.}
+      \field{volume}{127}
+      \field{year}{2001}
+      \field{pages}{267}
+      \range{pages}{1}
+    \endentry
     \entry{mukherjee2010dual}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=fac22b40a232cc40bb5e2283aa846a96}{%
@@ -538,7 +589,6 @@
       \range{pages}{15}
     \endentry
   \enddatalist
-  \missing{rottenstreich2001}
 \endrefsection
 \endinput
 
