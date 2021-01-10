@@ -19,8 +19,12 @@ df <- tibble(c1 = rnorm(30, m = 0.2, sd = 0.4),
              c3 = rnorm(30, m = 0.8, sd = 0.4))
 
 ## t-test data 
-t.test(c1, c2)
-t.test(c2, c3)
+t.test(df$c2, df$c1, 
+       paired = TRUE, 
+       alternative = "greater")
+t.test(df$c3, df$c2,
+       paired = TRUE,
+       alternative = "greater")
 
 ## melt data
 df_melt <- melt(df)
