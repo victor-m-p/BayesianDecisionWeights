@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.11.11)  10 JAN 2021 14:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.11.11)  10 JAN 2021 16:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -31,16 +31,36 @@ File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \WF@everypar=\toks15
 Package: wrapfig 2003/01/31  v 3.6
 )
+(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/05/10 v3.4j Customizing captions (AR)
+
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/05/10 v1.11 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+\captionmargin=\dimen137
+\captionmargin@=\dimen138
+\captionwidth=\dimen139
+\caption@tempdima=\dimen140
+\caption@indent=\dimen141
+\caption@parindent=\dimen142
+\caption@hangindent=\dimen143
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count176
+\c@continuedfloat=\count177
+Package caption Info: wrapfig package is loaded.
+)
 (/usr/share/texmf-dist/tex/latex/tex-gyre/tgtermes.sty
 Package: tgtermes 2009/09/27 v1.2 TeX Gyre Termes as default roman family
 
 (/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 
-(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks16
-)
 (/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
 )
@@ -64,46 +84,46 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
-\ex@=\dimen137
+\ex@=\dimen144
 ))
 (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen138
+\pmbraise@=\dimen145
 )
 (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count176
+\inf@bad=\count178
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count177
-\leftroot@=\count178
+\uproot@=\count179
+\leftroot@=\count180
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count179
-\DOTSCASE@=\count180
+\classnum@=\count181
+\DOTSCASE@=\count182
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
 \Mathstrutbox@=\box46
 \strutbox@=\box47
-\big@size=\dimen139
+\big@size=\dimen146
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count181
-\c@MaxMatrixCols=\count182
+\macc@depth=\count183
+\c@MaxMatrixCols=\count184
 \dotsspace@=\muskip16
-\c@parentequation=\count183
-\dspbrk@lvl=\count184
+\c@parentequation=\count185
+\dspbrk@lvl=\count186
 \tag@help=\toks18
-\row@=\count185
-\column@=\count186
-\maxfields@=\count187
+\row@=\count187
+\column@=\count188
+\maxfields@=\count189
 \andhelp@=\toks19
-\eqnshift@=\dimen140
-\alignsep@=\dimen141
-\tagshift@=\dimen142
-\tagwidth@=\dimen143
-\totwidth@=\dimen144
-\lineht@=\dimen145
+\eqnshift@=\dimen147
+\alignsep@=\dimen148
+\tagshift@=\dimen149
+\tagwidth@=\dimen150
+\totwidth@=\dimen151
+\lineht@=\dimen152
 \@envbody=\toks20
 \multlinegap=\skip50
 \multlinetaggap=\skip51
@@ -111,8 +131,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
 )
-LaTeX Font Info:    Trying to load font information for OT1+qtm on input line 9
-.
+LaTeX Font Info:    Trying to load font information for OT1+qtm on input line 1
+1.
 
 (/usr/share/texmf-dist/tex/latex/tex-gyre/ot1qtm.fd
 File: ot1qtm.fd 2009/09/25 v1.2 font definition file for OT1/qtm
@@ -134,12 +154,12 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen146
-\Gin@req@width=\dimen147
+\Gin@req@height=\dimen153
+\Gin@req@width=\dimen154
 )
 (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count188
+\c@float@type=\count190
 \float@exts=\toks22
 \float@box=\box48
 \@float@everytoks=\toks23
@@ -169,11 +189,11 @@ Package pdftexcmds Info: \pdfdraftmode found.
 )
 (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count189
+\etb@tempcnta=\count191
 )
 (/usr/share/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count190
+\lrq@indent=\count192
 
 (/usr/share/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -185,47 +205,47 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count191
-\c@listtotal=\count192
-\c@listcount=\count193
-\c@liststart=\count194
-\c@liststop=\count195
-\c@citecount=\count196
-\c@citetotal=\count197
-\c@multicitecount=\count198
-\c@multicitetotal=\count199
-\c@instcount=\count266
-\c@maxnames=\count267
-\c@minnames=\count268
-\c@maxitems=\count269
-\c@minitems=\count270
-\c@citecounter=\count271
-\c@maxcitecounter=\count272
-\c@savedcitecounter=\count273
-\c@uniquelist=\count274
-\c@uniquename=\count275
-\c@refsection=\count276
-\c@refsegment=\count277
-\c@maxextratitle=\count278
-\c@maxextratitleyear=\count279
-\c@maxextraname=\count280
-\c@maxextradate=\count281
-\c@maxextraalpha=\count282
-\c@abbrvpenalty=\count283
-\c@highnamepenalty=\count284
-\c@lownamepenalty=\count285
-\c@maxparens=\count286
-\c@parenlevel=\count287
-\blx@tempcnta=\count288
-\blx@tempcntb=\count289
-\blx@tempcntc=\count290
-\blx@maxsection=\count291
-\blx@maxsegment@0=\count292
-\blx@notetype=\count293
-\blx@parenlevel@text=\count294
-\blx@parenlevel@foot=\count295
-\blx@sectionciteorder@0=\count296
-\blx@entrysetcounter=\count297
+\c@tabx@nest=\count193
+\c@listtotal=\count194
+\c@listcount=\count195
+\c@liststart=\count196
+\c@liststop=\count197
+\c@citecount=\count198
+\c@citetotal=\count199
+\c@multicitecount=\count266
+\c@multicitetotal=\count267
+\c@instcount=\count268
+\c@maxnames=\count269
+\c@minnames=\count270
+\c@maxitems=\count271
+\c@minitems=\count272
+\c@citecounter=\count273
+\c@maxcitecounter=\count274
+\c@savedcitecounter=\count275
+\c@uniquelist=\count276
+\c@uniquename=\count277
+\c@refsection=\count278
+\c@refsegment=\count279
+\c@maxextratitle=\count280
+\c@maxextratitleyear=\count281
+\c@maxextraname=\count282
+\c@maxextradate=\count283
+\c@maxextraalpha=\count284
+\c@abbrvpenalty=\count285
+\c@highnamepenalty=\count286
+\c@lownamepenalty=\count287
+\c@maxparens=\count288
+\c@parenlevel=\count289
+\blx@tempcnta=\count290
+\blx@tempcntb=\count291
+\blx@tempcntc=\count292
+\blx@maxsection=\count293
+\blx@maxsegment@0=\count294
+\blx@notetype=\count295
+\blx@parenlevel@text=\count296
+\blx@parenlevel@foot=\count297
+\blx@sectionciteorder@0=\count298
+\blx@entrysetcounter=\count299
 \labelnumberwidth=\skip52
 \labelalphawidth=\skip53
 \biblabelsep=\skip54
@@ -237,9 +257,9 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \blx@bcfin=\read2
 \blx@bcfout=\write3
 \blx@langwohyphens=\language86
-\c@mincomprange=\count298
-\c@maxcomprange=\count299
-\c@mincompwidth=\count300
+\c@mincomprange=\count300
+\c@maxcomprange=\count301
+\c@mincompwidth=\count302
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -254,86 +274,86 @@ File: apa.dbx 2020/05/30 v9.13 APA biblatex style data model
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count301
-\c@savedafterword=\count302
-\c@annotator=\count303
-\c@savedannotator=\count304
-\c@author=\count305
-\c@savedauthor=\count306
-\c@bookauthor=\count307
-\c@savedbookauthor=\count308
-\c@commentator=\count309
-\c@savedcommentator=\count310
-\c@editor=\count311
-\c@savededitor=\count312
-\c@editora=\count313
-\c@savededitora=\count314
-\c@editorb=\count315
-\c@savededitorb=\count316
-\c@editorc=\count317
-\c@savededitorc=\count318
-\c@foreword=\count319
-\c@savedforeword=\count320
-\c@holder=\count321
-\c@savedholder=\count322
-\c@introduction=\count323
-\c@savedintroduction=\count324
-\c@namea=\count325
-\c@savednamea=\count326
-\c@nameb=\count327
-\c@savednameb=\count328
-\c@namec=\count329
-\c@savednamec=\count330
-\c@translator=\count331
-\c@savedtranslator=\count332
-\c@shortauthor=\count333
-\c@savedshortauthor=\count334
-\c@shorteditor=\count335
-\c@savedshorteditor=\count336
-\c@groupauthor=\count337
-\c@savedgroupauthor=\count338
-\c@narrator=\count339
-\c@savednarrator=\count340
-\c@execproducer=\count341
-\c@savedexecproducer=\count342
-\c@execdirector=\count343
-\c@savedexecdirector=\count344
-\c@with=\count345
-\c@savedwith=\count346
-\c@labelname=\count347
-\c@savedlabelname=\count348
-\c@institution=\count349
-\c@savedinstitution=\count350
-\c@lista=\count351
-\c@savedlista=\count352
-\c@listb=\count353
-\c@savedlistb=\count354
-\c@listc=\count355
-\c@savedlistc=\count356
-\c@listd=\count357
-\c@savedlistd=\count358
-\c@liste=\count359
-\c@savedliste=\count360
-\c@listf=\count361
-\c@savedlistf=\count362
-\c@location=\count363
-\c@savedlocation=\count364
-\c@organization=\count365
-\c@savedorganization=\count366
-\c@origlocation=\count367
-\c@savedoriglocation=\count368
-\c@origpublisher=\count369
-\c@savedorigpublisher=\count370
-\c@publisher=\count371
-\c@savedpublisher=\count372
-\c@language=\count373
-\c@savedlanguage=\count374
-\c@origlanguage=\count375
-\c@savedoriglanguage=\count376
-\c@citation=\count377
-\c@savedcitation=\count378
-\c@pageref=\count379
-\c@savedpageref=\count380
+\c@afterword=\count303
+\c@savedafterword=\count304
+\c@annotator=\count305
+\c@savedannotator=\count306
+\c@author=\count307
+\c@savedauthor=\count308
+\c@bookauthor=\count309
+\c@savedbookauthor=\count310
+\c@commentator=\count311
+\c@savedcommentator=\count312
+\c@editor=\count313
+\c@savededitor=\count314
+\c@editora=\count315
+\c@savededitora=\count316
+\c@editorb=\count317
+\c@savededitorb=\count318
+\c@editorc=\count319
+\c@savededitorc=\count320
+\c@foreword=\count321
+\c@savedforeword=\count322
+\c@holder=\count323
+\c@savedholder=\count324
+\c@introduction=\count325
+\c@savedintroduction=\count326
+\c@namea=\count327
+\c@savednamea=\count328
+\c@nameb=\count329
+\c@savednameb=\count330
+\c@namec=\count331
+\c@savednamec=\count332
+\c@translator=\count333
+\c@savedtranslator=\count334
+\c@shortauthor=\count335
+\c@savedshortauthor=\count336
+\c@shorteditor=\count337
+\c@savedshorteditor=\count338
+\c@groupauthor=\count339
+\c@savedgroupauthor=\count340
+\c@narrator=\count341
+\c@savednarrator=\count342
+\c@execproducer=\count343
+\c@savedexecproducer=\count344
+\c@execdirector=\count345
+\c@savedexecdirector=\count346
+\c@with=\count347
+\c@savedwith=\count348
+\c@labelname=\count349
+\c@savedlabelname=\count350
+\c@institution=\count351
+\c@savedinstitution=\count352
+\c@lista=\count353
+\c@savedlista=\count354
+\c@listb=\count355
+\c@savedlistb=\count356
+\c@listc=\count357
+\c@savedlistc=\count358
+\c@listd=\count359
+\c@savedlistd=\count360
+\c@liste=\count361
+\c@savedliste=\count362
+\c@listf=\count363
+\c@savedlistf=\count364
+\c@location=\count365
+\c@savedlocation=\count366
+\c@organization=\count367
+\c@savedorganization=\count368
+\c@origlocation=\count369
+\c@savedoriglocation=\count370
+\c@origpublisher=\count371
+\c@savedorigpublisher=\count372
+\c@publisher=\count373
+\c@savedpublisher=\count374
+\c@language=\count375
+\c@savedlanguage=\count376
+\c@origlanguage=\count377
+\c@savedoriglanguage=\count378
+\c@citation=\count379
+\c@savedcitation=\count380
+\c@pageref=\count381
+\c@savedpageref=\count382
 \shorthandwidth=\skip60
 \shortjournalwidth=\skip61
 \shortserieswidth=\skip62
@@ -359,19 +379,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/share/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
-\c@textcitecount=\count381
-\c@textcitetotal=\count382
-\c@textcitemaxnames=\count383
-\c@biburlbigbreakpenalty=\count384
-\c@biburlbreakpenalty=\count385
-\c@biburlnumpenalty=\count386
-\c@biburlucpenalty=\count387
-\c@biburllcpenalty=\count388
+\c@textcitecount=\count383
+\c@textcitetotal=\count384
+\c@textcitemaxnames=\count385
+\c@biburlbigbreakpenalty=\count386
+\c@biburlbreakpenalty=\count387
+\c@biburlnumpenalty=\count388
+\c@biburlucpenalty=\count389
+\c@biburllcpenalty=\count390
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count389
+\c@smartand=\count391
 )
 Package biblatex Info: Trying to load bibliography style 'apa'...
 Package biblatex Info: ... file 'apa.bbx' found.
@@ -383,8 +403,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/share/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count390
-\c@bbx:relatedtotal=\count391
+\c@bbx:relatedcount=\count392
+\c@bbx:relatedtotal=\count393
 ))
 Package biblatex Info: Trying to load citation style 'apa'...
 Package biblatex Info: ... file 'apa.cbx' found.
@@ -432,53 +452,56 @@ s
 \f@nch@O@olf=\skip81
 \f@nch@O@orf=\skip82
 )
-\@quotelevel=\count392
-\@quotereset=\count393
+\@quotelevel=\count394
+\@quotereset=\count395
 
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-06-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count394
+\l__kernel_color_stack_int=\count396
 \l__pdf_internal_box=\box50
 )
 (/home/victormp/BayesianDecisionWeights/Report/affective-weights.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Info: Redefining \celsius on input line 26.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Info: Redefining \celsius on input line 28.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 28.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 26.
-Package gensymb Info: Using \Omega for \ohm on input line 26.
+LaTeX Info: Redefining \ohm on input line 28.
+Package gensymb Info: Using \Omega for \ohm on input line 28.
 
 Package gensymb Warning: Not defining \micro.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count395
-\scratchdimen=\dimen148
+\scratchcounter=\count397
+\scratchdimen=\dimen155
 \scratchbox=\box51
-\nofMPsegments=\count396
-\nofMParguments=\count397
+\nofMPsegments=\count398
+\nofMParguments=\count399
 \everyMPshowfont=\toks26
-\MPscratchCnt=\count398
-\MPscratchDim=\dimen149
-\MPnumerator=\count399
-\makeMPintoPDFobject=\count400
+\MPscratchCnt=\count400
+\MPscratchDim=\dimen156
+\MPnumerator=\count401
+\makeMPintoPDFobject=\count402
 \everyMPtoPDFconversion=\toks27
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -523,11 +546,31 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'affective-weights.bbl' found.
 
 (/home/victormp/BayesianDecisionWeights/Report/affective-weights.bbl)
-Package biblatex Info: Reference section=0 on input line 26.
-Package biblatex Info: Reference segment=0 on input line 26.
- [1
+Package biblatex Info: Reference section=0 on input line 28.
+Package biblatex Info: Reference segment=0 on input line 28.
+
+Overfull \hbox (87.02995pt too wide) in paragraph at lines 34--36
+\OT1/qtm/m/n/12 Code for Sim-u-la-tion & Fig-ures avail-able at: https://github
+.com/victor-m-p/BayesianDecisionWeights 
+ []
+
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 57--66
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--74
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--94
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
 Make it at least 14.49998pt.
@@ -535,183 +578,174 @@ We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
 [2]
-<../Figures/oneParam.png, id=16, 505.89pt x 505.89pt>
+Underfull \hbox (badness 10000) in paragraph at lines 113--118
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--137
+
+ []
+
+[3] [4]
+<../Figures/oneParam.png, id=25, 505.89pt x 505.89pt>
 File: ../Figures/oneParam.png Graphic file (type png)
 <use ../Figures/oneParam.png>
-Package pdftex.def Info: ../Figures/oneParam.png  used on input line 139.
+Package pdftex.def Info: ../Figures/oneParam.png  used on input line 194.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3] [4 </home/victormp/BayesianDecisionWeights/Report/../Figures/oneParam.png>]
-
-Underfull \hbox (badness 10000) in paragraph at lines 173--181
+ [5] [6 </home/victormp/BayesianDecisionWeights/Report/../Figures/oneParam.png>
+]
+Underfull \hbox (badness 10000) in paragraph at lines 228--236
 
  []
 
-<../Figures/Fig2.png, id=30, 549.85425pt x 270.41025pt>
+<../Figures/Fig2.png, id=38, 549.85425pt x 270.41025pt>
 File: ../Figures/Fig2.png Graphic file (type png)
 <use ../Figures/Fig2.png>
-Package pdftex.def Info: ../Figures/Fig2.png  used on input line 193.
+Package pdftex.def Info: ../Figures/Fig2.png  used on input line 249.
 (pdftex.def)             Requested size: 390.0pt x 191.79868pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[5] [6 <../Figures/Fig2.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 290--297
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 298--303
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 304--323
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 324--329
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 342--348
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 356--360
+[7] [8 <../Figures/Fig2.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 345--355
 
  []
 
 [9]
-<../Figures/ourHyp.png, id=49, 505.89pt x 505.89pt>
-File: ../Figures/ourHyp.png Graphic file (type png)
-<use ../Figures/ourHyp.png>
-Package pdftex.def Info: ../Figures/ourHyp.png  used on input line 423.
-(pdftex.def)             Requested size: 390.0pt x 390.00737pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[10] [11 </home/victormp/BayesianDecisionWeights/Report/../Figures/ourHyp.png>]
-
-Underfull \hbox (badness 10000) in paragraph at lines 456--467
+Underfull \hbox (badness 10000) in paragraph at lines 356--361
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 468--472
+Underfull \hbox (badness 10000) in paragraph at lines 362--382
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--388
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 426--429
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 469--484
 
  []
 
 [12]
-<../Figures/simulated.png, id=60, 517.935pt x 251.9814pt>
+<../Figures/ourHyp.png, id=60, 505.89pt x 505.89pt>
+File: ../Figures/ourHyp.png Graphic file (type png)
+<use ../Figures/ourHyp.png>
+Package pdftex.def Info: ../Figures/ourHyp.png  used on input line 500.
+(pdftex.def)             Requested size: 390.0pt x 390.00737pt.
+ [13] [14 </home/victormp/BayesianDecisionWeights/Report/../Figures/ourHyp.png>
+]
+Underfull \hbox (badness 10000) in paragraph at lines 536--548
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 549--554
+
+ []
+
+[15]
+<../Figures/simulated.png, id=72, 517.935pt x 251.9814pt>
 File: ../Figures/simulated.png Graphic file (type png)
 <use ../Figures/simulated.png>
-Package pdftex.def Info: ../Figures/simulated.png  used on input line 530.
+Package pdftex.def Info: ../Figures/simulated.png  used on input line 611.
 (pdftex.def)             Requested size: 390.0pt x 189.74687pt.
+ [16]
+Underfull \hbox (badness 10000) in paragraph at lines 639--644
 
+ []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<../Figures/gamma.png, id=61, 517.935pt x 251.9814pt>
+<../Figures/gamma.png, id=76, 517.935pt x 251.9814pt>
 File: ../Figures/gamma.png Graphic file (type png)
 <use ../Figures/gamma.png>
-Package pdftex.def Info: ../Figures/gamma.png  used on input line 552.
+Package pdftex.def Info: ../Figures/gamma.png  used on input line 646.
 (pdftex.def)             Requested size: 390.0pt x 189.74687pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 577--581
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 582--583
-
- []
-
-[14 </home/victormp/BayesianDecisionWeights/Report/../Figures/simulated.png (PN
-G copy)>] [15 </home/victormp/BayesianDecisionWeights/Report/../Figures/gamma.p
+[17 </home/victormp/BayesianDecisionWeights/Report/../Figures/simulated.png (PN
+G copy)>] [18 </home/victormp/BayesianDecisionWeights/Report/../Figures/gamma.p
 ng>]
-Underfull \hbox (badness 10000) in paragraph at lines 626--627
-
- []
-
-
-Overfull \hbox (125.79701pt too wide) in paragraph at lines 628--633
-[]\OT1/qtm/m/it/12 Study 2\OT1/qtm/m/n/12 : Lev-els of un-cer-tainty are ma-nip
--u-lated, and are given as $\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 
-01\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 05\OML/
-cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 15\OML/cmm/m/i
-t/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 3\OML/cmm/m/it/12 ; \
-OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 5\OML/cmm/m/it/12 ; \OT1/cmr/
-m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 7\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0
-\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 85\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cm
-m/m/it/12 :\OT1/cmr/m/n/12 95\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/
-12 :\OT1/cmr/m/n/12 99$\OT1/qtm/m/n/12 .
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 656--659
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 660--662
-
- []
-
-[17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 680--682
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 683--685
+Underfull \hbox (badness 10000) in paragraph at lines 700--701
 
  []
 
 [19]
-LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 6
-88.
+Underfull \hbox (badness 10000) in paragraph at lines 735--736
+
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 776--780
+
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 809--815
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 816--818
+
+ []
+
+[22]
+Overfull \hbox (0.69377pt too wide) in paragraph at lines 833--833
+[][]\OT1/qtm/m/n/12 Charness, G., Gneezy, U., & Kuhn, M. A. (2012). Ex-per-i-me
+n-tal meth-ods: Between-
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 836--838
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 839--841
+
+ []
+
+[24]
+LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 8
+44.
  (/usr/share/texmf-dist/tex/latex/tex-gyre/ts1qtm.fd
 File: ts1qtm.fd 2009/09/25 v1.2 font definition file for TS1/qtm
-) [20]
+) [25]
 (/home/victormp/BayesianDecisionWeights/Report/affective-weights.aux)
 Package logreq Info: Writing requests to 'affective-weights.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 10452 strings out of 480478
- 188529 string characters out of 5905958
- 928071 words of memory out of 5000000
- 26363 multiletter control sequences out of 15000+600000
- 560029 words of font info for 50 fonts, out of 8000000 for 9000
+ 11606 strings out of 480478
+ 210036 string characters out of 5905958
+ 941281 words of memory out of 5000000
+ 27511 multiletter control sequences out of 15000+600000
+ 563992 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,16n,64p,869b,4731s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,16n,80p,869b,4731s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/share/texmf-d
 ist/fonts/enc/dvips/tex-gyre/q-rm.enc}</usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
-/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/typ
-e1/public/tex-gyre/qtmb.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/
-qtmr.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb>
+mmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><
+/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qtmb.pfb><
+/usr/share/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texmf-di
+st/fonts/type1/public/tex-gyre/qtmri.pfb>
 Output written on /home/victormp/BayesianDecisionWeights/Report/affective-weigh
-ts.pdf (20 pages, 626995 bytes).
+ts.pdf (25 pages, 657333 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
+ 160 PDF objects out of 1000 (max. 8388607)
+ 107 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
