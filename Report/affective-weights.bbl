@@ -19,6 +19,51 @@
 
 \refsection{0}
   \datalist[entry]{apa/global//global/global}
+    \entry{abdellaoui2010separating}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=509365155e8e0f6a7435c713e7a71a78}{%
+           family={Abdellaoui},
+           familyi={A\bibinitperiod},
+           given={Mohammed},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f5f0f68e0f3814e79e5f1a9fd88810f}{%
+           family={l’Haridon},
+           familyi={l\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=586f2065293b6ec54596115b9d4aea93}{%
+           family={Zank},
+           familyi={Z\bibinitperiod},
+           given={Horst},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{84bf9db4c31d251ddf06b9483834b26d}
+      \strng{fullhash}{a8bb6c62853903fbb23306bf951b6711}
+      \strng{bibnamehash}{a8bb6c62853903fbb23306bf951b6711}
+      \strng{authorbibnamehash}{a8bb6c62853903fbb23306bf951b6711}
+      \strng{authornamehash}{84bf9db4c31d251ddf06b9483834b26d}
+      \strng{authorfullhash}{a8bb6c62853903fbb23306bf951b6711}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Risk and Uncertainty}
+      \field{number}{1}
+      \field{title}{Separating curvature and elevation: A parametric probability weighting function}
+      \field{volume}{41}
+      \field{year}{2010}
+      \field{pages}{39\bibrangedash 65}
+      \range{pages}{27}
+    \endentry
     \entry{brms}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=ec69dfaa36b99b02d1d9a3733eae1d23}{%
@@ -589,6 +634,7 @@
       \range{pages}{15}
     \endentry
   \enddatalist
+  \missing{gonzalez1994abdellaoui2010separating}
 \endrefsection
 \endinput
 

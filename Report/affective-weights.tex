@@ -36,19 +36,19 @@ https://github.com/victor-m-p/BayesianDecisionWeights
 
 \section{Description}
 
-Both Expected-utility theory (EUT) and prospect theory
-(PT) posit that humans maximize some version of
-utility. For decisions under uncertainty
-(e.g. bets), the theories explain the valuation
-by combining two functions
+For decisions under uncertainty
+(e.g. bets), decision theories
+(e.g. Prospect Theory) can explain the
+value assigned to bets by combining two functions
 \autocite{rottenstreich2001money}.
 A value function $v$ transforms objective value to
 subjective utility, and a probability
 weighting function $w$
 distorts probabilities \autocite{rottenstreich2001money,
 gonzalez1999shape}.
-EUT and PT combine these
-two paramters in
+In prospect theory (PT)
+and expected-utility theory the two parameters
+are combined in
 the simplest way possible
 \autocite{rottenstreich2001money}
 
@@ -88,8 +88,10 @@ the weight function $w$,
 PT \autocite{
 	PT,
 tversky1992advances} advances theorizing,
-and better reflects empirical results (\textbf{cite}).
-It is arguably the main model of human decision making
+and better explains empirical results
+\autocite{abdellaoui2010separating,
+wu1996curvature} than EUT.
+PT is arguably the main model of human decision making
 \autocite{newell2015straight}.
 PT advances theorizing
 with regards to te value function $v$
@@ -102,7 +104,8 @@ behaviour. This is because both will
 evaluate outcomes based
 on a neutral reference point (i.e. not
 changing from the status quo)
-\autocite{newell2015straight}.
+\autocite{newell2015straight,
+abdellaoui2010separating}.
 This leads us to the familiar (non-linear) S-shaped
 value function $v$ proposed in PT \autocite{PT}.
 The value function $v$ is concave for the gains
@@ -130,11 +133,13 @@ $100\$$). This is the famous loss aversion. \\
 
 PT advances theorizing with regards to
 the weight function $w$
-by proposing a non-linear probability
-distortion \autocite{PT}. $w$ is stylized as
+by allowing a non-linear probability
+distortion \autocite{PT,
+gonzalez1999shape}. $w$ is stylized as
 being reverse S-shaped, meaning that it is
 concave for low probabilities and convex for
-high probabilities \autocite{gonzalez1999shape}.
+high probabilities \autocite{gonzalez1999shape,
+wu1996curvature}.
 This means that
 people underweight changes in probability in
 the middle of the spectrum (e.g. $[0.2-0.8]$)
@@ -143,7 +148,14 @@ to the end-points (e.g. $[0.0 - 0.2], [0.8 - 1.0]$).
 These general characteristics of the weighting
 function are empirically well documented
 \autocite{tversky1992advances,
-wu1996curvature}.
+wu1996curvature,
+abdellaoui2010separating}.
+Prospect theory (PT) also allows for potentially
+different weighting functions for gains $w^{+}$
+and lossos  $w^{-}$ \autocite{abdellaoui2010separating}.
+Generally, the probability weighting function $w$
+has received less attention than the value function
+$v$ \autocite{gonzalez1999shape}.
 
 \subsection{Prior work}
 
@@ -175,7 +187,11 @@ outcome was preferred for high probability (99\%).
 If this result is solid, it suggests
 that people distort probabilities
 more for high-affect as compared to low-affect
-outcomes. \\
+outcomes. It also violates the probability-
+outcome independence that both EUT and PT hold,
+and suggests that this independence might
+not hold for across outcomes which differ
+in affect \autocite{rottenstreich2001money}. \\
 
 For the gains domain, the value function $v$
 has been shown to be more
@@ -212,7 +228,12 @@ In this article we focus exclusively on the
 weighting function $w$ while ignoring both
 the value function $v$ and the combination
 of the two functions. We also restrict ourselves
-to the gains domain.
+to the gains domain. A weighting function
+is formally a mapping from the interval
+$[0, 1]$ into  $[0, 1]$ \autocite{abdellaoui2010separating}.
+The probability weight function can be
+empirically studied independently of
+the value function \autocite{wu1996curvature}.
 In \textcite{rottenstreich2001money} they
 suggest that future work (building on their
 stylized results) should estimate the affective
@@ -240,8 +261,10 @@ generally show low \emph{elevation}.
 What I mean by that is that the empirically
 observed weighting function $w$ typically
 crosses the diagonal line given by $w(p) = p$
-at around $0.3$ rather than $0.5$
-\autocite{gonzalez1999shape}. This can be
+at around $0.3-0.4$ rather than $0.5$
+\autocite{gonzalez1999shape,
+abdellaoui2010separating,
+wu1996curvature}. This can be
 interpreted as people generally being
 pessimistic (i.e. $50\%$ probability is
 evaluated as being worth less than  $50\%$
@@ -274,7 +297,11 @@ proposed in \textcite{rottenstreich2001money}
 this paper will use the parameterization
 of $w$ proposed in \textcite{gonzalez1999shape}.
 They parameterize $w$ with two parameters;
-$\delta$ and $\gamma$.
+$\delta$ and $\gamma$. Other two-parameter
+forms which attempt to capture elevation and
+curvature have been proposed, including the
+constant relative sensitivity (CRS) weighting
+functions \autocite{abdellaoui2010separating}.
 
 \vspace{3mm}
 
@@ -294,7 +321,12 @@ are primarily interested in for our purposes.
 It follows as a direct prediction from
 \textcite{rottenstreich2001money} that the
 curvature ($\gamma$) should be modulated by changes in
-the affective level of outcomes. \\
+the affective level of outcomes.
+The two parameters are logically independent,
+and as such they should be modeled
+independently and not collapsed to one
+parameter \autocite{abdellaoui2010separating,
+gonzalez1999shape}. \\
 
 $w(p) = p$ for  $\gamma = 1$ and $\delta = 1$
 with this parameterization. Empirically,
@@ -888,9 +920,14 @@ the unobserved parameters (of  $v$ as well) with
 a sample size of only $10$ participants suggests
 that it is not so much the number of participants,
 but rather the number of trials for each participant
-that is important. More noise is observed within
-participants than between \autocite{gonzalez1999shape}.
-Based on their results and on the simulation carried
+that is important. Generally there is much
+variation at the individual level
+\autocite{gonzalez1999shape,
+wu1996curvature,
+gonzalez1994abdellaoui2010separating}.
+Based on the results of
+\textcite{gonzalez1999shape}
+and on the simulation carried
 out, it is argued that $30$ participants should
 probably give us reasonable power to detect
 minimally interesting effects.
@@ -1016,12 +1053,19 @@ effect of affect should be investigated. The
 proposed study
 only uses gambles in the gains domain (i.e. "how
 much would you be willing to pay for a
-certain probability of winning something?"). A similar
+certain probability of winning something?")
+and as such it only models $w^{+}$. To model
+$w^{-}$, a similar
 study could be run for the loss domain, still with
 validated high-affect and low-affect items (i.e. "how
 much would you be willing to pay to avoid a
 certain probability of loosing something/something
-bad happening?").
+bad happening?"). It has been experimentally
+found that subjets are more sensitive to
+probabilities of gains ($w^{+}$) rather than
+losses ($w^{-}$) \autocite{
+abdellaoui2010separating} but whether there is a
+modulatory effect of affect-richness is unclear.
 The loss-domain of prospect theory is generally
 understudied, so this would be extremely interesting.\\
 
@@ -1040,10 +1084,12 @@ conjunction. \\
 Lastly, this study assumes
 a specific parameterization of $w$.
 Non-parametric approaches which do not assume
-specific functions exist, and as there does not
-appear to be agreement as to the correct functional
-specification, this is another interesting
-direction.
+specific functions exist, and it can
+be argued that these should be preferred
+as long as there is not agreement as to
+the correct functional form of the
+probability weighting function
+\autocite{wu1996curvature}.
 
 \printbibliography
 \section{Appendix}
