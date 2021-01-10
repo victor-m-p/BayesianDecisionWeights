@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.11.11)  10 JAN 2021 16:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.11.11)  10 JAN 2021 19:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -545,7 +545,15 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'affective-weights.bbl' found.
 
-(/home/victormp/BayesianDecisionWeights/Report/affective-weights.bbl)
+(/home/victormp/BayesianDecisionWeights/Report/affective-weights.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                rottenstreich2001
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
 Package biblatex Info: Reference section=0 on input line 28.
 Package biblatex Info: Reference segment=0 on input line 28.
 
@@ -605,32 +613,32 @@ File: ../Figures/Fig2.png Graphic file (type png)
 Package pdftex.def Info: ../Figures/Fig2.png  used on input line 249.
 (pdftex.def)             Requested size: 390.0pt x 191.79868pt.
 [7] [8 <../Figures/Fig2.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 345--355
+Underfull \hbox (badness 10000) in paragraph at lines 346--356
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 356--361
+Underfull \hbox (badness 10000) in paragraph at lines 357--362
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--382
+Underfull \hbox (badness 10000) in paragraph at lines 363--383
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--388
+Underfull \hbox (badness 10000) in paragraph at lines 384--389
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 426--429
+Underfull \hbox (badness 10000) in paragraph at lines 427--430
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 469--484
+Underfull \hbox (badness 10000) in paragraph at lines 471--491
 
  []
 
@@ -638,16 +646,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 469--484
 <../Figures/ourHyp.png, id=60, 505.89pt x 505.89pt>
 File: ../Figures/ourHyp.png Graphic file (type png)
 <use ../Figures/ourHyp.png>
-Package pdftex.def Info: ../Figures/ourHyp.png  used on input line 500.
+Package pdftex.def Info: ../Figures/ourHyp.png  used on input line 510.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
  [13] [14 </home/victormp/BayesianDecisionWeights/Report/../Figures/ourHyp.png>
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 536--548
+Underfull \hbox (badness 10000) in paragraph at lines 546--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 549--554
+Underfull \hbox (badness 10000) in paragraph at lines 559--564
 
  []
 
@@ -655,75 +663,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 549--554
 <../Figures/simulated.png, id=72, 517.935pt x 251.9814pt>
 File: ../Figures/simulated.png Graphic file (type png)
 <use ../Figures/simulated.png>
-Package pdftex.def Info: ../Figures/simulated.png  used on input line 611.
+Package pdftex.def Info: ../Figures/simulated.png  used on input line 621.
 (pdftex.def)             Requested size: 390.0pt x 189.74687pt.
  [16]
-Underfull \hbox (badness 10000) in paragraph at lines 639--644
+Underfull \hbox (badness 10000) in paragraph at lines 649--654
 
  []
 
 <../Figures/gamma.png, id=76, 517.935pt x 251.9814pt>
 File: ../Figures/gamma.png Graphic file (type png)
 <use ../Figures/gamma.png>
-Package pdftex.def Info: ../Figures/gamma.png  used on input line 646.
+Package pdftex.def Info: ../Figures/gamma.png  used on input line 656.
 (pdftex.def)             Requested size: 390.0pt x 189.74687pt.
 [17 </home/victormp/BayesianDecisionWeights/Report/../Figures/simulated.png (PN
 G copy)>] [18 </home/victormp/BayesianDecisionWeights/Report/../Figures/gamma.p
 ng>]
-Underfull \hbox (badness 10000) in paragraph at lines 700--701
+Underfull \hbox (badness 10000) in paragraph at lines 710--711
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 735--736
+Underfull \hbox (badness 10000) in paragraph at lines 745--746
 
  []
 
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 776--780
-
- []
-
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 809--815
+[20] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 813--817
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 816--818
+Underfull \hbox (badness 10000) in paragraph at lines 825--830
 
  []
 
 [22]
-Overfull \hbox (0.69377pt too wide) in paragraph at lines 833--833
-[][]\OT1/qtm/m/n/12 Charness, G., Gneezy, U., & Kuhn, M. A. (2012). Ex-per-i-me
-n-tal meth-ods: Between-
+Underfull \hbox (badness 10000) in paragraph at lines 847--853
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 854--859
+
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 836--838
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 839--841
+Underfull \hbox (badness 10000) in paragraph at lines 913--915
 
  []
 
 [24]
-LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 8
-44.
- (/usr/share/texmf-dist/tex/latex/tex-gyre/ts1qtm.fd
+Underfull \hbox (badness 10000) in paragraph at lines 916--918
+
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 9
+21.
+(/usr/share/texmf-dist/tex/latex/tex-gyre/ts1qtm.fd
 File: ts1qtm.fd 2009/09/25 v1.2 font definition file for TS1/qtm
 ) [25]
 (/home/victormp/BayesianDecisionWeights/Report/affective-weights.aux)
 Package logreq Info: Writing requests to 'affective-weights.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 11606 strings out of 480478
- 210036 string characters out of 5905958
- 941281 words of memory out of 5000000
- 27511 multiletter control sequences out of 15000+600000
+ 11574 strings out of 480478
+ 209142 string characters out of 5905958
+ 940878 words of memory out of 5000000
+ 27479 multiletter control sequences out of 15000+600000
  563992 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,16n,80p,869b,4731s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -742,7 +748,7 @@ onts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qtmb.pfb><
 /usr/share/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texmf-di
 st/fonts/type1/public/tex-gyre/qtmri.pfb>
 Output written on /home/victormp/BayesianDecisionWeights/Report/affective-weigh
-ts.pdf (25 pages, 657333 bytes).
+ts.pdf (25 pages, 655013 bytes).
 PDF statistics:
  160 PDF objects out of 1000 (max. 8388607)
  107 compressed objects within 2 object streams

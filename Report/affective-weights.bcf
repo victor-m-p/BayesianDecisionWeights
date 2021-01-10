@@ -2949,6 +2949,8 @@
     <bcf:citekey order="84">rstudio</bcf:citekey>
     <bcf:citekey order="85">brms</bcf:citekey>
     <bcf:citekey order="86">brms</bcf:citekey>
+    <bcf:citekey order="87">rottenstreich2001</bcf:citekey>
+    <bcf:citekey order="88">rottenstreich2001</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">
@@ -2984,13 +2986,4 @@
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
-  <bcf:datalist section="0"
-                name="apa/global//global/global"
-                type="entry"
-                sortingtemplatename="apa"
-                sortingnamekeytemplatename="global"
-                labelprefix=""
-                uniquenametemplatename="global"
-                labelalphanametemplatename="global">
-  </bcf:datalist>
 </bcf:controlfile>

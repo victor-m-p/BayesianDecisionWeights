@@ -336,7 +336,8 @@ most affective. Three items are
 then selected: The least affective item ($A$),
 the most affective item ($C$) and the item in
 between these two extremes ($B$) which separate them
-best (follow up). t-tests between $A$ and  $B$,
+best (follow up). Welch two sample t-tests
+between $A$ and  $B$,
 and between $B$ and  $C$ will indicate whether
 they differ significantly.
 
@@ -442,7 +443,8 @@ three outcomes are selected from the
 10 investigated outcomes. The most
 affective ($C$), the least affective ($A$) and the
 question which best separate the two ($B$).
-It is hypothesized that pair-wise t-tests
+It is hypothesized that pairwise t-tests (Welch
+Two Sample)
 between $A$ and  $B$ and between  $B$ and  $C$
 will result in significant differences.
 This has to be achieved before conducting
@@ -480,7 +482,12 @@ $A$, lower for  $B$ and lowest for  $C$
 result in high curvature, which is offered
 by low $\gamma$). This effect would replicate
 and seriously strengthen the results of
-\textcite{rottenstreich2001money}. \\
+\textcite{rottenstreich2001money}. A
+weaker replication would consist of
+credibility intervals ($.66$) showing the
+same effect. This would still be an
+interesting result, but would indicate a
+weaker and less reliable effect. \\
 
 \emph{Hypothesis 2}: Additionally,
 \textcite{gonzalez1999shape} report
@@ -491,7 +498,10 @@ $\gamma = 0.44$ will be within the  $.95$
 credibility interval of our low-affect
 condition ($A$). This would serve as
 a replication of the findings of
-\textcite{gonzalez1999shape}. Minimally
+\textcite{gonzalez1999shape}. Again, a
+less convincing, but interesting result would
+be to observe $\gamma = 0.44$ within the
+ $0.66$ credibility interval. Minimally
 interesting effects for $\gamma$ are
 shown in figure 3, where  $\gamma$
 values are  $A = 0.44, B = 0.34, C = 0.24$.
@@ -738,7 +748,34 @@ online experiment
 
 \textbf{Sample size rationale}:
 
-\emph{Study 1}: Choice of sample
+\emph{Study 1}: Data was simulated to estimate the
+approximate sample size needed for a Welch two
+sample t-test to dissociate the three most
+different items (questions). Plotting and common
+sense was used to arrive at best guesses for
+reasonable values. Three distributions were generated
+(assumed normal, although that is not generally true
+for slider data):
+
+\begin{equation} \label{eq3}
+\begin{split}
+	item_A &\sim norm(0.2, 0.4) \\
+	item_B &\sim norm(0.5, 0.4) \\
+	item_C &\sim norm(0.8, 0.4)
+\end{split}
+\end{equation}
+
+With $n = 30$ participants we have extremely
+high power to detect these effects. However,
+as this is a cheap experiment to run, and the
+results are critical for the second study
+(it is important that the three best items are
+used as the conditions in experiment 2)
+this is deemed to be reasonable.
+
+\vspace{3mm}
+
+\emph{Study 2}: Choice of sample
 size is naturally related to
 power. Typically, $.8$ power is considered reasonable
 \autocite{cohen1992power},
@@ -787,8 +824,9 @@ study 2.
 
 \emph{Study 1}: The single outcome variable
 will be the rating of affect level. This will
-be measured on a scale of $0-100$ using a
-slider.
+be measured on a scale of $0-1$. Participants
+will rate this using a slider (and will not see
+the same scale that we measure). \\
 
 \emph{Study 2}: The single outcome variable
 is the price that subjects indicate that they
@@ -802,7 +840,7 @@ more than this.
 
 \subsection{Indices}
 
-??
+No indices are used.
 
 \section{Analysis Plan}
 
@@ -814,22 +852,64 @@ bayesian model fitting is \emph{brms}
 \autocite{brms}. \\
 
 \emph{Study 1}: The affect ratings will be
-ordered based on group-level means? \\
+ordered based on group-level means. The
+three questions that best separate the
+are validated as being statistically significant
+with a Welch two sample t-test. \\
 
 \emph{Study 2}: A bayesian generalized nonlinear
 mixed effects model is fit to the data using the
-$R$ package $brms$ \autocite{brms}.
+\emph{R} package \emph{brms} \autocite{brms}.
 This is done to estimate the unobserved parameters
-$\delta$ and $\gamma$ from the independent variable
-probability/uncertainty and the dependent variable
+$\delta$ and $\gamma$ from the independent variables
+(1) probability level and (2) category,
+and their relation to the dependent variable
 $w(p)$ which is the observed certainty equivalence (CE).
-Weakly informative priors are specified for both
-$\gamma$ and $\delta$ (see Github).
+Regularizing priors are specified for both
+$\gamma$ and $\delta$ as described in the
+"simulation" section.
 
+\section{Discussion \& Future Work}
 
-\section{Discussion}
+The two-part study presented is important
+for several reasons. Firstly, it is part of
+a movement to formalize psychology and decision
+making (DM) which the author believes is both
+important and generally done too rarely.
+The effect that this study tries to replicate
+\autocite{rottenstreich2001} is an interesting
+study. However, it bases the conclusion of a
+modulation of the weighting function
+by affect based on a measurement of end-points
+($1\%$ and $99\%$) only.
+As such, it is rather stylized; i.e. they
+are not able to estimate the modulation of
+the actual parameters of the weighting function.
+It is surprising that no-one (to the knowledge
+of me) has actually followed the suggestion
+of \autocite{rottenstreich2001} in extending
+their stylized effect and testing it across
+more than two items, and across enough uncertainty
+levels to estimate parameters of the weighting
+function $w$.
 
-\printbibliography
+\vspace{3mm}
+The present study also attempts to facilitate
+cumulative science more generally, by providing
+all code, simulation and eventual data at:
+https://github.com/victor-m-p/BayesianDecisionWeights.
+By making the code and data accessible future
+experimenters can use the knowledge gained in
+this experiment to motivate stronger priors -
+effectively pooling information across studies
+(by using our posteriors as priors). Sadly,
+most of the research in this area is carried
+out in a frequentist framework
+\autocite{gonzalez1999shape, rottenstreich2001money,
+hsee2004music}, and often
+code and data is not accessible which makes it
+impossible to properly integrate previous work
+and thus properly build upon previous work.
 
 \section{Appendix}
 
