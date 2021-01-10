@@ -35,7 +35,6 @@ We want both gamma and delta.
 ```{r}
 
 #http://mjskay.github.io/tidybayes/articles/tidy-brms.html
-devtools::install_github("mjskay/tidybayes")
 library(tidybayes)
 
 ## sample posterior 
@@ -60,7 +59,13 @@ posts_melt <- posts_clean %>%
   pivot_longer(cols = starts_with("b_"),
                names_to = c("variable", "level"),
                names_pattern = ("b_(.*)O_(.*)"),
-               values_to = "observed")
+               values_to = "observed") 
+
+posts_melt <- posts_melt %>%
+  mutate(level = fct_recode(level,
+                            A = "item1",
+                            B = "item2",
+                            C = "item3"))
 
 ## use the melted data to get 95% CI. 
 posts_melt %>%
@@ -78,12 +83,16 @@ interval_plot <- function(df, variable){
     mutate(condition_mean = observed) %>%
     ggplot(aes(y = level, 
                x = condition_mean)) +
-    stat_halfeye()
+    labs(x = "Gamma estimate",
+         y = "Condition (items)") +
+    stat_halfeye() +
+    theme_minimal()
   
 }
 
 ## plot both gamma and delta posteriors by item:
 interval_plot(posts_melt, "gamma")
+ggsave("../Figures/gamma.png")
 interval_plot(posts_melt, "delta") #hmm?
 
 ## he has one more nice plot with coloring:
