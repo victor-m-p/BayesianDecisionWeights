@@ -63,9 +63,9 @@ posts_melt <- posts_clean %>%
 
 posts_melt <- posts_melt %>%
   mutate(level = fct_recode(level,
-                            A = "item1",
+                            C = "item1",
                             B = "item2",
-                            C = "item3"))
+                            A = "item3"))
 
 ## use the melted data to get 95% CI. 
 posts_melt %>%
