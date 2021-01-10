@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.11.11)  10 JAN 2021 13:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.11.11)  10 JAN 2021 14:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -619,24 +619,33 @@ Package pdftex.def Info: ../Figures/simulated.png  used on input line 530.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+<../Figures/gamma.png, id=61, 517.935pt x 251.9814pt>
+File: ../Figures/gamma.png Graphic file (type png)
+<use ../Figures/gamma.png>
+Package pdftex.def Info: ../Figures/gamma.png  used on input line 552.
+(pdftex.def)             Requested size: 390.0pt x 189.74687pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 564--568
+Underfull \hbox (badness 10000) in paragraph at lines 577--581
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 569--570
+Underfull \hbox (badness 10000) in paragraph at lines 582--583
 
  []
 
 [14 </home/victormp/BayesianDecisionWeights/Report/../Figures/simulated.png (PN
-G copy)>] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 613--614
+G copy)>] [15 </home/victormp/BayesianDecisionWeights/Report/../Figures/gamma.p
+ng>]
+Underfull \hbox (badness 10000) in paragraph at lines 626--627
 
  []
 
 
-Overfull \hbox (125.79701pt too wide) in paragraph at lines 615--620
+Overfull \hbox (125.79701pt too wide) in paragraph at lines 628--633
 []\OT1/qtm/m/it/12 Study 2\OT1/qtm/m/n/12 : Lev-els of un-cer-tainty are ma-nip
 -u-lated, and are given as $\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 
 01\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 05\OML/
@@ -649,39 +658,40 @@ m/m/it/12 :\OT1/cmr/m/n/12 95\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/
 12 :\OT1/cmr/m/n/12 99$\OT1/qtm/m/n/12 .
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 643--646
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 656--659
 
  []
 
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 647--649
+
+Underfull \hbox (badness 10000) in paragraph at lines 660--662
 
  []
 
 [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 667--669
+Underfull \hbox (badness 10000) in paragraph at lines 680--682
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 670--672
+Underfull \hbox (badness 10000) in paragraph at lines 683--685
 
  []
 
+[19]
 LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 6
-75.
-(/usr/share/texmf-dist/tex/latex/tex-gyre/ts1qtm.fd
+88.
+ (/usr/share/texmf-dist/tex/latex/tex-gyre/ts1qtm.fd
 File: ts1qtm.fd 2009/09/25 v1.2 font definition file for TS1/qtm
-) [19] [20]
+) [20]
 (/home/victormp/BayesianDecisionWeights/Report/affective-weights.aux)
 Package logreq Info: Writing requests to 'affective-weights.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 10448 strings out of 480478
- 188417 string characters out of 5905958
- 927055 words of memory out of 5000000
- 26359 multiletter control sequences out of 15000+600000
+ 10452 strings out of 480478
+ 188529 string characters out of 5905958
+ 928071 words of memory out of 5000000
+ 26363 multiletter control sequences out of 15000+600000
  560029 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,16n,64p,869b,4731s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -698,10 +708,10 @@ usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf
 e1/public/tex-gyre/qtmb.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/
 qtmr.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb>
 Output written on /home/victormp/BayesianDecisionWeights/Report/affective-weigh
-ts.pdf (20 pages, 614019 bytes).
+ts.pdf (20 pages, 626995 bytes).
 PDF statistics:
- 133 PDF objects out of 1000 (max. 8388607)
+ 135 PDF objects out of 1000 (max. 8388607)
  90 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

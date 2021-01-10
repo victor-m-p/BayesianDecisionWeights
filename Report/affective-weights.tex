@@ -13,7 +13,7 @@
 \usepackage[backend=biber,style=apa,autocite=inline]{biblatex}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{Paper 1}
+\lhead{Affective weighting function}
 \rhead{Victor M. Poulsen, Studie Nr.: 201707639}
 
 \DeclareLanguageMapping{english}{english-apa}
@@ -468,7 +468,7 @@ will be conducted. \\
 Data is generated for $50$ probability levels,
 $p = 0.01, 0.03,  \ldots, 0.99$ crossed with $3$
 conditions (i.e. corresponding to the three items).
-Data is generated for $20$ simulated subjects (ID). \\
+Data is generated for $30$ simulated subjects (ID). \\
 
 Note that standard deviations vary
 between $\gamma$ and $\delta$, and
@@ -477,7 +477,7 @@ variation. This qualitatively
 follows the results of \textcite{gonzalez1999shape}.
 Data is generated as a distribution of $\gamma$
 and $\delta$ for each condition. We generate
-$20$ values (i) for each, corresponding to the
+$30$ values (i) for each, corresponding to the
 number of participants. As we do not hypothesize
 that $\delta$ is modulated by condition (item)
 this can simply be generated as once.
@@ -547,8 +547,32 @@ what we expect from the real data.}
 Next, a model i fitted in $R$ using the
  $brms$ package. Is this described earlier?
 
+\begin{figure}[h!]
+	\includegraphics[width = \linewidth]
+	{../Figures/gamma.png}
+	\caption{showing the estimated  $\gamma$
+	population distributions. The thick
+	black line is  $.66$ credibility intervals
+	whereas the thin black line is  $0.95$
+	credibility intervals. Note that the
+	conditions are ordered as expected with
+	 $A$ having the lowest  $\gamma$ and
+	 $C$ having the highest  $\gamma$.
+	 Note that the  $0.95$ credibility
+	 intervals do not overlap.}
+ \end{figure}
 
-\section{Design Plan}
+We extract credibility intervals with regards
+to $\gamma$ and $\delta$ distributions for each
+condition ($A$, $B$, $C$). With the simulated
+data, we note that the model is capable of
+recovering these unobserved parameters, and
+that for $\gamma$ the  $.95$ credibility
+intervals do not overlap (see fig. XXX)
+
+
+
+ \section{Design Plan}
 
 \textbf{Study type:} As the study does not have
 a manipulation (e.g. control and experimental)

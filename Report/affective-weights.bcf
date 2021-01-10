@@ -2929,11 +2929,9 @@
     <bcf:citekey order="63">rottenstreich2001money</bcf:citekey>
     <bcf:citekey order="64">gonzalez1999shape</bcf:citekey>
     <bcf:citekey order="65">gonzalez1999shape</bcf:citekey>
-    <bcf:citekey order="66">gonzalez1999shape</bcf:citekey>
-    <bcf:citekey order="67">gonzalez1999shape</bcf:citekey>
-    <bcf:citekey order="68">rcore</bcf:citekey>
-    <bcf:citekey order="69">rstudio</bcf:citekey>
-    <bcf:citekey order="70">brms</bcf:citekey>
+    <bcf:citekey order="66">rcore</bcf:citekey>
+    <bcf:citekey order="67">rstudio</bcf:citekey>
+    <bcf:citekey order="68">brms</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">
