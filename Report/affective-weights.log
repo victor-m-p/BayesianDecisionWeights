@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.11.11)  10 JAN 2021 19:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.11.11)  10 JAN 2021 19:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -556,26 +556,20 @@ Package biblatex Warning: The following entry could not be found
 )
 Package biblatex Info: Reference section=0 on input line 28.
 Package biblatex Info: Reference segment=0 on input line 28.
-
-Overfull \hbox (87.02995pt too wide) in paragraph at lines 34--36
-\OT1/qtm/m/n/12 Code for Sim-u-la-tion & Fig-ures avail-able at: https://github
-.com/victor-m-p/BayesianDecisionWeights 
- []
-
-[1
+ [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 57--66
+Underfull \hbox (badness 10000) in paragraph at lines 60--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--74
+Underfull \hbox (badness 10000) in paragraph at lines 70--77
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--94
+Underfull \hbox (badness 10000) in paragraph at lines 78--97
 
  []
 
@@ -586,12 +580,12 @@ We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 113--118
+Underfull \hbox (badness 10000) in paragraph at lines 116--121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--137
+Underfull \hbox (badness 10000) in paragraph at lines 122--140
 
  []
 
@@ -599,46 +593,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 119--137
 <../Figures/oneParam.png, id=25, 505.89pt x 505.89pt>
 File: ../Figures/oneParam.png Graphic file (type png)
 <use ../Figures/oneParam.png>
-Package pdftex.def Info: ../Figures/oneParam.png  used on input line 194.
+Package pdftex.def Info: ../Figures/oneParam.png  used on input line 197.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
  [5] [6 </home/victormp/BayesianDecisionWeights/Report/../Figures/oneParam.png>
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 228--236
+Underfull \hbox (badness 10000) in paragraph at lines 231--239
 
  []
 
 <../Figures/Fig2.png, id=38, 549.85425pt x 270.41025pt>
 File: ../Figures/Fig2.png Graphic file (type png)
 <use ../Figures/Fig2.png>
-Package pdftex.def Info: ../Figures/Fig2.png  used on input line 249.
+Package pdftex.def Info: ../Figures/Fig2.png  used on input line 252.
 (pdftex.def)             Requested size: 390.0pt x 191.79868pt.
 [7] [8 <../Figures/Fig2.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 346--356
+Underfull \hbox (badness 10000) in paragraph at lines 349--359
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 357--362
+Underfull \hbox (badness 10000) in paragraph at lines 360--365
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 363--383
+Underfull \hbox (badness 10000) in paragraph at lines 366--386
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 384--389
+Underfull \hbox (badness 10000) in paragraph at lines 387--392
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 427--430
+Underfull \hbox (badness 10000) in paragraph at lines 430--433
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 471--491
+Underfull \hbox (badness 10000) in paragraph at lines 474--494
 
  []
 
@@ -646,16 +640,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 471--491
 <../Figures/ourHyp.png, id=60, 505.89pt x 505.89pt>
 File: ../Figures/ourHyp.png Graphic file (type png)
 <use ../Figures/ourHyp.png>
-Package pdftex.def Info: ../Figures/ourHyp.png  used on input line 510.
+Package pdftex.def Info: ../Figures/ourHyp.png  used on input line 513.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
  [13] [14 </home/victormp/BayesianDecisionWeights/Report/../Figures/ourHyp.png>
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 546--558
+Underfull \hbox (badness 10000) in paragraph at lines 549--561
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 559--564
+Underfull \hbox (badness 10000) in paragraph at lines 562--567
 
  []
 
@@ -663,73 +657,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 559--564
 <../Figures/simulated.png, id=72, 517.935pt x 251.9814pt>
 File: ../Figures/simulated.png Graphic file (type png)
 <use ../Figures/simulated.png>
-Package pdftex.def Info: ../Figures/simulated.png  used on input line 621.
+Package pdftex.def Info: ../Figures/simulated.png  used on input line 624.
 (pdftex.def)             Requested size: 390.0pt x 189.74687pt.
  [16]
-Underfull \hbox (badness 10000) in paragraph at lines 649--654
+Underfull \hbox (badness 10000) in paragraph at lines 652--657
 
  []
 
 <../Figures/gamma.png, id=76, 517.935pt x 251.9814pt>
 File: ../Figures/gamma.png Graphic file (type png)
 <use ../Figures/gamma.png>
-Package pdftex.def Info: ../Figures/gamma.png  used on input line 656.
+Package pdftex.def Info: ../Figures/gamma.png  used on input line 659.
 (pdftex.def)             Requested size: 390.0pt x 189.74687pt.
 [17 </home/victormp/BayesianDecisionWeights/Report/../Figures/simulated.png (PN
 G copy)>] [18 </home/victormp/BayesianDecisionWeights/Report/../Figures/gamma.p
 ng>]
-Underfull \hbox (badness 10000) in paragraph at lines 710--711
+Underfull \hbox (badness 10000) in paragraph at lines 713--714
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 745--746
+Underfull \hbox (badness 10000) in paragraph at lines 748--749
 
  []
 
 [20] [21]
-Underfull \hbox (badness 10000) in paragraph at lines 813--817
+Underfull \hbox (badness 10000) in paragraph at lines 816--820
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 825--830
+Underfull \hbox (badness 10000) in paragraph at lines 828--833
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 847--853
+Underfull \hbox (badness 10000) in paragraph at lines 850--856
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 854--859
+Underfull \hbox (badness 10000) in paragraph at lines 857--862
 
  []
 
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 913--915
+[23] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 945--947
 
  []
 
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 916--918
+
+Underfull \hbox (badness 10000) in paragraph at lines 948--950
 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 9
-21.
+53.
 (/usr/share/texmf-dist/tex/latex/tex-gyre/ts1qtm.fd
 File: ts1qtm.fd 2009/09/25 v1.2 font definition file for TS1/qtm
-) [25]
+) [25] [26]
 (/home/victormp/BayesianDecisionWeights/Report/affective-weights.aux)
 Package logreq Info: Writing requests to 'affective-weights.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 11574 strings out of 480478
- 209142 string characters out of 5905958
- 940878 words of memory out of 5000000
- 27479 multiletter control sequences out of 15000+600000
+ 11577 strings out of 480478
+ 209175 string characters out of 5905958
+ 940893 words of memory out of 5000000
+ 27482 multiletter control sequences out of 15000+600000
  563992 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,16n,80p,869b,4731s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -748,10 +742,10 @@ onts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qtmb.pfb><
 /usr/share/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texmf-di
 st/fonts/type1/public/tex-gyre/qtmri.pfb>
 Output written on /home/victormp/BayesianDecisionWeights/Report/affective-weigh
-ts.pdf (25 pages, 655013 bytes).
+ts.pdf (26 pages, 656660 bytes).
 PDF statistics:
- 160 PDF objects out of 1000 (max. 8388607)
- 107 compressed objects within 2 object streams
+ 163 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
