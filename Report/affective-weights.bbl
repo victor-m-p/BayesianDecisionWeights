@@ -52,6 +52,84 @@
       \verb 10.32614/RJ-2018-017
       \endverb
     \endentry
+    \entry{charness2012experimental}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=134e92f09e5ba63f519ccd0a63b0dcff}{%
+           family={Charness},
+           familyi={C\bibinitperiod},
+           given={Gary},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=854085327c48d8e153675ac883f29b52}{%
+           family={Gneezy},
+           familyi={G\bibinitperiod},
+           given={Uri},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3255637c785f5260babb2f6aa0b40a6d}{%
+           family={Kuhn},
+           familyi={K\bibinitperiod},
+           given={Michael\bibnamedelima A},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{58d0870487ee793bd094509b5b5a1f8b}
+      \strng{fullhash}{198e102402fb28709646f11f07c860f4}
+      \strng{bibnamehash}{198e102402fb28709646f11f07c860f4}
+      \strng{authorbibnamehash}{198e102402fb28709646f11f07c860f4}
+      \strng{authornamehash}{58d0870487ee793bd094509b5b5a1f8b}
+      \strng{authorfullhash}{198e102402fb28709646f11f07c860f4}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Economic Behavior \& Organization}
+      \field{number}{1}
+      \field{title}{Experimental methods: Between-subject and within-subject design}
+      \field{volume}{81}
+      \field{year}{2012}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+    \endentry
+    \entry{cohen1992power}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=eaad07ee1c6ef93a9308150f12c3c2eb}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Psychological Association}%
+      }
+      \strng{namehash}{eaad07ee1c6ef93a9308150f12c3c2eb}
+      \strng{fullhash}{eaad07ee1c6ef93a9308150f12c3c2eb}
+      \strng{bibnamehash}{eaad07ee1c6ef93a9308150f12c3c2eb}
+      \strng{authorbibnamehash}{eaad07ee1c6ef93a9308150f12c3c2eb}
+      \strng{authornamehash}{eaad07ee1c6ef93a9308150f12c3c2eb}
+      \strng{authorfullhash}{eaad07ee1c6ef93a9308150f12c3c2eb}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychological bulletin}
+      \field{number}{1}
+      \field{title}{A power primer.}
+      \field{volume}{112}
+      \field{year}{1992}
+      \field{pages}{155}
+      \range{pages}{1}
+    \endentry
     \entry{gonzalez1999shape}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=16a790b9f1635d02ebe5fc48cdf9ae8d}{%

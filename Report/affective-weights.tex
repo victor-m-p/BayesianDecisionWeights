@@ -2,6 +2,8 @@
 %\usepackage{apacite}
 \usepackage{wrapfig}
 \setlength{\parindent}{0pt}
+\usepackage{caption} %test
+\captionsetup[figure]{font=small} %test
 \usepackage{tgtermes}
 \usepackage{setspace}
 \usepackage{gensymb}
@@ -28,8 +30,12 @@
 \leavevmode
 
 \section{Description}
-Both Expected-utility theory and prospect theory
-posit that humans maximize some version of
+
+Code for Simulation \& Figures available at:
+https://github.com/victor-m-p/BayesianDecisionWeights
+
+Both Expected-utility theory (EUT) and prospect theory
+(PT) posit that humans maximize some version of
 utility. The theories get there by a
 combination of two functions
 \autocite{rottenstreich2001money}.
@@ -48,29 +54,51 @@ the simplest way possible
 where $p$ stands for probability and $i$ stands for the
 $i^{th}$ gamble.
 
-Prospect Theory \autocite{PT,
-tversky1992advances} (PT) is arguably the main model
-of human decision making \autocite{
-newell2015straight}. It advances theorizing
-from expected-utility by postulating that losses and
+In EUT the weight function $w$
+is the identity $w(p) = p$ assuming that people do
+not distort probabilities \autocite{rottenstreich2001money}.
+In expected-utility the value functin $v$ is
+proposed to reflect how people feel about
+end states. This assumes that people should
+take into account their current state (e.g. of wealth)
+when evaluating outcomes
+\autocite{newell2015straight}. \\
+
+With regards to both $v$ and  $w$
+PT \autocite{
+	PT,
+tversky1992advances} advances theorizing,
+and better reflects empirical results.
+It is arguably the main model of human decision making
+\autocite{newell2015straight}. \\
+
+PT advances theorizing
+with regards to $v$ by positing that losses and
 gains are evaluated as changes in wealth rather
-than in regard to end states \autocite{newell2015straight}.
+than with regards to end states. This means that
+rich and poor people should show relatively similar
+behaviour, because both evaluate outcomes based
+on a neutral starting point
+\autocite{newell2015straight}.
+This leads us to the familiar (non-linear) S-shaped
+value function $v$ proposed in PT \autocite{PT}.
+The value function $v$ is concave for the gains
+domain and convex for losses. This reflects the
+fact that small changes in outcome are relatively
+overweighted. I.e., a monetary increase from
+$0 - 100\$$ has greater utility than an increase
+from $1000 - 1100\$$. The same is the case for the
+domain of losses. Another key stylistic of the
+value function is that it is steeper for the
+loss domain, showing loss aversion. \\
 
-\vspace{3mm}
-
-In \textcite{PT} we find the familiar
-(non-linear) S-shaped
-value function $v$ which is concave for the gains
-domain and convex for losses (where it is steeper as well).
-The weight function $w$ is the identity,
-$w(p) = p$ in expected-utility theory
-\autocite{rottenstreich2001money} whereas
-a non-linear probability distortion is proposed in
-prospect theory \autocite{PT}. Here $w$
-is stylized as being reverse S-shaped,
-meaning that it is concave for low probabilities
-and convex for high probabilities \textcite{
-gonzalez1999shape}. This means that
+PT advances theorizing with regards to $w$
+by proposing a non-linear probability
+distortion \autocite{PT}. $w$ is stylized as
+being reverse S-shaped, meaning that it is
+concave for low probabilities and convex for
+high probabilities \autocite{gonzalez1999shape}.
+This means that
 people underweight changes in probability in
 the middle of the spectrum (e.g. $[0.2-0.8]$)
 while overweighting changes in probability close
@@ -86,22 +114,43 @@ There is evidence to support
 the notion that the affect of outcomes modulates
 the parameters of both $v$
 \autocite{hsee2004music} and $w$ \autocite{
-rottenstreich2001money}. A main finding is
-that the S-shape of the weighting function
+rottenstreich2001money}. \\
+
+The S-shape of the weighting function
 $w$ appears to be more pronounced
 for high-affect than low-affect outcomes under
 uncertainty \autocite{rottenstreich2001money}.
-This was shown as a preference reversal in
-which a high-affect outcome was preferred for
+They investigated how much participants were
+willing to pay for two coupons
+(worth the same) at different
+levels of probability. The first item was
+a trip to Europe (high-affect) while the second
+item was tuition covering (low-affect). They
+were able to show a preference reversal in
+which the high-affect outcome was preferred for
 low probability (1\%) whereas a low-affect
-outcome was preferred for high probability (100\%)
-\autocite{rottenstreich2001money}.
-The finding that affect appears to modulate
-both $v$ and $w$ has subsequently been
-modelled as an interaction between an
-affective system and a deliberative system \textcite{
+outcome was preferred for high probability (99\%).
+If the results are solid, they suggest
+that people distort probabilities
+more for high-affect as compared to low-affect
+outcomes. \\
+
+For gains, the value function $v$ becomes more
+concave for high-affect as opposed to low-affect
+outcomes \autocite{hsee2004music}.
+\textcite{hsee2004music} showed this by
+priming participants to
+evaluate outcomes either based on calculation or
+based on feeling. Their results clearly suggest
+a modulatory effect of affect-richness. Taken
+together the results suggest a consistent picture
+of modulation of both the value function $v$ and
+the weight function  $w$. This line of evidence
+has been pursued elsewhere \autocite{
 	mukherjee2010dual,
-mukherjee2011thinking}.
+mukherjee2011thinking} with the idea of modeling
+decision making as an interaction between an
+affective system and a deliberative system.
 
 \subsection{Focus and parameterization}
 
@@ -120,7 +169,7 @@ in the form:
 	{p^{1-a}+(1-p)^{1-a}}
 .\]
 
-where $a \in [0, 1]$ and larger values indicate
+where $a \in [0, 1]$ and larger $a$ values indicate
 greater affect
 and more curvature \autocite{rottenstreich2001money}.
 The issue with this one-parameter
@@ -131,11 +180,17 @@ What I mean by that is that the empirically
 observed weighting function $w$ typically
 crosses the diagonal line
 at around $0.3$ rather than $0.5$
-\autocite{gonzalez1999shape}. The one-parameter
-formulation fixes this point at $0.5$
+\autocite{gonzalez1999shape}. This can be
+interpreted as people generally being
+pessimistic (i.e. $50\%$ probability is
+evaluated as being worth less than  $50\%$
+of the outcome).
+The one-parameter
+formulation fixes this point at $0.5$,
+(i.e. $w(.5) = 0.5$),
 which can be seen from figure $1$.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\includegraphics[width = \linewidth]{../Figures/oneParam.png}
 	\caption{Data simulated from the model
 		$w(p) = \frac{p^{1-a}}
@@ -156,7 +211,7 @@ Instead of using the parameterization
 proposed in \textcite{rottenstreich2001money}
 this paper will use the parameterization
 of $w$ proposed in \textcite{gonzalez1999shape}.
-They parameterize $w$ with two parametrs;
+They parameterize $w$ with two parameters;
 $\delta$ and $\gamma$.
 
 \vspace{3mm}
@@ -182,14 +237,15 @@ the affective level of outcomes. \\
 $p(w) = p$ for  $\gamma = 1, \delta = 1$
 with this parameterization. Higher  $\delta$
 corresponds to higher elevation, and
-higher $\alpha $ corresponds to \emph{lower}
-curvature (unintuitively).
-
-See figure 2 for an illustration of how the $\delta$
+higher $\gamma$ corresponds to \emph{less}
+curvature (unintuitively, and as opposed
+to the $\alpha$ parameter in the one-parameter
+$w$ function). See figure 2 for an
+illustration of how the $\delta$
 and $\gamma$ parameters independently modulate
 different aspects of the weighting function $w$.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\includegraphics[width = \linewidth]{../Figures/Fig2.png}
 	\caption{Data simulated from the model
 		$w(p) = \frac{\delta \cdot p^{\gamma}}
@@ -212,7 +268,7 @@ different aspects of the weighting function $w$.
 
 \vspace{3mm}
 
-The model is:
+The model proposed in \textcite{gonzalez1999shape} is:
 
 \[
 	\log\frac{w(p)}{1-w(p)} =
@@ -227,9 +283,6 @@ gives us
 	{\delta \cdot p^{\gamma} +
 	(1-p)^{\gamma}}
 .\]
-
-The above equations are taken from \textcite{
-rottenstreich2001money}.
 
 \subsection{Methodology}
 
@@ -253,7 +306,7 @@ affect-poor.
 
 \vspace{3mm}
 
-Example of expected high-affect item:\\
+\emph{Example of expected high-affect item:} \\
 "If you won a $\$500$ coupon redeemable
 for a vacation abroad with a friend/partner
 how emotionally
@@ -261,7 +314,7 @@ affected would you be?"
 
 \vspace{3mm}
 
-Example of expected low-affect item: \\
+\emph{Example of expected low-affect item:} \\
 "If you won a $\$500$ coupon redeemable
 for insurance covering how emotionally
 affected would you be?"
@@ -279,18 +332,23 @@ We will receive continuous ratings from $0$
 (affect poor) to $1$ (affect rich). A mean
 affect rating across participants for each
 item will rank them from least affective to
-most affective. Three items (gambles) are
-then selected: The least affective item,
-the most affective item and the item in
-between these two extremes which separate them
-best (follow up).
+most affective. Three items are
+then selected: The least affective item ($A$),
+the most affective item ($C$) and the item in
+between these two extremes ($B$) which separate them
+best (follow up). t-tests between $A$ and  $B$,
+and between $B$ and  $C$ will indicate whether
+they differ significantly.
 
 \vspace{3mm}
 
 In the second study, subjects will be presented
-with the three items which have been validated
-for affect-richness in the prior study.
-In this study however, the formulation
+with the three items ($A$,  $B$,  $C$)
+which have been validated
+for affect-richness in the prior study. All
+subjects rate items in all three conditions,
+making the study a within-subject design.
+The formulation
 around the items is that of a gamble.
 The formulation is the same
 for all items: \\
@@ -302,13 +360,14 @@ chance of winning nothing. How much are you
 willing to pay for the lottery ticket?" \\
 
 The three selected items are inserted as $[y]$
-and $100$ different probability levels:
-$x = 0.01, 0.02, \ldots, 0.99$ will be
+and $50$ different probability levels:
+$x = 0.01, 0.03, \ldots, 0.99$ will be
 inserted as $[x]$ and the negation $[1-x]$.
 With all
 possible combinations, this means that
-all participants will rate $3$ items
-at $100$ different levels of certainty each.
+all participants will rate the items of
+the $3$ conditions
+at $50$ different levels of certainty each.
 As in experiment 1 participants will rate
 with a slider. This time ranging from
 $\$0$ to $\$500$ as it is neither logical
@@ -324,13 +383,14 @@ that the gamble is worth. \\
 Note that we are not directly measuring either
 $\delta$ or $\gamma$. What we do measure is the
 dependent variable $w(p)$ and the independent
-variable $p$ for items ranked based on their
-affect-richness. \\
+variables $p$ for three conditions (ranked
+based on affect-richness).  \\
 
 In order to infer the
 unmeasured paramters a bayesian (non)linear
 mixed effects model is proposed. The model
-is fitted in $R$ with the  $brms$ package.
+is fitted in $R$ \autocite{rcore}
+with the  $brms$ package \autocite{brms}.
 Here we can specify the previously
 mentioned formula:
 
@@ -339,12 +399,22 @@ mentioned formula:
 	 {\exp({\tau})\cdot p^{\gamma}+(1-p)^{\gamma}}
 .\]
 
-We have to specify that the model should
-be nonlinear. We can further specify that we would like to
+It is extremely important that we specify
+that we want to measure $\exp(\tau)$ rather
+than  $\delta$ as this tells the models that
+this parameter must be positive and thus
+limits the flexibility of the model in an
+appropriate way.  $\delta$ can be inferred
+afterwards by taking  $\exp{\tau}$.
+Additionally, we have to specify that the model should
+be nonlinear - as we believe that the weighting
+function is non-linear.
+We can further specify that we would like to
 estimate specifically the value for $\tau$
 and $\gamma$ with random intercepts (partial pooling)
-for participants (ID) and with item as a main
-effect. \\
+for participants (ID) and with item (condition)
+as a main
+effect.
 
  \[
 	 \tau \sim 0 + item + (1|ID),
@@ -353,33 +423,39 @@ effect. \\
 	\gamma \sim 0 + item + (1|ID)
 .\]
 
-We can then convert $\tau$ to $\delta$
-by exponentiating the estimated value
-for $\tau$ for each item. For the analysis
-pipeline on simulated data, see Github. \\
+As mentioned, estimated $\tau$ is converted
+to $\delta$ by exponentiating the estimated
+$\tau$ value after model fitting. \\
 
-After fitting the model, posterior samples
-for the three items are generated. Based on
-these, $.66$ and $.95$ credibility intervals
-are calculated and the distributions for each
-paramter (for each item) as a group-level effect
-is visualized.
+Results are reported as $.66$ and $.95$
+credibility intervals
+for the $\delta$ and $\gamma$ distributions
+for each condition. Posterior samples
+are drawn from the distributions, allowing
+for a nice visualization of effects.
 
 \section{Hypotheses}
 
 \subsection{Study 1}
-There is no formal hypothesis connected with
-study 1. It is expected that participants
-will rate the items as having different
-affect-richness. If this is not achieved then
-study 2 does not make sense to conduct, and
-another attempt must be made to validate
-outcomes on a scale of affect. However, it
-does seem reasonable that the 10 different
-questions would cover the spectrum pretty well
-(see \emph{Appendix A}) and as such mean
-ratings should differ significantly
-(follow up on significantly).
+\emph{Hypothesis 1}: As explained earlier,
+three outcomes are selected from the
+10 investigated outcomes. The most
+affective ($C$), the least affective ($A$) and the
+question which best separate the two ($B$).
+It is hypothesized that pair-wise t-tests
+between $A$ and  $B$ and between  $B$ and  $C$
+will result in significant differences.
+This has to be achieved before conducting
+study 2, as that study relies on this effect.
+As such, if this effect is not achieved, another
+study should be conducted to validate questions
+before proceeding with study 2. With that said
+however, it does appear reasonable that
+the 10 different questions should cover the
+spectrum of affect-richness pretty well
+(see \emph{Appendix A}) and as such it is
+expected that three items which differ significantly
+can be extracted.
 
 \subsection{Study 2}
 \emph{Hypothesis 1:} A directional effect is
@@ -390,37 +466,38 @@ predicted for the $\gamma$ parameter of the function:
 	{\delta \cdot p^{\gamma}+(1-p)^{\gamma}}
 .\]
 
-Recall that study 2 uses three three
-items (conditions) based on outcomes of
-varying affect-levels from study 1.
+Recall that study 2 uses the three
+items from study 1 as three conditions.
 We will refer to these as conditions
 low-affect $A$, medium-affect $B$, and
-high-affect $C$. Since \textcite{gonzalez1999shape}
-report population $\gamma = 0.44$ (median)
-and use monetary gambles (low-affect)
-it is expected that our population
-$\gamma$ will be close to this value.
-The minimally interesting effect for this
-study is shown in figure XXX, where $\gamma$
-values are $A = 0.44, B = 0.34, C = 0.24$.
-To evaluate whether $\gamma$ has a directional
-effect we will sample the posterior of
-our model (for each parameter, for each
-condition) and compare the  $.66$ and
- $.95$ credibility intervals. Some indication
- of an effect of affect on $\gamma$ would be
-  provided if the  $.66$ credibility intervals do not
-  overlap between conditions, and fall such
-  that $A > B > C$ (recall, high-affect should
-  mean low $\gamma$). Stronger evidence
-  would be provided if this is the case for
-  $0.95$ credibility intervals.
-  (is density intervals even a thing?).
+high-affect $C$. It hypothesized that
+posterior credibility intervals ($.95$)
+for the $\gamma$
+parameter will not overlap between
+conditions, and that $\gamma$ highest for
+$A$, lower for  $B$ and lowest for  $C$
+(recall that high affect is predicted to
+result in high curvature, which is offered
+by low $\gamma$). This effect would replicate
+and seriously strengthen the results of
+\textcite{rottenstreich2001money}. \\
 
+\emph{Hypothesis 2}: Additionally,
+\textcite{gonzalez1999shape} report
+population $\gamma = 0.44$ (median).
+They use monetary gambles (low-affect),
+and as such it is hypothesized that
+$\gamma = 0.44$ will be within the  $.95$
+credibility interval of our low-affect
+condition ($A$). This would serve as
+a replication of the findings of
+\textcite{gonzalez1999shape}. Minimally
+interesting effects for $\gamma$ are
+shown in figure 3, where  $\gamma$
+values are  $A = 0.44, B = 0.34, C = 0.24$.
 
-\begin{figure}[h!]
-	\includegraphics[width = \linewidth]
-	{../Figures/ourHyp.png}
+\begin{figure}[H]
+	\includegraphics[width = \linewidth]{../Figures/ourHyp.png}
 	\caption{Three curves shown, all with $\delta = 0.77$
 	as reported in \textcite{gonzalez1999shape}.
 	$\gamma$ levels $0.24, 0.34, 0.44$. The
@@ -433,10 +510,11 @@ condition) and compare the  $.66$ and
 to detect}.
 \end{figure}
 
-\emph{Hypothesis 2:} No direction of effect
-for the $\delta$ parameter (by item) is
+\emph{Hypothesis 3:} No direction of effect
+for the $\delta$ parameter by condition is
 hypothesized. The  $\delta$ parameter is
-not of interest to the main hypothesis (H1)
+not of interest to the main hypothesis
+(replicating and extending \textcite{rottenstreich2001money})
 and is mainly included in the analysis in
 order to control for elevation and properly
 estimate  $\gamma$. If the three items differ
@@ -444,8 +522,9 @@ in perceived overall value the $\delta$ parameter
 should capture this. This means that our $\gamma$
 distributions should still be interpretable
 even if the $\delta$ parameter differs by
-item. The same analysis pipeline will be applied
-to $\delta$ as for $\gamma$ but as suggested,
+condition. The same analysis pipeline will be applied
+to $\delta$ as for $\gamma$ (i.e. credibility
+intervals estimated) but as suggested,
 it is not clear whether an effect would
 be interesting. The $\delta$ parameter is
 expected to have a value close to $.77$
@@ -453,11 +532,13 @@ which is the population median found for
 this parameter is \textcite{gonzalez1999shape}.
 
 \subsection{Simulation}
+
 In order to test the pipeline for the
 bayesian analysis, data simulation was
 conducted. Unfortunately, \textcite{gonzalez1999shape}
 does not exactly report the values (i.e.
-distributional properties) that we need
+distributional properties of $\tau$ and
+$\gamma$) that we need
 to generate data consistent with what they
 gathered. As such, it does not make sense
 to calculate power based on our simulations,
@@ -467,7 +548,8 @@ will be conducted. \\
 
 Data is generated for $50$ probability levels,
 $p = 0.01, 0.03,  \ldots, 0.99$ crossed with $3$
-conditions (i.e. corresponding to the three items).
+conditions, corresponding to the actual data
+that will be collected.
 Data is generated for $30$ simulated subjects (ID). \\
 
 Note that standard deviations vary
@@ -479,7 +561,7 @@ Data is generated as a distribution of $\gamma$
 and $\delta$ for each condition. We generate
 $30$ values (i) for each, corresponding to the
 number of participants. As we do not hypothesize
-that $\delta$ is modulated by condition (item)
+that $\delta$ is modulated by condition
 this can simply be generated as once.
 
 
@@ -517,17 +599,16 @@ level (j)
 
 As such, each condition will contain
 two levels of noise around a true signal.
-The implied results of the simulated data
-can be qualitatively seen in figure 4.
+The simulated data, and the best fit
+$w(p)$ curves are shown in figure 4.
 As can be seen, the simulated data shows
 the expected pattern, where low values of
 $\gamma$ exhibit more curvature. The preference
 reversal shown in \textcite{rottenstreich2001money}
 is also seen in the plot.
 
-\begin{figure}[h!]
-	\includegraphics[width = \linewidth]
-	{../Figures/simulated.png}
+\begin{figure}[H]
+	\includegraphics[width = \linewidth]{../Figures/simulated.png}
 	\caption{Plot of simulated data in three
 		conditions ($A: \gamma = 0.24$,
 		$B: \gamma = 0.34$,
@@ -542,14 +623,27 @@ is also seen in the plot.
 	The population effect is a
 	weak, but true signal, which is
 what we expect from the real data.}
-	\end{figure}
+\end{figure}
 
-Next, a model i fitted in $R$ using the
- $brms$ package. Is this described earlier?
+Next, the model described earlier is fitted
+to the data. Regularizing riors are specified:
 
-\begin{figure}[h!]
-	\includegraphics[width = \linewidth]
-	{../Figures/gamma.png}
+\[
+	\tau \sim normal(0, 1)
+\]
+
+\[
+	\gamma \sim normal(0.3, 0.5)
+\]
+
+Reflecting our knowledge of reasonable values for
+these parameters. The same priors will be used for
+modeling the actual data. Various characteristics,
+such as R-hat and pp\_checks (from \emph{brms})
+indicate a good model fit. \\
+
+\begin{figure}[H]
+	\includegraphics[width = \linewidth]{../Figures/gamma.png}
 	\caption{showing the estimated  $\gamma$
 	population distributions. The thick
 	black line is  $.66$ credibility intervals
@@ -566,72 +660,131 @@ We extract credibility intervals with regards
 to $\gamma$ and $\delta$ distributions for each
 condition ($A$, $B$, $C$). With the simulated
 data, we note that the model is capable of
-recovering these unobserved parameters, and
-that for $\gamma$ the  $.95$ credibility
-intervals do not overlap (see fig. XXX)
-
-
+recovering these unobserved (unmeasured) parameters,
+and that for $\gamma$ the  $.95$ credibility
+intervals do not overlap between conditions
+(see figure 5). The estimates and credibility intervals
+are, $\gamma_{A} = 0.37, \: CI: [0.34, 0.40]$,
+$\gamma_{B} = 0.30, \: CI: [0.27, 0.33]$ and
+$\gamma_{C} = 0.20, \: CI: [0.17, 0.23]$.
+This slightly underestimates the true effect, which
+we know because we simulated the data. However, it
+is reasonably close. This shows that with $30$
+participants, and 50 probability levels crossed with
+3 conditions it is possible to detect the effect
+that we specified. This of course assumes specific
+distributional characteristics and noise-levels
+that we cannot know in advance. It does however, show
+that the model works as intended.
 
  \section{Design Plan}
 
-\textbf{Study type:} As the study does not have
-a manipulation (e.g. control and experimental)
-it should be classified as an observational study.
-This is true of both study 1 and study 2. \\
+\textbf{Study type:} Study 1 might be characterized
+as an observational study, since it does not
+really have an experimental manipulation. It
+resembles a survey of questions (e.g. the 10
+outcomes). Study 2 is an experiment using a
+within-subjects design, in which all participants
+participate in all three conditions ($A$,  $B$,  $C$).
+This is important because within-subject designs
+have better power to detect effects than
+between-subject designs
+\autocite{charness2012experimental}. Power is a
+primary concern because effects are likely
+to be small, and variance is likely to be high
+\autocite{gonzalez1999shape}. A between-subjects
+design is not necessary in our case, because we do
+not induce an effect by priming, as in e.g.
+\textcite{hsee2004music}.
 
 \textbf{Blinding:} No blinding is involved in this study. \\
 
 \subsection{Study Design}
 
-\emph{Study 1}: All subjects will rate all items
+\emph{Study 1}: All subjects will rate all 10 items
 (see Appendix 1) as to the level of affect they
 feel with regards to them.
 
 \emph{Study 2}: All participants
 indicate their certainty equivalence (CE) for all
-combinations of items (10) and certainty levels
-(1\%, 5\%, 15\%, 30\%, 50\%, 70\%, 85\%, 95\%, 99\%).
-This results in $90$ observations per participant.
+certainty levels $p = 0.01, 0.03, \ldots, 0.99 (n = 50)$
+and in all three conditions ($A$,  $B$,  $C$).
+This results in $150$ observations per participant,
+and  $50$ observations per participant for each
+condition.
 
 \section{Sampling Plan}
 
 \textbf{Existing Data}: Registration prior
-to creation of data.
+to creation of data. Data from simulation
+does exist.
 
 \textbf{Data collection procedures}:
 Participants will be recruited through online
 channels (e.g. facebook, student groups, etc.).
 Participants must be at least 18 years old to
 participate. In the first experiments subjects
-will be payed 30 DKK for agreeing to participate
-in an approx. 10 minute online survey. In the
-second experiment subjects will be payed 150 DKK
-for agreeing to participate in an approx. 60 minute
-online survey.
+will be payed $30$ DKK for agreeing to participate
+in an approx. $10$ minute online survey. In the
+second experiment subjects will be payed $150$ DKK
+for agreeing to participate in an approx. $60$ minute
+online experiment
 
 \textbf{Sample size}:
 
-\emph{Study 1}: 30 participants. \\
-\emph{Study 2}: 50 participants.
+\emph{Study 1}: $30$ participants are recruited. \\
+
+\emph{Study 2}: $30$ participants are recruited.
 
 \textbf{Sample size rationale}:
 
-Power analysis?
-Credibility/Density interval 95\%
-assuming data generating process?
+\emph{Study 1}: Choice of sample
+size is naturally related to
+power. Typically, $.8$ power is considered reasonable
+\autocite{cohen1992power},
+although this is just convention. Power reflects the
+ability to detect a effect and is influenced by
+effect size and number of participants.
+Unfortunately, a power simulation was not possible
+to carry out since reasonable estimates for the
+distributions (and effect sizes) are not present.
+The simulation presented earlier likely underestimates
+individual variation, which will lessen power.
+The best comparison that we have is
+\textcite{gonzalez1999shape} who estimate both
+parameters of the value function $v$ as well
+parameters $\gamma$ and  $\delta$ of the weighting
+function  $w$. They do so with  $10$ participants and
+collect data with respect to $15$ gambles crossed
+with  $11$ probability levels \autocite{gonzalez1999shape}.
+The fact that they are able to reasonable recover
+the unobserved parameters (of  $v$ as well) with
+a sample size of only $10$ participants suggests
+that it is not so much the number of participants,
+but rather the number of trials for each participant
+that is important. More noise is observed within
+participants than between \autocite{gonzalez1999shape}.
+Based on their results and on the simulation carried
+out, it is argued that $30$ participants should
+probably give us reasonable power to detect a
+minimally interesting effect.
 
 \section{Variables}
 
 \subsection{Manipulated variables}
-\emph{Study 1}: No manipulated variables. \\
 
-\emph{Study 2}: Levels of uncertainty are
-manipulated, and are given as
-$0.01, 0.05, 0.15, 0.3, 0.5, 0.7, 0.85, 0.95, 0.99$.
-Levels of affect differ for each item
-(obtained in Study 1).
+\emph{Study 1}: No manipulated variables.
+The study is an observational survey, where
+participants use a slider to indicate the
+affect-richness of unordered outcomes. \\
+
+\emph{Study 2}: $50$ levels of uncertainty are
+crossed with  $3$ conditions (different gambles).
+These are the two manipulated variables of
+study 2.
 
 \subsection{Measured variables}
+
 \emph{Study 1}: The single outcome variable
 will be the rating of affect level. This will
 be measured on a scale of $0-100$ using a
@@ -639,13 +792,13 @@ slider.
 
 \emph{Study 2}: The single outcome variable
 is the price that subjects indicate that they
-are willing to pay for a ticket in a lottery
-(combination of probability of outcome).
-This will indicate their certainty equivalence (CE).
+are willing to pay for a ticket in a lottery.
+This measures the certainty equivalence (CE) of
+participants, and can be thought of as $w(p)$.
 This will be measured on a scale of $0-500$ dollars
 using a slider. The max is 500 dollars since the
 lottery tickets by definition cannot be worth
-more than this (see Appendix 2).
+more than this.
 
 \subsection{Indices}
 
@@ -654,8 +807,11 @@ more than this (see Appendix 2).
 \section{Analysis Plan}
 
 All analysis is performed in the programming
-language $R$ \autocite{rcore} using $Rstudio$
-\autocite{rstudio}. \\
+language \emph{R} \autocite{rcore} using
+\emph{Rstudio} IDE
+\autocite{rstudio}. A key package used for
+bayesian model fitting is \emph{brms}
+\autocite{brms}. \\
 
 \emph{Study 1}: The affect ratings will be
 ordered based on group-level means? \\
