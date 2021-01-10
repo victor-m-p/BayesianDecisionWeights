@@ -237,7 +237,7 @@ Generate data
 
 ```{r}
 delta = c(0.77, 0.77, 0.77)
-gamma = c(0.22, 0.44, 0.64)
+gamma = c(0.24, 0.34, 0.44) #good
 
 Gonzalez_param <- est_param3(gonzWu, 
                              delta = delta, 
@@ -276,11 +276,6 @@ grid1 <- plot_grid(p2, p3,
 
 ggsave("../Figures/grid1.png")
 
-## second grid 
-grid2 <- plot_grid(p1, p4,
-                   labels = c('A', 'B'))
-
-ggsave("../Figures/grid2.png")
 ```
 
 

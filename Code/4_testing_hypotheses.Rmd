@@ -9,11 +9,11 @@ p_load(tidyverse, brms)
 setwd("C:/Users/95/BayesianDecisionWeights/Code")
 ```
 
-load the models: 
+load the model
 
 ```{r}
-#can also load non-big.
-mod <- readRDS("../Data/m_items_logID_big.rds")
+
+mod <- readRDS("../Data/fit_simulated.rds")
 ```
 
 Checking the model
@@ -30,6 +30,7 @@ conditional_effects(mod)
 Getting posterior draws for the 
 various items (population level).
 We want both gamma and delta. 
+## Intervals with densities
 
 ```{r}
 
@@ -83,8 +84,18 @@ interval_plot <- function(df, variable){
 
 ## plot both gamma and delta posteriors by item:
 interval_plot(posts_melt, "gamma")
-interval_plot(posts_melt, "delta")
+interval_plot(posts_melt, "delta") #hmm?
 
 ## he has one more nice plot with coloring:
 
 ```
+
+some more cool plots exist!! 
+remember, we also have the real data!!!!!!!
+
+-------------------
+
+## HDI 
+note that there is something else than HDI..
+#https://easystats.github.io/bayestestR/reference/hdi.html
+

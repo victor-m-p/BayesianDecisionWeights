@@ -1,0 +1,182 @@
+---
+title: "1sample_data_1999"
+output: html_document
+---
+
+inspiration:
+
+```{r}
+library(pacman)
+p_load(tidyverse, brms, parallel, bayesplot)
+setwd("C:/Users/95/BayesianDecisionWeights/Code")
+
+```
+
+setting up function which can generate data. 
+
+```{r}
+
+## Gonzalez / Wu 
+gonzWu <- function(delta, gamma, p){
+  w = (delta * (p ** gamma)) / (delta * (p ** gamma) + (1-p)**gamma)
+  #return(w)
+}
+
+```
+
+Range of plausible values (Gonzalez & Wu 1999): 
+NOT USED.
+
+```{r}
+
+gonzalez_1999 = data.frame(
+  delta = c(0.46, 1.51, 1.45, 0.21, 1.19, 1.33, 
+  0.38, 0.38, 0.9, 0.93),
+  gamma = c(0.39, 0.65, 0.39, 0.15, 0.27, 0.89,
+            0.20, 0.37, 0.86, 0.5),
+  delta_SE = c(0.11, 0.46, 0.35, 0.04, 0.32, 
+               0.15, 0.07, 0.11, 0.18, 0.26),
+  gamma_SE = c(0.03, 0.04, 0.02, 0.02, 0.02,
+               0.03, 0.02, 0.04, 0.04, 0.03),
+  ID = c(seq(1, 10, 1))
+)
+
+gonzalez_1999 = gonzalez_1999 %>%
+  mutate(delta_SD = delta_SE * sqrt(165),
+         gamma_SD = gamma_SE * sqrt(165))
+
+gonzalez_summary = gonzalez_1999 %>%
+  summarize(delta_m = mean(delta),
+            gamma_m = mean(gamma),
+            delta_overall_SD = sd(delta),
+            gamma_overall_SD = sd(gamma),
+            delta_individual_SD = mean(delta_SD),
+            gamma_individual_SD = mean(gamma_SD))
+  
+```
+
+simulation function:
+
+```{r}
+
+simulatoR <- function(n_ID, n_prob, prob_vect,
+                      gamma_overall_SD, 
+                      gamma_individual_SD,
+                      gamma, 
+                      delta_overall_SD,
+                      delta_individual_SD,
+                      delta){
+  
+  ## empty tibble that we fill values into.
+  df <- tibble(ID = numeric(),
+               item = numeric(),
+               probability = numeric(),
+               gamma_true = numeric(),
+               delta_true = numeric(),
+               gamma_obs = numeric(),
+               delta_obs = numeric())
+  
+  item = 0
+  for(i in 1:length(gamma)){
+    item = item + 1
+    
+    ## individual variation around population gamma
+    ## per item (question)
+    ind_gamma = rnorm(n_ID, 
+                      mean = gamma[i],
+                      sd = gamma_overall_SD)
+    
+    ## individual variation around population delta.
+    ## per item (question)
+    ind_delta = rnorm(n_ID, 
+                      mean = delta,
+                      sd = delta_overall_SD)
+    
+    for(j in 1:length(ind_gamma)){
+
+      ## individual variation for probabilities
+      prob_gamma = rnorm(n_prob, 
+                         mean = ind_gamma[j],
+                         sd = gamma_individual_SD)
+      
+      ## individual variation for probabilities
+      prob_delta = rnorm(n_prob, 
+                         mean = ind_delta[j],
+                         sd = delta_individual_SD)
+      
+      ## rbind the new values to the current df. 
+      df = rbind(df,
+                 tibble(ID = rep(j, length(n_prob)),
+                        item = rep(item, length(n_prob)),
+                        probability = prob_vect,
+                        gamma_true = rep(gamma[i],
+                                         length(n_prob)),
+                        delta_true = rep(delta,
+                                         length(n_prob)),
+                        gamma_obs = prob_gamma,
+                        delta_obs = prob_delta))
+
+    }
+  }
+  
+  return(df)
+  
+}
+          
+```
+
+chose parameter values.
+based loosely on gonzalez 1999.
+
+```{r}
+
+## overall grouping:
+n_ID = 30
+prob_vect = seq(0.01, 1, by = 0.02)
+n_prob = length(prob_vect)
+
+## parameters: 
+gamma_overall_SD = 0.1
+gamma_individual_SD = 0.1
+gamma = c(seq(from = 0.24, to = 0.44, by = 0.1))
+delta_overall_SD = 0.2
+delta_individual_SD = 0.3
+delta = 0.77
+
+```
+
+run the function:
+
+```{r}
+
+df <- simulatoR(n_ID = n_ID, 
+                n_prob = n_prob, 
+                prob_vect = prob_vect,
+                gamma_overall_SD = gamma_overall_SD, 
+                gamma_individual_SD = gamma_individual_SD,
+                gamma = gamma,
+                delta_overall_SD = delta_overall_SD,
+                delta_individual_SD = delta_individual_SD,
+                delta = delta)
+
+```
+
+apply the parameterized function to obtain
+w(p).
+
+```{r}
+
+dfW <- df %>%
+  mutate(w_prob = gonzWu(delta_obs, gamma_obs, probability))
+
+```
+
+write file 
+
+```{r}
+
+write_csv(dfW, "../Data/exp2_simulation.csv")
+
+```
+
+
