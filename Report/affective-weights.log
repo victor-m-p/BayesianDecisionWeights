@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.11.11)  10 JAN 2021 13:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.11.11)  10 JAN 2021 13:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -550,11 +550,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 173--181
 
  []
 
-<../Figures/Fig2.png, id=30, 543.2295pt x 266.1945pt>
+<../Figures/Fig2.png, id=30, 549.85425pt x 270.41025pt>
 File: ../Figures/Fig2.png Graphic file (type png)
 <use ../Figures/Fig2.png>
 Package pdftex.def Info: ../Figures/Fig2.png  used on input line 193.
-(pdftex.def)             Requested size: 390.0pt x 191.11154pt.
+(pdftex.def)             Requested size: 390.0pt x 191.79868pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -592,7 +592,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 356--360
 <../Figures/ourHyp.png, id=49, 505.89pt x 505.89pt>
 File: ../Figures/ourHyp.png Graphic file (type png)
 <use ../Figures/ourHyp.png>
-Package pdftex.def Info: ../Figures/ourHyp.png  used on input line 422.
+Package pdftex.def Info: ../Figures/ourHyp.png  used on input line 423.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
 
 
@@ -600,32 +600,43 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [10] [11 </home/victormp/BayesianDecisionWeights/Report/../Figures/ourHyp.png>]
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--466
+Underfull \hbox (badness 10000) in paragraph at lines 456--467
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 467--471
+Underfull \hbox (badness 10000) in paragraph at lines 468--472
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 529--533
+<../Figures/simulated.png, id=60, 517.935pt x 251.9814pt>
+File: ../Figures/simulated.png Graphic file (type png)
+<use ../Figures/simulated.png>
+Package pdftex.def Info: ../Figures/simulated.png  used on input line 530.
+(pdftex.def)             Requested size: 390.0pt x 189.74687pt.
 
- []
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 534--535
-
- []
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 578--579
+Underfull \hbox (badness 10000) in paragraph at lines 564--568
 
  []
 
 
-Overfull \hbox (125.79701pt too wide) in paragraph at lines 580--585
+Underfull \hbox (badness 10000) in paragraph at lines 569--570
+
+ []
+
+[14 </home/victormp/BayesianDecisionWeights/Report/../Figures/simulated.png (PN
+G copy)>] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 613--614
+
+ []
+
+
+Overfull \hbox (125.79701pt too wide) in paragraph at lines 615--620
 []\OT1/qtm/m/it/12 Study 2\OT1/qtm/m/n/12 : Lev-els of un-cer-tainty are ma-nip
 -u-lated, and are given as $\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 
 01\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 05\OML/
@@ -638,39 +649,39 @@ m/m/it/12 :\OT1/cmr/m/n/12 95\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/
 12 :\OT1/cmr/m/n/12 99$\OT1/qtm/m/n/12 .
  []
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 608--611
+
+Underfull \hbox (badness 10000) in paragraph at lines 643--646
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 647--649
+
+ []
+
+[17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 667--669
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 612--614
-
- []
-
-[16] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 632--634
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 635--637
+Underfull \hbox (badness 10000) in paragraph at lines 670--672
 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 6
-40.
+75.
 (/usr/share/texmf-dist/tex/latex/tex-gyre/ts1qtm.fd
 File: ts1qtm.fd 2009/09/25 v1.2 font definition file for TS1/qtm
-) [18] [19]
+) [19] [20]
 (/home/victormp/BayesianDecisionWeights/Report/affective-weights.aux)
 Package logreq Info: Writing requests to 'affective-weights.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 10441 strings out of 480478
- 188254 string characters out of 5905958
- 927050 words of memory out of 5000000
- 26353 multiletter control sequences out of 15000+600000
+ 10448 strings out of 480478
+ 188417 string characters out of 5905958
+ 927055 words of memory out of 5000000
+ 26359 multiletter control sequences out of 15000+600000
  560029 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,16n,64p,869b,4731s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -687,10 +698,10 @@ usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf
 e1/public/tex-gyre/qtmb.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/
 qtmr.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb>
 Output written on /home/victormp/BayesianDecisionWeights/Report/affective-weigh
-ts.pdf (19 pages, 389200 bytes).
+ts.pdf (20 pages, 614019 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
+ 133 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

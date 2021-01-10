@@ -417,10 +417,11 @@ condition) and compare the  $.66$ and
   $0.95$ credibility intervals.
   (is density intervals even a thing?).
 
+
 \begin{figure}[h!]
 	\includegraphics[width = \linewidth]
 	{../Figures/ourHyp.png}
-	Three curves shown, all with $\delta = 0.77$
+	\caption{Three curves shown, all with $\delta = 0.77$
 	as reported in \textcite{gonzalez1999shape}.
 	$\gamma$ levels $0.24, 0.34, 0.44$. The
 	least curved line corresponds to $\gamma = 0.44$,
@@ -429,7 +430,7 @@ condition) and compare the  $.66$ and
 	be lower, and as such we suggest $0.24$
 	(for high affect) and  $0.34$ (for medium
 	affect) as minimally interesting effects
-	to detect.
+to detect}.
 \end{figure}
 
 \emph{Hypothesis 2:} No direction of effect
@@ -517,28 +518,34 @@ level (j)
 As such, each condition will contain
 two levels of noise around a true signal.
 The implied results of the simulated data
-can be qualitatively seen in figure XXX.
+can be qualitatively seen in figure 4.
 As can be seen, the simulated data shows
 the expected pattern, where low values of
 $\gamma$ exhibit more curvature. The preference
 reversal shown in \textcite{rottenstreich2001money}
 is also seen in the plot.
 
-FIGURE WITH PLOT!
+\begin{figure}[h!]
+	\includegraphics[width = \linewidth]
+	{../Figures/simulated.png}
+	\caption{Plot of simulated data in three
+		conditions ($A: \gamma = 0.24$,
+		$B: \gamma = 0.34$,
+		$C: \gamma = 0.44$). In all conditions
+		the true population mean of
+		$\delta = 0.77$. Shows the preference
+		reversal observed in
+	\textcite{rottenstreich2001money}. Note
+	that the yellow curve corresponds
+	roughly to what was found in
+	\textcite{gonzalez1999shape}.
+	The population effect is a
+	weak, but true signal, which is
+what we expect from the real data.}
+	\end{figure}
 
 Next, a model i fitted in $R$ using the
- $brms$ package.
-
-
-Each condition is assumed to have a "true"
-$\gamma$ and $\delta$ parameter. In
-\textcite{gonzalez1999shape} population $\gamma = 0.44$
-(median) and population $\delta = 0.77$. As their
-gambles are with regards to money (low-affect)
-we expect to find similar parameter values for
-our lowest-affect condition (item 1). We
-
-
+ $brms$ package. Is this described earlier?
 
 
 \section{Design Plan}
