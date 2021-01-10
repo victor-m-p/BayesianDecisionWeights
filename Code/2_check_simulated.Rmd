@@ -48,7 +48,8 @@ ggplot(df, aes(x = p, y = w,
   geom_abline(intercept = 0, slope = 1) +
   labs(color = "gamma value", x = "p", y = "w(p)") +
   xlim(0, 1) +
-  ylim(0, 1) 
+  ylim(0, 1) +
+  theme_minimal()
 
 ggsave("../Figures/simulated.png")
 ```
