@@ -1,0 +1,55 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r}
+library(pacman)
+p_load(tidyverse, reshape2, wesanderson)
+```
+
+```{r setup, include=FALSE}
+
+## set seed.
+set.seed(111)
+
+## create data
+df <- tibble(c1 = rnorm(30, m = 0.2, sd = 0.4),
+             c2 = rnorm(30, m = 0.5, sd = 0.4),
+             c3 = rnorm(30, m = 0.8, sd = 0.4))
+
+## t-test data 
+t.test(c1, c2)
+t.test(c2, c3)
+
+## melt data
+df_melt <- melt(df)
+
+## plot data
+df_melt %>%
+  ggplot(aes(x = value, fill = variable)) +
+  geom_density(alpha = 0.4) +
+  scale_fill_manual(values = wes_palette("Darjeeling1"))+
+  theme_minimal()
+
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
