@@ -3,10 +3,16 @@ title: "Untitled"
 output: html_document
 ---
 
+```{r}
+library(pacman)
+p_load(tidyverse, wesanderson)
+```
+
+
 Checking the sampled data
 
 ```{r}
-df <- read_csv("../Data/exp2_sim_data.csv") %>%
+df <- read_csv("../Data/exp2_simulation.csv") %>%
   rename(p = probability,
          gammaT = gamma_true,
          deltaT = delta_true,
@@ -17,20 +23,34 @@ df <- read_csv("../Data/exp2_sim_data.csv") %>%
          item = as_factor(item))
 ```
 
-
+visualize 1.
 
 ```{r}
 ggplot(df, aes(x = item, y = gammaO)) +
   geom_boxplot(aes(fill = item), 
                alpha = 2/3, show.legend = F) +
-  scale_fill_manual(values = c("grey25", "blue2", "green")) +
+  scale_fill_manual(values = wes_palette("Darjeeling1")) +
   xlab(NULL) +
   ylim(0,1) +
   facet_wrap(~as_factor(ID))
+
 ```
 
+visualize 2.
 
 ```{r}
 
+ggplot(df, aes(x = p, y = w,
+                color = as_factor(gammaT))) +
+  geom_point(alpha = 0.5, size = 0.4) +
+  geom_smooth() +
+  scale_color_manual(values = wes_palette("Darjeeling1"))+
+  geom_abline(intercept = 0, slope = 1) +
+  labs(color = "gamma value", x = "p", y = "w(p)") +
+  xlim(0, 1) +
+  ylim(0, 1) 
+
+ggsave("../Figures/simulated.png")
 ```
+
 
