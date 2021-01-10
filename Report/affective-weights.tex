@@ -5,6 +5,7 @@
 \usepackage{tgtermes}
 \usepackage{setspace}
 \usepackage{gensymb}
+\usepackage{amsmath}
 \doublespacing
 \usepackage{graphicx}
 \usepackage{float}
@@ -19,7 +20,7 @@
 \addbibresource{References.bib}
 \setcounter{page}{1}
 
-\title{Affective modulation of weighting function}
+\title{Affective modulation of the weighting function}
 \author{Victor Møller Poulsen, Studie Nr.: 201707639}
 
 \begin{document}
@@ -176,8 +177,15 @@ are primarily interested in for our purposes.
 It follows as a direct prediction from
 \textcite{rottenstreich2001money} that the
 curvature ($\gamma$) should be modulated by changes in
-the affective level of outcomes. See
-figure 2 for an illustration of how the $\delta$
+the affective level of outcomes. \\
+
+$p(w) = p$ for  $\gamma = 1, \delta = 1$
+with this parameterization. Higher  $\delta$
+corresponds to higher elevation, and
+higher $\alpha $ corresponds to \emph{lower}
+curvature (unintuitively).
+
+See figure 2 for an illustration of how the $\delta$
 and $\gamma$ parameters independently modulate
 different aspects of the weighting function $w$.
 
@@ -247,7 +255,8 @@ affect-poor.
 
 Example of expected high-affect item:\\
 "If you won a $\$500$ coupon redeemable
-for a vacation abroad how emotionally
+for a vacation abroad with a friend/partner
+how emotionally
 affected would you be?"
 
 \vspace{3mm}
@@ -259,7 +268,7 @@ affected would you be?"
 
 \vspace{3mm}
 
-For the full list of items see Appendix $A$.
+For the full list of items see \emph{Appendix A}.
 Participants
 will indicate how affect-rich
 each outcome is with a slider. Participants will
@@ -354,68 +363,190 @@ for the three items are generated. Based on
 these, $.66$ and $.95$ credibility intervals
 are calculated and the distributions for each
 paramter (for each item) as a group-level effect
-is visualized. \\
-
-\emph{Hypothesis:} A directional effect is
-expected for the population effect of the
-$\gamma$ parameter. It is expected that
-item 1 (lowest affect) will have the highest
-$\gamma$ value, and that item 3 (highest affect)
-will have the lowest $\gamma$ value, with
-item 2 falling in the middle. The paper
-does not propose to calculate significance
-or bayes factor, but simply hypothesizes that
-the $.95$ and $.66$ credibility intervals
-will only overlap in the expected direction
-(see plot).
-
-
-
-
-
-
-
-but a thorough investigation
-of this effect is lacking. This study consits
-of two sub-studies. In the first study subjects
-will evaluate 10 items on a scale of affect.
-In the second study subjects will indicate their
-certainty equivalence (CE) as to gambles
-involving these questions. Based on this, the
-parameters of the weighting function
-
-\[
-	w(p) = \frac{\delta \cdot p^{\gamma}}
-	{\delta \cdot p^{\gamma} + (1-p)^{\gamma}}
-\]
-
-are estimated for each of the 10 items, and it
-is calculated whether level of affect (obtained in
-study 1) modulates the parameters of the weighting
-function. Note that the above is the two-parameter
-weighting function
-suggested in \autocite{gonzalez1999shape}.
+is visualized.
 
 \section{Hypotheses}
 
-$H_1$: It is expected that the 10 questions in
-study 1 will - on average - obtain significantly
-different ratings as to affective quality.
-This is necessary for the follow-up study to
-make sense.
+\subsection{Study 1}
+There is no formal hypothesis connected with
+study 1. It is expected that participants
+will rate the items as having different
+affect-richness. If this is not achieved then
+study 2 does not make sense to conduct, and
+another attempt must be made to validate
+outcomes on a scale of affect. However, it
+does seem reasonable that the 10 different
+questions would cover the spectrum pretty well
+(see \emph{Appendix A}) and as such mean
+ratings should differ significantly
+(follow up on significantly).
 
-$H_2$ It is hypothesized that the $\gamma$
-parameter will be higher for items that are
-rated as being higher in affect.
-(estimate of size of effect).
+\subsection{Study 2}
+\emph{Hypothesis 1:} A directional effect is
+predicted for the $\gamma$ parameter of the function:
 
-$H_3$: It is expected that the $\delta$
-parameter will not be systematically
-modulated by the level of affect of items.
+\[
+	w(p) = \frac{\delta \cdot p^{\gamma}}
+	{\delta \cdot p^{\gamma}+(1-p)^{\gamma}}
+.\]
+
+Recall that study 2 uses three three
+items (conditions) based on outcomes of
+varying affect-levels from study 1.
+We will refer to these as conditions
+low-affect $A$, medium-affect $B$, and
+high-affect $C$. Since \textcite{gonzalez1999shape}
+report population $\gamma = 0.44$ (median)
+and use monetary gambles (low-affect)
+it is expected that our population
+$\gamma$ will be close to this value.
+The minimally interesting effect for this
+study is shown in figure XXX, where $\gamma$
+values are $A = 0.44, B = 0.34, C = 0.24$.
+To evaluate whether $\gamma$ has a directional
+effect we will sample the posterior of
+our model (for each parameter, for each
+condition) and compare the  $.66$ and
+ $.95$ credibility intervals. Some indication
+ of an effect of affect on $\gamma$ would be
+  provided if the  $.66$ credibility intervals do not
+  overlap between conditions, and fall such
+  that $A > B > C$ (recall, high-affect should
+  mean low $\gamma$). Stronger evidence
+  would be provided if this is the case for
+  $0.95$ credibility intervals.
+  (is density intervals even a thing?).
+
+\begin{figure}[h!]
+	\includegraphics[width = \linewidth]
+	{../Figures/ourHyp.png}
+	Three curves shown, all with $\delta = 0.77$
+	as reported in \textcite{gonzalez1999shape}.
+	$\gamma$ levels $0.24, 0.34, 0.44$. The
+	least curved line corresponds to $\gamma = 0.44$,
+	as reported in \textcite{gonzalez1999shape}.
+	For high-affect items $\gamma$ should
+	be lower, and as such we suggest $0.24$
+	(for high affect) and  $0.34$ (for medium
+	affect) as minimally interesting effects
+	to detect.
+\end{figure}
+
+\emph{Hypothesis 2:} No direction of effect
+for the $\delta$ parameter (by item) is
+hypothesized. The  $\delta$ parameter is
+not of interest to the main hypothesis (H1)
+and is mainly included in the analysis in
+order to control for elevation and properly
+estimate  $\gamma$. If the three items differ
+in perceived overall value the $\delta$ parameter
+should capture this. This means that our $\gamma$
+distributions should still be interpretable
+even if the $\delta$ parameter differs by
+item. The same analysis pipeline will be applied
+to $\delta$ as for $\gamma$ but as suggested,
+it is not clear whether an effect would
+be interesting. The $\delta$ parameter is
+expected to have a value close to $.77$
+which is the population median found for
+this parameter is \textcite{gonzalez1999shape}.
+
+\subsection{Simulation}
+In order to test the pipeline for the
+bayesian analysis, data simulation was
+conducted. Unfortunately, \textcite{gonzalez1999shape}
+does not exactly report the values (i.e.
+distributional properties) that we need
+to generate data consistent with what they
+gathered. As such, it does not make sense
+to calculate power based on our simulations,
+and the simulation serves only the purpose
+of making clear how analysis on eventual data
+will be conducted. \\
+
+Data is generated for $50$ probability levels,
+$p = 0.01, 0.03,  \ldots, 0.99$ crossed with $3$
+conditions (i.e. corresponding to the three items).
+Data is generated for $20$ simulated subjects (ID). \\
+
+Note that standard deviations vary
+between $\gamma$ and $\delta$, and
+between population level and individual
+variation. This qualitatively
+follows the results of \textcite{gonzalez1999shape}.
+Data is generated as a distribution of $\gamma$
+and $\delta$ for each condition. We generate
+$20$ values (i) for each, corresponding to the
+number of participants. As we do not hypothesize
+that $\delta$ is modulated by condition (item)
+this can simply be generated as once.
+
+
+\begin{equation} \label{eq1}
+\begin{split}
+	\gamma_{A_{i}} &\sim norm(n = 30,
+	m = 0.24, sd = 0.1) \\
+	\gamma_{B_{i}} &\sim norm(n = 30,
+	m = 0.34, sd = 0.1) \\
+	\gamma_{C_{i}} &\sim norm(n = 30,
+	m = 0.44, sd = 0.1) \\
+	\delta_i &\sim norm(n = 90,
+	m = 0.77, sd = 0.2)
+\end{split}
+\end{equation}
+
+Based on these $\gamma$ and $\delta$ values for
+participants per condition, we generate
+the final $\gamma$ and $\delta$ values by
+adding individual noise for each probability
+level (j)
+
+\begin{equation} \label{eq2}
+\begin{split}
+	\gamma_{A_{ij}} &\sim norm(n = 50,
+	m = \gamma_{A_{i}}, sd = 0.1) \\
+	\gamma_{B_{ij}} &\sim norm(n = 50,
+	m = \gamma_{B_{i}}, sd = 0.1) \\
+	\gamma_{C_{ij}} &\sim norm(n = 50,
+	m = \gamma_{C_{i}}, sd = 0.1) \\
+	\delta_{ij} &\sim norm(n = 150,
+	m = \delta_{i}, sd = 0.3)
+\end{split}
+\end{equation}
+
+As such, each condition will contain
+two levels of noise around a true signal.
+The implied results of the simulated data
+can be qualitatively seen in figure XXX.
+As can be seen, the simulated data shows
+the expected pattern, where low values of
+$\gamma$ exhibit more curvature. The preference
+reversal shown in \textcite{rottenstreich2001money}
+is also seen in the plot.
+
+FIGURE WITH PLOT!
+
+Next, a model i fitted in $R$ using the
+ $brms$ package.
+
+
+Each condition is assumed to have a "true"
+$\gamma$ and $\delta$ parameter. In
+\textcite{gonzalez1999shape} population $\gamma = 0.44$
+(median) and population $\delta = 0.77$. As their
+gambles are with regards to money (low-affect)
+we expect to find similar parameter values for
+our lowest-affect condition (item 1). We
+
+
+
 
 \section{Design Plan}
 
-\textbf{Study type:} Observational Study. \\
+\textbf{Study type:} As the study does not have
+a manipulation (e.g. control and experimental)
+it should be classified as an observational study.
+This is true of both study 1 and study 2. \\
 
 \textbf{Blinding:} No blinding is involved in this study. \\
 
@@ -512,6 +643,29 @@ $\gamma$ and $\delta$ (see Github).
 \section{Discussion}
 
 \printbibliography
+
+\section{Appendix}
+
+\emph{Appendix A} \\
+As all items in study 1 follow the same template: \\
+
+"If you won a $\$500$ coupon redeemable for/at
+$[x]$ how emotionally affected would you be?" \\
+
+The $10$ proposed $[x]$ outcomes are:
+\begin{itemize}
+	\item for a vacation abroad with a friend/partner.
+	\item at a local shopping mall.
+	\item for donation to a charity of your choice.
+	\item for a cultural experience in your city.
+	\item for insurance covering.
+	\item for investing in the stock market.
+	\item for job training.
+	\item for $\$500$.
+	\item for spending on a present to someone you love.
+	\item at your favorite restaurant.
+\end{itemize}
+
 \end{document}
 
 
