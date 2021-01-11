@@ -2989,15 +2989,16 @@
     <bcf:citekey order="112">gonzalez1999shape</bcf:citekey>
     <bcf:citekey order="113">rottenstreich2001money</bcf:citekey>
     <bcf:citekey order="114">rottenstreich2001money</bcf:citekey>
-    <bcf:citekey order="115">gonzalez1999shape</bcf:citekey>
     <bcf:citekey order="115">rottenstreich2001money</bcf:citekey>
-    <bcf:citekey order="115">hsee2004music</bcf:citekey>
-    <bcf:citekey order="116">abdellaoui2010separating</bcf:citekey>
-    <bcf:citekey order="117">rottenstreich2001money</bcf:citekey>
+    <bcf:citekey order="116">gonzalez1999shape</bcf:citekey>
+    <bcf:citekey order="116">rottenstreich2001money</bcf:citekey>
+    <bcf:citekey order="116">hsee2004music</bcf:citekey>
+    <bcf:citekey order="117">abdellaoui2010separating</bcf:citekey>
     <bcf:citekey order="118">rottenstreich2001money</bcf:citekey>
-    <bcf:citekey order="119">hsee2004music</bcf:citekey>
+    <bcf:citekey order="119">rottenstreich2001money</bcf:citekey>
     <bcf:citekey order="120">hsee2004music</bcf:citekey>
-    <bcf:citekey order="121">wu1996curvature</bcf:citekey>
+    <bcf:citekey order="121">hsee2004music</bcf:citekey>
+    <bcf:citekey order="122">wu1996curvature</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">
