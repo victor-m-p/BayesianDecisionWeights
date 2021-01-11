@@ -47,7 +47,7 @@ weighting function $w$
 distorts probabilities \autocite{rottenstreich2001money,
 gonzalez1999shape}.
 In prospect theory (PT)
-and expected-utility theory the two parameters
+and expected-utility theory (EUT) the two parameters
 are combined in
 the simplest way possible
 \autocite{rottenstreich2001money}
@@ -69,7 +69,7 @@ as either an "as-if" or a "process" model
 "as-if" these functions are computed, and the
 process model claims that people actually compute
 these functions (or something similar). This
-is not a main concern here. \\
+is not a primary concern here. \\
 
 In EUT the weight function $w$
 is the identity $w(p) = p$, assuming that people do
@@ -90,11 +90,11 @@ PT \autocite{
 tversky1992advances} advances theorizing,
 and better explains empirical results
 \autocite{abdellaoui2010separating,
-wu1996curvature} than EUT.
+wu1996curvature} as compared to EUT.
 PT is arguably the main model of human decision making
 \autocite{newell2015straight}.
 PT advances theorizing
-with regards to te value function $v$
+with regards to the value function $v$
 by positing that losses and
 gains are evaluated as changes in wealth rather
 than with regards to end states. This means that
@@ -133,7 +133,7 @@ $100\$$). This is the famous loss aversion. \\
 
 PT advances theorizing with regards to
 the weight function $w$
-by allowing a non-linear probability
+by allowing a (non)-linear probability
 distortion \autocite{PT,
 gonzalez1999shape}. $w$ is stylized as
 being reverse S-shaped, meaning that it is
@@ -152,7 +152,7 @@ wu1996curvature,
 abdellaoui2010separating}.
 Prospect theory (PT) also allows for potentially
 different weighting functions for gains $w^{+}$
-and lossos  $w^{-}$ \autocite{abdellaoui2010separating}.
+and losses  $w^{-}$ \autocite{abdellaoui2010separating}.
 Generally, the probability weighting function $w$
 has received less attention than the value function
 $v$ \autocite{gonzalez1999shape}.
@@ -166,7 +166,7 @@ the parameters of both the value function $v$
 \autocite{
 rottenstreich2001money}. \\
 
-The S-shape (curvature) of the weighting function
+The reverse S-shape (curvature) of the weighting function
 $w$ appears to be more pronounced
 for high-affect than low-affect outcomes under
 uncertainty \autocite{rottenstreich2001money}.
@@ -187,8 +187,8 @@ outcome was preferred for high probability (99\%).
 If this result is solid, it suggests
 that people distort probabilities
 more for high-affect as compared to low-affect
-outcomes. It also violates the probability-
-outcome independence that both EUT and PT hold,
+outcomes. It also violates the probability-outcome
+independence that both EUT and PT hold,
 and suggests that this independence might
 not hold for across outcomes which differ
 in affect \autocite{rottenstreich2001money}. \\
@@ -261,7 +261,7 @@ generally show low \emph{elevation}.
 What I mean by that is that the empirically
 observed weighting function $w$ typically
 crosses the diagonal line given by $w(p) = p$
-at around $0.3-0.4$ rather than $0.5$
+at around $0.3-0.4$ rather than at $0.5$
 \autocite{gonzalez1999shape,
 abdellaoui2010separating,
 wu1996curvature}. This can be
@@ -280,7 +280,8 @@ which can be seen from figure $1$.
 	\caption{Data simulated from the model
 		$w(p) = \frac{p^{1-a}}
 		{p^{1-a}+(1-p)^{1-a}}$ with
-		$a \in [0, 1]$. Diagonal line has
+		$a \in [0, 1]$ (see Github).
+		Diagonal line has
 		$a = 0$, and the horizontal line
 		has $a = 1$. Intermediate curves
 		are generated for $0.2$ increments
@@ -324,7 +325,7 @@ curvature ($\gamma$) should be modulated by changes in
 the affective level of outcomes.
 The two parameters are logically independent,
 and as such they should be modeled
-independently and not collapsed to one
+independently and not be collapsed into one
 parameter \autocite{abdellaoui2010separating,
 gonzalez1999shape}. \\
 
@@ -351,7 +352,8 @@ different aspects of the weighting function $w$.
 	\caption{Data simulated from the model
 		$w(p) = \frac{\delta \cdot p^{\gamma}}
 	{\delta \cdot p^{\gamma} +
-	(1-p)^{\gamma}}$ similarly to figure 4
+	(1-p)^{\gamma}}$ (see Github). The figure
+	is similar to figure 4
 	of \textcite{gonzalez1999shape}.
 	On the left: $\gamma$ fixed at $0.6$
 	and $\delta$ varied between $0.2$ and $1.8$.
@@ -360,16 +362,15 @@ different aspects of the weighting function $w$.
 	Shows that $\gamma$  controls
 	curvature and $\delta$ controls
 	elevation. The identity function $w(p) = p$
-	is achieved for $\delta = 1, \gamma = 1$.
-	Note.. gamma low has the opposite interpretation
-	as compared to rottenstreich?}
+	is achieved for $\delta = 1, \gamma = 1$.}
 \end{figure}
 
 
 
 \vspace{3mm}
 
-The model proposed in \textcite{gonzalez1999shape} is:
+One of the models proposed in
+\textcite{gonzalez1999shape} is:
 
 \[
 	\log\frac{w(p)}{1-w(p)} =
@@ -443,7 +444,7 @@ most affective. Three items are
 then selected: The least affective item ($A$),
 the most affective item ($C$) and the item in
 between these two extremes ($B$) which separate them
-best. We use a paired-sample t-test
+best. We use a one-tailed t-test
 (directional) to compare $A$ and  $B$
 and  $B$ and  $C$ as the items ($A$,  $B$,  $C$)
 are by definition ranked based on mean
@@ -487,8 +488,9 @@ The approach is somewhat
 different from \textcite{gonzalez1999shape}
 but ultimately we estimate the same thing that
 they do; participants' certainty equivalence (CE).
-This simply is the amount of money they think
-that the gamble is worth. \\
+This simply is the amount of money the
+gamble is worth to them. The amount of money
+they would accept to forego the gamble. \\
 
 Note that we are not directly measuring either
 $\delta$ or $\gamma$. What we do measure is the
@@ -622,7 +624,7 @@ values are  $A = 0.44, B = 0.34, C = 0.24$.
 	be lower, and as such we suggest $0.24$
 	(for high affect) and  $0.34$ (for medium
 	affect) as minimally interesting effects
-to detect}.
+to detect.}
 \end{figure}
 
 \emph{Hypothesis 3:} No direction of effect
@@ -924,7 +926,7 @@ that is important. Generally there is much
 variation at the individual level
 \autocite{gonzalez1999shape,
 wu1996curvature,
-gonzalez1994abdellaoui2010separating}.
+abdellaoui2010separating}.
 Based on the results of
 \textcite{gonzalez1999shape}
 and on the simulation carried
@@ -1004,14 +1006,15 @@ section for more detail.
 The two-part study presented here is important
 for several reasons. Firstly, it attempts to
 formalize an interesting finding in the
-field of decision making (DM). The authors generally
-believe that formalization is the way to
+field of decision making (DM). The author
+strongly believe that formalization is the way to
 make DM and psychology generally a more
 reproducible and predictive science.
 The effect that this study tries to replicate
-\autocite{rottenstreich2001money} is an interesting
-study. However, it bases the finding that
-the probability weighting function $w$ is
+\autocite{rottenstreich2001money} is
+very interesting. However, the study
+bases the claim that the
+probability weighting function $w$ is
 modulated by affect on of a measurement of end-points
 ($1\%$ and $99\%$) only.
 As such, it is rather stylized; i.e. they
@@ -1065,9 +1068,7 @@ found that subjets are more sensitive to
 probabilities of gains ($w^{+}$) rather than
 losses ($w^{-}$) \autocite{
 abdellaoui2010separating} but whether there is a
-modulatory effect of affect-richness is unclear.
-The loss-domain of prospect theory is generally
-understudied, so this would be extremely interesting.\\
+modulatory effect of affect-richness is unclear.\\
 
 A second avenue of further study is to broaden
 the analysis to include estimation of paramters
@@ -1082,7 +1083,8 @@ these two papers seem to suggest in
 conjunction. \\
 
 Lastly, this study assumes
-a specific parameterization of $w$.
+a specific parameterization of
+the probability weighting function $w$.
 Non-parametric approaches which do not assume
 specific functions exist, and it can
 be argued that these should be preferred

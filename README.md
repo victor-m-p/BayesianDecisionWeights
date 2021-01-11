@@ -5,8 +5,8 @@ Decision Making Exam for Cognitive Science Masters.
 ## Project Description
 
 Pipeline for experimental validation of the idea
-that Prospect Theory's (PT) S-shaped weighting function
-is modulated by the affect of risky choices
+that Prospect Theory's (PT) reverse S-shaped weighting function
+is modulated by the affect of outcomes for risky decisions
 (Rottenstreich & Hsee, 2001).
 
 This pipeline is a suggestion for how their initial
@@ -16,60 +16,46 @@ See the folder "Code" for code used in the project.
 See the folder "Report" for the report submitted.
 See the folder "Literature" for the literature that I build on.
 
-### Study 1
+# Project Overview
 
-First, it is proposed that a range of questions (10)
-are evaluated based on their affective value.
-Participants in this study will evaluate the
-emotional value on a scale of 0-100 with a slider.
+## Report
 
-### Study 2
+Contains the bibtex library used for the report,
+alongside latex and pdf compilations of the report.
 
-Second, decisions under varying levels
-of uncertainty are made related to these
-questions, and the
-certainty equivalence (CE) is found for
-each combination of these for each participant.
-The value of a gamble to a participant is again
-indicated with a slider.
+## Code
 
-Then the two parameters, gamma and delta (Gonzales & Wu, 1999), are
-estimated for each question.
+Figures which visualize the parameters of different
+weighting functions are generated in the file
+"0\_visualize\_paramters.Rmd".
 
-Support for the original proposition of Rottenstreich &
-Hsee will consist of estimated gamma being higher
-for high-affect items.
+Data is simulated in the file "1\_simulate\_data.Rmd".
 
-## Project Overview
+The simulated data is sanity checked in the file
+"2\_check\_simulated.Rmd".
 
-### Study 1
+Then the simulated data is modeled (i.e.
+non-observed parameters are estimated) with
+a (non)linear bayesian model in the file
+"3\_toy\_model.Rmd".
 
-Found in folder "Study1"
+Lastly, the file "4\_testing\_hypotheses.Rmd"
+looks at the credibility intervals of the paramters
+of interest for the three conditions studied.
 
-#### Simulate data
+## Figures
 
-Found in folder and document ..
+Figures generated in the .Rmd files in the code
+folder are stored in the "figures" folder.
+All figures from the assignment are there.
 
-#### Something here?
+## Data
 
-Found in folder and document ..
+The fit of the bayesian model and the simulated data
+are located in this folder.
 
-### Study 2
+## Literature
 
-Found in folder "Study2"
+.pdf versions of the used literature is in the "Literature"
+folder (with comments).
 
-#### Simulate data
-
-Found in folder and document ..
-
-#### Visualize simulated data & the effect of weighting params
-
-Found in folder and document ..
-
-#### Modeling of simulated data
-
-Found in folder & document ..
-
-#### Visualization & Statistics
-
-Found in folder & document ..
