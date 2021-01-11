@@ -1,0 +1,639 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{abdellaoui2010separating}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=509365155e8e0f6a7435c713e7a71a78}{%
+           family={Abdellaoui},
+           familyi={A\bibinitperiod},
+           given={Mohammed},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f5f0f68e0f3814e79e5f1a9fd88810f}{%
+           family={l’Haridon},
+           familyi={l\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=586f2065293b6ec54596115b9d4aea93}{%
+           family={Zank},
+           familyi={Z\bibinitperiod},
+           given={Horst},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{84bf9db4c31d251ddf06b9483834b26d}
+      \strng{fullhash}{a8bb6c62853903fbb23306bf951b6711}
+      \strng{bibnamehash}{a8bb6c62853903fbb23306bf951b6711}
+      \strng{authorbibnamehash}{a8bb6c62853903fbb23306bf951b6711}
+      \strng{authornamehash}{84bf9db4c31d251ddf06b9483834b26d}
+      \strng{authorfullhash}{a8bb6c62853903fbb23306bf951b6711}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Risk and Uncertainty}
+      \field{number}{1}
+      \field{title}{Separating curvature and elevation: A parametric probability weighting function}
+      \field{volume}{41}
+      \field{year}{2010}
+      \field{pages}{39\bibrangedash 65}
+      \range{pages}{27}
+    \endentry
+    \entry{brms}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ec69dfaa36b99b02d1d9a3733eae1d23}{%
+           family={Bürkner},
+           familyi={B\bibinitperiod},
+           given={Paul-Christian},
+           giveni={P\bibinithyphendelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{fullhash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{bibnamehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{authorbibnamehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{authornamehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{authorfullhash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The R Journal}
+      \field{number}{1}
+      \field{title}{Advanced {Bayesian} Multilevel Modeling with the {R} Package {brms}}
+      \field{volume}{10}
+      \field{year}{2018}
+      \field{pages}{395\bibrangedash 411}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.32614/RJ-2018-017
+      \endverb
+    \endentry
+    \entry{charness2012experimental}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=134e92f09e5ba63f519ccd0a63b0dcff}{%
+           family={Charness},
+           familyi={C\bibinitperiod},
+           given={Gary},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=854085327c48d8e153675ac883f29b52}{%
+           family={Gneezy},
+           familyi={G\bibinitperiod},
+           given={Uri},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3255637c785f5260babb2f6aa0b40a6d}{%
+           family={Kuhn},
+           familyi={K\bibinitperiod},
+           given={Michael\bibnamedelima A},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{58d0870487ee793bd094509b5b5a1f8b}
+      \strng{fullhash}{198e102402fb28709646f11f07c860f4}
+      \strng{bibnamehash}{198e102402fb28709646f11f07c860f4}
+      \strng{authorbibnamehash}{198e102402fb28709646f11f07c860f4}
+      \strng{authornamehash}{58d0870487ee793bd094509b5b5a1f8b}
+      \strng{authorfullhash}{198e102402fb28709646f11f07c860f4}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Economic Behavior \& Organization}
+      \field{number}{1}
+      \field{title}{Experimental methods: Between-subject and within-subject design}
+      \field{volume}{81}
+      \field{year}{2012}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+    \endentry
+    \entry{cohen1992power}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=eaad07ee1c6ef93a9308150f12c3c2eb}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Psychological Association}%
+      }
+      \strng{namehash}{eaad07ee1c6ef93a9308150f12c3c2eb}
+      \strng{fullhash}{eaad07ee1c6ef93a9308150f12c3c2eb}
+      \strng{bibnamehash}{eaad07ee1c6ef93a9308150f12c3c2eb}
+      \strng{authorbibnamehash}{eaad07ee1c6ef93a9308150f12c3c2eb}
+      \strng{authornamehash}{eaad07ee1c6ef93a9308150f12c3c2eb}
+      \strng{authorfullhash}{eaad07ee1c6ef93a9308150f12c3c2eb}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychological bulletin}
+      \field{number}{1}
+      \field{title}{A power primer.}
+      \field{volume}{112}
+      \field{year}{1992}
+      \field{pages}{155}
+      \range{pages}{1}
+    \endentry
+    \entry{gonzalez1999shape}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=16a790b9f1635d02ebe5fc48cdf9ae8d}{%
+           family={Gonzalez},
+           familyi={G\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bc34f63dffe91768896753e83b3a2c0a}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{0fff478ceae264afbc9c2a5633cf6325}
+      \strng{fullhash}{0fff478ceae264afbc9c2a5633cf6325}
+      \strng{bibnamehash}{0fff478ceae264afbc9c2a5633cf6325}
+      \strng{authorbibnamehash}{0fff478ceae264afbc9c2a5633cf6325}
+      \strng{authornamehash}{0fff478ceae264afbc9c2a5633cf6325}
+      \strng{authorfullhash}{0fff478ceae264afbc9c2a5633cf6325}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cognitive psychology}
+      \field{number}{1}
+      \field{title}{On the shape of the probability weighting function}
+      \field{volume}{38}
+      \field{year}{1999}
+      \field{pages}{129\bibrangedash 166}
+      \range{pages}{38}
+    \endentry
+    \entry{hsee2004music}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6e8c2833e35b0418f6acab1c9a9bd672}{%
+           family={Hsee},
+           familyi={H\bibinitperiod},
+           given={Christopher\bibnamedelima K},
+           giveni={C\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=92ad3d609627eb5e7a3925a361b5b08a}{%
+           family={Rottenstreich},
+           familyi={R\bibinitperiod},
+           given={Yuval},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Psychological Association}%
+      }
+      \strng{namehash}{ccd3f01a92302b530ea325dd56b3daa2}
+      \strng{fullhash}{ccd3f01a92302b530ea325dd56b3daa2}
+      \strng{bibnamehash}{ccd3f01a92302b530ea325dd56b3daa2}
+      \strng{authorbibnamehash}{ccd3f01a92302b530ea325dd56b3daa2}
+      \strng{authornamehash}{ccd3f01a92302b530ea325dd56b3daa2}
+      \strng{authorfullhash}{ccd3f01a92302b530ea325dd56b3daa2}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Experimental Psychology: General}
+      \field{number}{1}
+      \field{title}{Music, pandas, and muggers: on the affective psychology of value.}
+      \field{volume}{133}
+      \field{year}{2004}
+      \field{pages}{23}
+      \range{pages}{1}
+    \endentry
+    \entry{PT}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d0dcea81f8587e7d56bb5dbe34a39d6c}{%
+           family={Kahneman},
+           familyi={K\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=031d0d5f9391d970f6f089af958f701d}{%
+           family={Tversky},
+           familyi={T\bibinitperiod},
+           given={Amos},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \strng{fullhash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \strng{bibnamehash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \strng{authorbibnamehash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \strng{authornamehash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \strng{authorfullhash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{No abstract is available for this item.}
+      \field{journaltitle}{Econometrica}
+      \field{month}{3}
+      \field{number}{2}
+      \field{title}{{Prospect Theory: An Analysis of Decision under Risk}}
+      \field{volume}{47}
+      \field{year}{1979}
+      \field{pages}{263\bibrangedash 291}
+      \range{pages}{29}
+    \endentry
+    \entry{loewenstein2001risk}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=eee824474e847c4fa3e1ffd200268181}{%
+           family={Loewenstein},
+           familyi={L\bibinitperiod},
+           given={George\bibnamedelima F},
+           giveni={G\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=86c96845d5fadba6351f48d53834d9b4}{%
+           family={Weber},
+           familyi={W\bibinitperiod},
+           given={Elke\bibnamedelima U},
+           giveni={E\bibinitperiod\bibinitdelim U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e8c2833e35b0418f6acab1c9a9bd672}{%
+           family={Hsee},
+           familyi={H\bibinitperiod},
+           given={Christopher\bibnamedelima K},
+           giveni={C\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5a08b7a302d6a3d1a35d625ab7ad39b3}{%
+           family={Welch},
+           familyi={W\bibinitperiod},
+           given={Ned},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Psychological Association}%
+      }
+      \strng{namehash}{0689b8186974f40e0fd43ac1d38956fc}
+      \strng{fullhash}{342d2ce6eef9be11280076ac844eaafe}
+      \strng{bibnamehash}{342d2ce6eef9be11280076ac844eaafe}
+      \strng{authorbibnamehash}{342d2ce6eef9be11280076ac844eaafe}
+      \strng{authornamehash}{0689b8186974f40e0fd43ac1d38956fc}
+      \strng{authorfullhash}{342d2ce6eef9be11280076ac844eaafe}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychological bulletin}
+      \field{number}{2}
+      \field{title}{Risk as feelings.}
+      \field{volume}{127}
+      \field{year}{2001}
+      \field{pages}{267}
+      \range{pages}{1}
+    \endentry
+    \entry{mukherjee2010dual}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fac22b40a232cc40bb5e2283aa846a96}{%
+           family={Mukherjee},
+           familyi={M\bibinitperiod},
+           given={Kanchan},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Psychological Association}%
+      }
+      \strng{namehash}{fac22b40a232cc40bb5e2283aa846a96}
+      \strng{fullhash}{fac22b40a232cc40bb5e2283aa846a96}
+      \strng{bibnamehash}{fac22b40a232cc40bb5e2283aa846a96}
+      \strng{authorbibnamehash}{fac22b40a232cc40bb5e2283aa846a96}
+      \strng{authornamehash}{fac22b40a232cc40bb5e2283aa846a96}
+      \strng{authorfullhash}{fac22b40a232cc40bb5e2283aa846a96}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychological review}
+      \field{number}{1}
+      \field{title}{A dual system model of preferences under risk.}
+      \field{volume}{117}
+      \field{year}{2010}
+      \field{pages}{243}
+      \range{pages}{1}
+    \endentry
+    \entry{mukherjee2011thinking}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fac22b40a232cc40bb5e2283aa846a96}{%
+           family={Mukherjee},
+           familyi={M\bibinitperiod},
+           given={Kanchan},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{fac22b40a232cc40bb5e2283aa846a96}
+      \strng{fullhash}{fac22b40a232cc40bb5e2283aa846a96}
+      \strng{bibnamehash}{fac22b40a232cc40bb5e2283aa846a96}
+      \strng{authorbibnamehash}{fac22b40a232cc40bb5e2283aa846a96}
+      \strng{authornamehash}{fac22b40a232cc40bb5e2283aa846a96}
+      \strng{authorfullhash}{fac22b40a232cc40bb5e2283aa846a96}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Behavioral Decision Making}
+      \field{number}{5}
+      \field{title}{Thinking styles and risky decision-making: Further exploration of the affect--probability weighting link}
+      \field{volume}{24}
+      \field{year}{2011}
+      \field{pages}{443\bibrangedash 455}
+      \range{pages}{13}
+    \endentry
+    \entry{newell2015straight}{book}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=b99db8107cae1482ca10f13bd306f361}{%
+           family={Newell},
+           familyi={N\bibinitperiod},
+           given={Ben\bibnamedelima R},
+           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e7217f2e21106cf2fb139fd36946da97}{%
+           family={Lagnado},
+           familyi={L\bibinitperiod},
+           given={David\bibnamedelima A},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=90af7950b1e39366bd9e471daf89e98b}{%
+           family={Shanks},
+           familyi={S\bibinitperiod},
+           given={David\bibnamedelima R},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Psychology Press}%
+      }
+      \strng{namehash}{d12591b53a3ab68f63a6179682048535}
+      \strng{fullhash}{9652b1339dda0f6e509e0d9660173cbc}
+      \strng{bibnamehash}{9652b1339dda0f6e509e0d9660173cbc}
+      \strng{authorbibnamehash}{9652b1339dda0f6e509e0d9660173cbc}
+      \strng{authornamehash}{d12591b53a3ab68f63a6179682048535}
+      \strng{authorfullhash}{9652b1339dda0f6e509e0d9660173cbc}
+      \field{sortinit}{N}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Straight choices: The psychology of decision making}
+      \field{year}{2015}
+    \endentry
+    \entry{rcore}{manual}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=dcdebb6b35bff7c0568bf8c50ef8626d}{%
+           family={{R Core Team}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Vienna, Austria}%
+      }
+      \list{organization}{1}{%
+        {R Foundation for Statistical Computing}%
+      }
+      \strng{namehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{fullhash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{bibnamehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{authorbibnamehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{authornamehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{authorfullhash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{R: A Language and Environment for Statistical Computing}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.R-project.org/
+      \endverb
+      \verb{url}
+      \verb https://www.R-project.org/
+      \endverb
+    \endentry
+    \entry{rottenstreich2001money}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=92ad3d609627eb5e7a3925a361b5b08a}{%
+           family={Rottenstreich},
+           familyi={R\bibinitperiod},
+           given={Yuval},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e8c2833e35b0418f6acab1c9a9bd672}{%
+           family={Hsee},
+           familyi={H\bibinitperiod},
+           given={Christopher\bibnamedelima K},
+           giveni={C\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications Sage CA: Los Angeles, CA}%
+      }
+      \strng{namehash}{11baee389800f6ed007f5a69df2fb172}
+      \strng{fullhash}{11baee389800f6ed007f5a69df2fb172}
+      \strng{bibnamehash}{11baee389800f6ed007f5a69df2fb172}
+      \strng{authorbibnamehash}{11baee389800f6ed007f5a69df2fb172}
+      \strng{authornamehash}{11baee389800f6ed007f5a69df2fb172}
+      \strng{authorfullhash}{11baee389800f6ed007f5a69df2fb172}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychological science}
+      \field{number}{3}
+      \field{title}{Money, kisses, and electric shocks: On the affective psychology of risk}
+      \field{volume}{12}
+      \field{year}{2001}
+      \field{pages}{185\bibrangedash 190}
+      \range{pages}{6}
+    \endentry
+    \entry{rstudio}{manual}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=637571a077e704fe4594c3457d5a6a81}{%
+           family={{RStudio Team}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston, MA}%
+      }
+      \list{organization}{1}{%
+        {RStudio, PBC}%
+      }
+      \strng{namehash}{637571a077e704fe4594c3457d5a6a81}
+      \strng{fullhash}{637571a077e704fe4594c3457d5a6a81}
+      \strng{bibnamehash}{637571a077e704fe4594c3457d5a6a81}
+      \strng{authorbibnamehash}{637571a077e704fe4594c3457d5a6a81}
+      \strng{authornamehash}{637571a077e704fe4594c3457d5a6a81}
+      \strng{authorfullhash}{637571a077e704fe4594c3457d5a6a81}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{RStudio: Integrated Development Environment for R}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb http://www.rstudio.com/
+      \endverb
+      \verb{url}
+      \verb http://www.rstudio.com/
+      \endverb
+    \endentry
+    \entry{tversky1992advances}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=031d0d5f9391d970f6f089af958f701d}{%
+           family={Tversky},
+           familyi={T\bibinitperiod},
+           given={Amos},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d0dcea81f8587e7d56bb5dbe34a39d6c}{%
+           family={Kahneman},
+           familyi={K\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{e03b8c64a28ec0d8081c6f4ded219ba3}
+      \strng{fullhash}{e03b8c64a28ec0d8081c6f4ded219ba3}
+      \strng{bibnamehash}{e03b8c64a28ec0d8081c6f4ded219ba3}
+      \strng{authorbibnamehash}{e03b8c64a28ec0d8081c6f4ded219ba3}
+      \strng{authornamehash}{e03b8c64a28ec0d8081c6f4ded219ba3}
+      \strng{authorfullhash}{e03b8c64a28ec0d8081c6f4ded219ba3}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Risk and uncertainty}
+      \field{number}{4}
+      \field{title}{Advances in prospect theory: Cumulative representation of uncertainty}
+      \field{volume}{5}
+      \field{year}{1992}
+      \field{pages}{297\bibrangedash 323}
+      \range{pages}{27}
+    \endentry
+    \entry{wu1996curvature}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=bc34f63dffe91768896753e83b3a2c0a}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=16a790b9f1635d02ebe5fc48cdf9ae8d}{%
+           family={Gonzalez},
+           familyi={G\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {INFORMS}%
+      }
+      \strng{namehash}{6a4d7dc7ac24bae58342394d75733723}
+      \strng{fullhash}{6a4d7dc7ac24bae58342394d75733723}
+      \strng{bibnamehash}{6a4d7dc7ac24bae58342394d75733723}
+      \strng{authorbibnamehash}{6a4d7dc7ac24bae58342394d75733723}
+      \strng{authornamehash}{6a4d7dc7ac24bae58342394d75733723}
+      \strng{authorfullhash}{6a4d7dc7ac24bae58342394d75733723}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Management science}
+      \field{number}{12}
+      \field{title}{Curvature of the probability weighting function}
+      \field{volume}{42}
+      \field{year}{1996}
+      \field{pages}{1676\bibrangedash 1690}
+      \range{pages}{15}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
