@@ -8,6 +8,7 @@
 \usepackage{setspace}
 \usepackage{gensymb}
 \usepackage{amsmath}
+\usepackage{hyperref}
 \doublespacing
 \usepackage{graphicx}
 \usepackage{float}
@@ -31,8 +32,10 @@
 
 \textbf{Code}: Simulation, figures and
 full analysis pipeline available at: \\
-https://github.com/victor-m-p/BayesianDecisionWeights
+\href{https://github.com/victor-m-p/BayesianDecisionWeights}
+{https://github.com/victor-m-p/BayesianDecisionWeights}
 
+\tableofcontents
 
 \section{Description}
 
@@ -280,7 +283,10 @@ which can be seen from figure $1$.
 	\caption{Data simulated from the model
 		$w(p) = \frac{p^{1-a}}
 		{p^{1-a}+(1-p)^{1-a}}$ with
-		$a \in [0, 1]$ (see Github).
+		$a \in [0, 1]$ (see
+		\href{https://github.com/victor-m-p/BayesianDecisionWeights/blob/main/Code/0_visualize_parameters.Rmd}
+		{this file} on the
+		\href{https://github.com/victor-m-p/BayesianDecisionWeights}{github}).
 		Diagonal line has
 		$a = 0$, and the horizontal line
 		has $a = 1$. Intermediate curves
@@ -352,7 +358,10 @@ different aspects of the weighting function $w$.
 	\caption{Data simulated from the model
 		$w(p) = \frac{\delta \cdot p^{\gamma}}
 	{\delta \cdot p^{\gamma} +
-	(1-p)^{\gamma}}$ (see Github). The figure
+	(1-p)^{\gamma}}$ (see \href{
+https://github.com/victor-m-p/BayesianDecisionWeights/blob/main/Code/0_visualize_parameters.Rmd}{this
+file} on \href{https://github.com/victor-m-p/BayesianDecisionWeights}{the
+github}). The figure
 	is similar to figure 4
 	of \textcite{gonzalez1999shape}.
 	On the left: $\gamma$ fixed at $0.6$
@@ -615,7 +624,11 @@ values are  $A = 0.44, B = 0.34, C = 0.24$.
 
 \begin{figure}[H]
 	\includegraphics[width = \linewidth]{../Figures/ourHyp.png}
-	\caption{Three curves shown, all with $\delta = 0.77$
+	\caption{For code, see
+		\href{https://github.com/victor-m-p/BayesianDecisionWeights/blob/main/Code/0_visualize_parameters.Rmd}
+		{this file} on
+		\href{https://github.com/victor-m-p/BayesianDecisionWeights}{github}.
+		Three curves shown, all with $\delta = 0.77$
 	as reported in \textcite{gonzalez1999shape}.
 	$\gamma$ levels $0.24, 0.34, 0.44$. The
 	least curved line corresponds to $\gamma = 0.44$,
@@ -715,7 +728,11 @@ level (j)
 As such, each condition will contain
 two levels of noise around a true signal,
 where the true population signal for
-$\gamma$ varies by condition.
+$\gamma$ varies by condition. For simulation
+code see
+\href{https://github.com/victor-m-p/BayesianDecisionWeights/blob/main/Code/1_simulate_data.Rmd}{this
+file} on \href{https://github.com/victor-m-p/BayesianDecisionWeights}{my
+github}.
 The simulated data, and the best fit
 $w(p)$ curves are shown in figure 4.
 As can be seen, the simulated data shows
@@ -741,11 +758,18 @@ is also seen in the plot.
 	\textcite{gonzalez1999shape}.
 	The population effect is a
 	weak, but true signal, which is
-what we expect from the real data.}
+what we expect from the real data. {Code for the figure in
+		\href{https://github.com/victor-m-p/BayesianDecisionWeights/blob/main/Code/2_check_simulated.Rmd}{this
+		file} on
+		\href{https://github.com/victor-m-p/BayesianDecisionWeights}
+the github}}.
 \end{figure}
 
 Next, the model described earlier is fitted
-to the data. Regularizing riors are specified:
+to the data. See
+\href{https://github.com/victor-m-p/BayesianDecisionWeights/blob/main/Code/3_toy_model.Rmd}{this
+file} on \href{https://github.com/victor-m-p/BayesianDecisionWeights}{the
+github}. Regularizing riors are specified:
 \[
 	\tau \sim normal(0, 1)
 \]
@@ -772,7 +796,11 @@ indicate a good model fit for the simulated data. \\
 	 $A$ having the highest  $\gamma$ and
 	 $C$ having the lowest  $\gamma$.
 	 Note that the  $.95$ credibility
-	 intervals do not overlap.}
+	 intervals do not overlap. Code can
+ be found in
+ \href{https://github.com/victor-m-p/BayesianDecisionWeights/blob/main/Code/4_testing_hypotheses.Rmd}{this
+ file} on \href{https://github.com/victor-m-p/BayesianDecisionWeights}{the
+ github}}
  \end{figure}
 
 We extract credibility intervals with regards
@@ -868,8 +896,7 @@ between $A$ and  $B$ and between $B$ and  $C$.
 Plotting and common
 sense was used to arrive at best guesses for
 reasonable values. Three distributions were generated
-(assumed normal, although that is not generally true
-for slider data):
+
 \begin{equation} \label{eq3}
 \begin{split}
 	item_A &\sim norm(0.2, 0.4) \\
@@ -879,7 +906,10 @@ for slider data):
 \end{equation}
 
 With $n = 30$ participants we have extremely
-high power to detect these effects. However,
+high power to detect these effects with a
+one-tailed t-test (see
+\href{https://github.com/victor-m-p/BayesianDecisionWeights/blob/main/Code/simulate_study1.Rmd}{this
+file} on \href{https://github.com/victor-m-p/BayesianDecisionWeights}{github}). However,
 as this is a cheap experiment to run, and the
 results are critical for the second study
 (it is important that the three best items are
@@ -1032,8 +1062,9 @@ function $w$ seems like a worthwile effort.
 \vspace{3mm}
 The present study also attempts to facilitate
 cumulative science more generally, by providing
-all code, simulation and eventual data at:
-https://github.com/victor-m-p/BayesianDecisionWeights.
+all code, simulation and eventual data at
+\href{https://github.com/victor-m-p/BayesianDecisionWeights}
+{github}.
 By making the code and data accessible, future
 experimenters can use the knowledge gained in
 this experiment to motivate stronger priors in

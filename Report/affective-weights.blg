@@ -1,19 +1,19 @@
 [0] Config.pm:304> INFO - This is Biber 2.14
 [0] Config.pm:307> INFO - Logfile is '/home/victormp/BayesianDecisionWeights/Report/affective-weights.blg'
-[84] biber:322> INFO - === Mon Jan 11, 2021, 01:07:53
-[100] Biber.pm:415> INFO - Reading '/home/victormp/BayesianDecisionWeights/Report/affective-weights.bcf'
+[80] biber:322> INFO - === Mon Jan 11, 2021, 10:23:06
+[96] Biber.pm:415> INFO - Reading '/home/victormp/BayesianDecisionWeights/Report/affective-weights.bcf'
 [197] Biber.pm:943> INFO - Found 16 citekeys in bib section 0
-[212] Biber.pm:4256> INFO - Processing section 0
-[212] Utils.pm:75> INFO - Globbing data source 'References.bib'
-[212] Utils.pm:91> INFO - Globbed data source 'References.bib' to References.bib
-[222] Biber.pm:4455> INFO - Looking for bibtex format file 'References.bib' for section 0
-[224] bibtex.pm:1653> INFO - LaTeX decoding ...
-[252] bibtex.pm:1471> INFO - Found BibTeX data source '/home/victormp/BayesianDecisionWeights/Report/References.bib'
-[304] Utils.pm:304> WARN - month field 'March' in entry 'PT' is not an integer - this will probably not sort properly.
-[391] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[391] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[392] Biber.pm:4084> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
-[392] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[414] bbl.pm:652> INFO - Writing '/home/victormp/BayesianDecisionWeights/Report/affective-weights.bbl' with encoding 'UTF-8'
-[425] bbl.pm:755> INFO - Output to /home/victormp/BayesianDecisionWeights/Report/affective-weights.bbl
-[425] Biber.pm:128> INFO - WARNINGS: 1
+[213] Biber.pm:4256> INFO - Processing section 0
+[213] Utils.pm:75> INFO - Globbing data source 'References.bib'
+[213] Utils.pm:91> INFO - Globbed data source 'References.bib' to References.bib
+[223] Biber.pm:4455> INFO - Looking for bibtex format file 'References.bib' for section 0
+[225] bibtex.pm:1653> INFO - LaTeX decoding ...
+[254] bibtex.pm:1471> INFO - Found BibTeX data source '/home/victormp/BayesianDecisionWeights/Report/References.bib'
+[306] Utils.pm:304> WARN - month field 'March' in entry 'PT' is not an integer - this will probably not sort properly.
+[395] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[395] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[395] Biber.pm:4084> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[395] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[417] bbl.pm:652> INFO - Writing '/home/victormp/BayesianDecisionWeights/Report/affective-weights.bbl' with encoding 'UTF-8'
+[431] bbl.pm:755> INFO - Output to /home/victormp/BayesianDecisionWeights/Report/affective-weights.bbl
+[431] Biber.pm:128> INFO - WARNINGS: 1
