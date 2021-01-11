@@ -129,7 +129,7 @@ status quo. Another key stylistic of the
 value function is that it is steeper for the
 loss domain than for the gains domain
 \autocite{newell2015straight}.
-A majority of people will not take an gamble
+A majority of people will not take a gamble
 with a $0\$$ expected value (e.g.  $50\%$ chance
 to lose  $100\$$ and a  $50\%$ chance to win
 $100\$$). This is the famous loss aversion. \\
@@ -286,7 +286,7 @@ which can be seen from figure $1$.
 		$a \in [0, 1]$ (see
 		\href{https://github.com/victor-m-p/BayesianDecisionWeights/blob/main/Code/0_visualize_parameters.Rmd}
 		{this file} on the
-		\href{https://github.com/victor-m-p/BayesianDecisionWeights}{github}).
+		\href{https://github.com/victor-m-p/BayesianDecisionWeights}{Github}).
 		Diagonal line has
 		$a = 0$, and the horizontal line
 		has $a = 1$. Intermediate curves
@@ -378,7 +378,7 @@ different aspects of the weighting function $w$.
 	(1-p)^{\gamma}}$ (see
 		\href{https://github.com/victor-m-p/BayesianDecisionWeights/blob/main/Code/0_visualize_parameters.Rmd}
 		{this file} on the
-		\href{https://github.com/victor-m-p/BayesianDecisionWeights}{github}). The figure
+		\href{https://github.com/victor-m-p/BayesianDecisionWeights}{Github}). The figure
 	is similar to figure 4
 	of \textcite{gonzalez1999shape}.
 	On the left: $\gamma$ fixed at $0.6$
@@ -505,7 +505,7 @@ we also know the values of the the independent
 variables $p$ and condition. \\
 
 In order to infer the
-unmeasured parameters a bayesian (non)linear
+unmeasured parameters a Bayesian (non)linear
 mixed effects model is proposed. The model
 is fitted in $R$ \autocite{rcore}
 with the  $brms$ package \autocite{brms}.
@@ -622,7 +622,7 @@ values are  $A = 0.44, B = 0.34, C = 0.24$.
 	\caption{For code, see
 		\href{https://github.com/victor-m-p/BayesianDecisionWeights/blob/main/Code/0_visualize_parameters.Rmd}
 		{this file} on
-		\href{https://github.com/victor-m-p/BayesianDecisionWeights}{github}.
+		\href{https://github.com/victor-m-p/BayesianDecisionWeights}{Github}.
 		Three curves shown, all with $\delta = 0.77$
 	as reported in \textcite{gonzalez1999shape}.
 	$\gamma$ levels $0.24, 0.34, 0.44$. The
@@ -699,11 +699,11 @@ condition.
 \textbf{Existing Data}: Registration prior
 to creation of data. Data from simulation
 does exist (see below \& at
-\href{https://github.com/victor-m-p/BayesianDecisionWeights}{github}). \\
+\href{https://github.com/victor-m-p/BayesianDecisionWeights}{Github}). \\
 
 \textbf{Data collection procedures}:
 Participants will be recruited through online
-channels (e.g. facebook, student groups, etc.).
+channels (e.g. Facebook, student groups, etc.).
 Participants must be at least 18 years old to
 participate. In the first experiments subjects
 will be payed $30$ DKK (or $\$5$)
@@ -763,8 +763,9 @@ effect size and number of participants.
 Unfortunately, a power simulation was not possible
 to carry out since reasonable estimates for the
 distributions (and effect sizes) are not present.
-Additionally, there is no null hypothesis which
-needs a significant/not-significant label (as
+Additionally, the study does not conduct
+null-hypothesis testing, and there is no
+need for a significant/non-significant label (as
 in a frequentist framework). Clearly, we need
 power to detect effects that are interesting,
 but several gradations of evidence are interesting.
@@ -785,7 +786,7 @@ with  $11$ probability levels \autocite{gonzalez1999shape}.
 The fact that they are able to reasonably recover
 the unobserved parameters (of  $v$ as well) with
 a sample size of only $10$ participants suggests
-that it is not so much the number of participants,
+that it is not so much the number of participants
 but rather the number of trials for each participant
 that is important. Generally there is much
 variation at the individual level
@@ -828,7 +829,7 @@ the same scale that we measure). \\
 is the price that subjects indicate that they
 are willing to pay for a ticket in a lottery.
 This measures the certainty equivalence (CE) of
-participants, and can be thought of as $w(p)$.
+participants and can be thought of as $w(p)$.
 This will be measured on a scale of $0-500$ dollars
 using a slider. The max is 500 dollars since the
 lottery tickets by definition cannot be worth
@@ -844,7 +845,7 @@ All analysis is performed in the programming
 language \emph{R} \autocite{rcore} using
 \emph{Rstudio} IDE
 \autocite{rstudio}. A key package used for
-bayesian model fitting is \emph{brms}
+Bayesian model fitting is \emph{brms}
 \autocite{brms}. \\
 
 \emph{Study 1}: The measured affect ratings will be
@@ -857,7 +858,7 @@ with a paired (one-tailed) t-test.
 \subsection{Simulation}
 
 \emph{Study 2}: In order to test the pipeline for the
-bayesian analysis, data simulation was
+Bayesian analysis, data simulation was
 conducted. Unfortunately, \textcite{gonzalez1999shape}
 do not exactly report the values (i.e.
 distributional properties of $\tau$ and
@@ -923,7 +924,7 @@ $\gamma$ varies by condition. For simulation
 code see
 \href{https://github.com/victor-m-p/BayesianDecisionWeights/blob/main/Code/1_simulate_data.Rmd}{this
 file} on \href{https://github.com/victor-m-p/BayesianDecisionWeights}{my
-github}.
+Github}.
 The simulated data, and the best fit
 $w(p)$ curves are shown in figure 4.
 As can be seen, the simulated data shows
@@ -952,14 +953,15 @@ is also seen in the plot.
 what we expect from the real data. Code for the figure in
 		\href{https://github.com/victor-m-p/BayesianDecisionWeights/blob/main/Code/2_check_simulated.Rmd}{this
 		file} on
-		\href{https://github.com/victor-m-p/BayesianDecisionWeights}{the github}}.
+		\href{https://github.com/victor-m-p/BayesianDecisionWeights}{the
+	Github}}.
 \end{figure}
 
 Next, the model described earlier is fitted
 to the data (See
 \href{https://github.com/victor-m-p/BayesianDecisionWeights/blob/main/Code/3_toy_model.Rmd}{this
 file} on \href{https://github.com/victor-m-p/BayesianDecisionWeights}{the
-github}). Regularizing riors are specified:
+Github}). Regularizing riors are specified:
 \[
 	\tau \sim normal(0, 1)
 \]
@@ -990,14 +992,14 @@ indicate a good model fit for the simulated data. \\
  be found in
  \href{https://github.com/victor-m-p/BayesianDecisionWeights/blob/main/Code/4_testing_hypotheses.Rmd}{this
  file} on \href{https://github.com/victor-m-p/BayesianDecisionWeights}{the
- github}}
+ Github}}
  \end{figure}
 
 We extract credibility intervals with regards
 to $\gamma$ and $\delta$ distributions for each
 condition ($A$, $B$, $C$). With the simulated
-data, we note that the model is capable of
-recovering the unobserved (unmeasured) parameters,
+data, we note that the model can recover
+the unobserved (unmeasured) parameters,
 and that for $\gamma$ the  $.95$ credibility
 intervals do not overlap between conditions
 (see figure 5). The estimates and credibility intervals
@@ -1028,7 +1030,7 @@ The effect that this study tries to replicate
 very interesting. However, the study
 bases the claim that the
 probability weighting function $w$ is
-modulated by affect on of a measurement of end-points
+modulated by affect on a measurement of endpoints
 ($1\%$ and $99\%$) only.
 As such, it is rather stylized; i.e. they
 are not able to estimate the modulation of
@@ -1040,14 +1042,14 @@ of \autocite{rottenstreich2001money} in extending
 their stylized effect. Testing it for more than
 two items and across enough uncertainty
 levels to estimate parameters of the weighting
-function $w$ seems like a worthwile effort.
+function $w$ seems like a worthwhile effort.
 
 \vspace{3mm}
 The present study also attempts to facilitate
 cumulative science more generally, by providing
 all code, simulation and eventual data at
 \href{https://github.com/victor-m-p/BayesianDecisionWeights}
-{github}.
+{Github}.
 By making the code and data accessible, future
 experimenters can use the knowledge obtained in
 this experiment to motivate stronger priors in
@@ -1076,7 +1078,7 @@ $w^{-}$, a similar
 study could be run for the loss domain, still with
 validated high-affect and low-affect items (i.e. "how
 much would you be willing to pay to avoid a
-certain probability of loosing something/something
+certain probability of losing something/something
 bad happening?"). It has been experimentally
 found that subjets are more sensitive to
 probabilities of gains ($w^{+}$) than
@@ -1085,7 +1087,7 @@ abdellaoui2010separating} but whether there is a
 modulatory effect of affect-richness is unclear.\\
 
 A second avenue of further study is to broaden
-the analysis to include estimation of paramters
+the analysis to include estimation of parameters
 of both the value function $v$ and the weight
 function  $w$. This would be interesting because
 the stylized effects of \textcite{
